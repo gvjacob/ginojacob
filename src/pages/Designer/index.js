@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { developer } from '../../content';
+import { designer } from '../../content';
 import Project from '../../components/Project';
 import styles from './styles.css';
 
 const Designer = ({ className }) => {
   return (
     <div className={className}>
-      {developer.map((project) => (
+      {designer.map((project) => (
         <Project className={styles.project} content={project} />
       ))}
     </div>
