@@ -1,24 +1,22 @@
 import React from 'react';
 import styles from './styles.css';
 
+import Block from '../../components/Block';
+import { about } from '../../content';
 import Gino from '../../assets/images/Gino-Jacob.jpg';
 
-const About = (props) => {
+const About = ({ className }) => {
+  const { title, subtitle, description } = about;
+
   return (
-    <div>
+    <div className={className}>
       <img className={styles.profile} src={Gino} />
-      <div className={styles.bio}>
-        <h1>Gino V Jacob</h1>
-        <div className={styles.paragraph}>
-          I’ve mocked up website designs, prototyped VR games, and learned to be
-          an avid functional programmer beyond my professional web development
-          career. I’m a self-taught developer and above all else, an
-          unapologetically customer-centric designer.
-        </div>
-        <div className={styles.paragraph}>
-          You'd find me ballroom dancing when I'm not solving people's problems.
-        </div>
-      </div>
+      <Block
+        className={styles.bio}
+        title={title}
+        subtitle={subtitle}
+        description={description}
+      />
     </div>
   );
 };

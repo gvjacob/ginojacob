@@ -15,6 +15,7 @@ const Navigation = ({ className, tabs, currentIndex = 0, setCurrentIndex }) => {
             [styles.selected]: currentIndex === index,
           })}
           onClick={() => setCurrentIndex(index)}
+          key={index}
         >
           <h3>{tab}</h3>
         </button>
