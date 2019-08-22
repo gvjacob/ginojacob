@@ -1,7 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
 
-import App from './pages/App'
+import Base from './pages/Base';
 
-ReactDOM.render(<App />, document.getElementById('app'))
+ReactDOM.render(<Base />, document.getElementById('app'));

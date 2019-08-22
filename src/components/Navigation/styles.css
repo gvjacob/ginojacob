@@ -1,0 +1,14 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tab {
+  opacity: 0.5;
+  transition: all ease-in 0.1s;
+}
+
+.selected {
+  opacity: 1;
+}
