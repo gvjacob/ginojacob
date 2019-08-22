@@ -6,9 +6,9 @@ import styles from './styles.css';
 /**
  * Navigation tabs.
  */
-const Navigation = ({ tabs, currentIndex = 0, setCurrentIndex }) => {
+const Navigation = ({ className, tabs, currentIndex = 0, setCurrentIndex }) => {
   return (
-    <div className={styles.navigation}>
+    <div className={cn(className, styles.navigation)}>
       {tabs.map((tab, index) => (
         <button
           className={cn(styles.tab, {
