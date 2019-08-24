@@ -1,3 +1,7 @@
+// Gino Jacob and Ballroom Dancer
+import Gino from '../assets/images/Gino-Jacob.jpg';
+import smooth from '../assets/images/smooth.jpg';
+
 // MobSquad
 import mobSquad from '../assets/images/MobSquad-Black.png';
 
@@ -38,13 +42,14 @@ import logotypesSerifTwo from '../assets/images/LogotypesSerifTwo.jpg';
 // Thanksgiving
 import thanksgivingPie from '../assets/images/thanksgivingPie.jpg';
 
-export const about = {
+export const ginoJacob = {
   title: 'Gino Jacob',
   subtitle: 'developer, designer, ballroom dancer',
   description: [
     'I’ve mocked up website designs, prototyped VR games, and learned to be an avid functional programmer beyond my professional web development career. I’m a self-taught developer and above all else, an unapologetically customer-centric designer.',
     'You’d find me ballroom dancing when I’m not solving people’s problems.',
   ],
+  image: Gino,
 };
 
 export const developer = [
@@ -171,4 +176,5 @@ export const ballroomDancer = {
   description: [
     "I dance ballroom with my longtime partner, Tiffany. Catch me in a tailsuit I can't afford or NSFW latin shirt at your closest east coast collegiate competition!",
   ],
+  image: smooth,
 };

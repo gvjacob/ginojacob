@@ -1,16 +1,12 @@
 import React from 'react';
 import styles from './styles.css';
 
-import Block from '../../components/Block';
-import { about } from '../../content';
-import Gino from '../../assets/images/Gino-Jacob.jpg';
+import Block from '../Block';
 
-const About = ({ className }) => {
-  const { title, subtitle, description } = about;
-
+const About = ({ className, title, subtitle, description, image }) => {
   return (
     <div className={className}>
-      <img className={styles.profile} src={Gino} />
+      <img className={styles.profile} src={image} />
       <Block
         className={styles.bio}
         title={title}

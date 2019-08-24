@@ -1,10 +1,10 @@
 import React from 'react';
 
 import About from '../../components/About';
-import { ballroomDancer } from '../../content';
+import { ginoJacob } from '../../content';
 
-const BallroomDancer = ({ className }) => {
-  const { title, subtitle, description, image } = ballroomDancer;
+const GinoJacob = ({ className }) => {
+  const { title, subtitle, description, image } = ginoJacob;
 
   return (
     <About
@@ -17,4 +17,4 @@ const BallroomDancer = ({ className }) => {
   );
 };
 
-export default BallroomDancer;
+export default GinoJacob;
