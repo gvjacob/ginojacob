@@ -59,6 +59,8 @@ export const developer = [
     description: [
       'Chef is a version control system for your recipes. Write a recipe, publish it, collaborate with others on it, and learn to be a better chef.',
     ],
+    link: 'https://github.com/gvjacob/chef',
+    tags: ['React', 'NestJS', 'PostgreSQL', 'Typescript', 'Docker'],
   },
   {
     title: 'MobSquad',
@@ -68,6 +70,8 @@ export const developer = [
       'With MobSquad, developers can manage their place in the cycle, and decide on the cadence of their rotations.',
     ],
     images: [mobSquad],
+    shadow: true,
+    tags: ['Swift', 'XCode', 'MacOS'],
   },
   {
     title: 'responsive-jsx',
@@ -76,6 +80,8 @@ export const developer = [
       'responsive-jsx is a published npm package for web responsive React applications.',
       'This package provides APIs to create responsive components, and set global configuration for consistent media thresholds.',
     ],
+    link: 'https://www.npmjs.com/package/responsive-jsx',
+    tags: ['React', 'npm'],
   },
   {
     title: 'python-contracts',
@@ -84,6 +90,8 @@ export const developer = [
       'python-contracts is a published PyPi package that validates the input or output of a Python function.',
       'Data flow among components can be hard to keep track or maintained, sometimes forcing us to write print statements everywhere trying to catch malformed data. This contracts library solves this by intercepting data that is piped into or out of a function and checking if they satisfy the specified requirements.',
     ],
+    link: 'https://pypi.org/project/python-contracts/',
+    tags: ['Python'],
   },
   {
     title: 'Memoree',
@@ -93,6 +101,8 @@ export const developer = [
       'It was developed in Unity for ReGameVR Laboratory and the FITBoard project, and submitted to 2017 Rehabilitation Engineering and Assistive Technology Society of North America (RESNA) Student Design Competition.',
     ],
     images: [memoree],
+    link: 'https://www.dropbox.com/home/LinkedIn/ReGameVR%20Unity%20Games',
+    tags: ['Unity', 'C#'],
   },
   {
     title: 'Pomodoro Timer',
@@ -102,6 +112,8 @@ export const developer = [
       'Managing your pomodoro sessions is secondary work. Configurable to your needs and operating subtly behind the scenes, this site keeps track of your pomodoros so you can put all the focus on the work at hand, and provides analytics and insights to how you work.',
     ],
     images: [pomodoroHome, pomodoroSettings],
+    link: 'https://github.com/gvjacob/pomodoro',
+    tags: ['React', 'Flask', 'MongoDB'],
   },
   {
     title: 'TestDocs',
@@ -110,6 +122,9 @@ export const developer = [
       'Tests as documentation! This is a configurable VSCode extension that gives you a convenient lens to the tests of your Javascript symbols. Hovering over a symbol gives you a top down overview of its tests.',
     ],
     images: [testDocs],
+    link:
+      'https://marketplace.visualstudio.com/items?itemName=gvjacob.testdocs',
+    tags: ['Javascript', 'VSCode Extension'],
   },
 ];
 
@@ -122,6 +137,9 @@ export const designer = [
       'Information includes locations, schedule, pick-up availability, menus and general real-time updates such as occupancy levels and menu changes.',
     ],
     images: [nuEats],
+    link:
+      'https://projects.invisionapp.com/prototype/NU-Eats-cjpail4xn00euaf010b6o39a5/play/3f0116a8',
+    tags: ['Invision Studio', 'Photoshop'],
   },
   {
     title: '24 Logotypes & Typefaces',
@@ -140,6 +158,8 @@ export const designer = [
       logotypesSerifOne,
       logotypesSerifTwo,
     ],
+    shadow: true,
+    tags: ['Illustrator', 'Photoshop', 'InDesign'],
   },
   {
     title: 'Abstract Series',
@@ -149,6 +169,8 @@ export const designer = [
       'I took inspiration from different natural elements, translated them into simpler and more abstract shapes, imposed vibrant colors, and created contrast with more subdued backgrounds.',
     ],
     images: [leaf, roses, tree],
+    shadow: true,
+    tags: ['Illustrator'],
   },
   {
     title: 'Texture Series',
@@ -158,6 +180,7 @@ export const designer = [
       'The textures that inspire this piece range from geodes and ceramics to bushes of roses.',
     ],
     images: [roseCascade, lines, polygons, combinedTextures],
+    shadow: true,
   },
   {
     title: "America's Favorite Thanksgiving Pie",
@@ -167,6 +190,8 @@ export const designer = [
       'Pie charts seemed fitting, so I rationed out portions of the pie according to the popularity of each type. I wanted this visualization to be simple yet appealing and reminiscent of retro visuals. Image tracing each colorful pie with high fidelity and imposing the pie chart on a neutral background gave this the right look and feel.',
     ],
     images: [thanksgivingPie],
+    shadow: true,
+    tags: ['Illustrator', 'InDesign'],
   },
 ];
 
@@ -174,7 +199,7 @@ export const ballroomDancer = {
   title: 'Ballroom Dancer',
   subtitle: 'east coast collegiate: latin, standard, smooth',
   description: [
-    "I dance ballroom with my longtime partner, Tiffany. Catch me in a tailsuit I can't afford or NSFW latin shirt at your closest east coast collegiate competition!",
+    "I ballroom dance with my longtime partner, Tiffany. Catch me in a tailsuit I can't afford or NSFW latin shirt at your closest east coast collegiate competition!",
   ],
   image: smooth,
 };

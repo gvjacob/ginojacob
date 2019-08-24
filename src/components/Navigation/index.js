@@ -3,9 +3,6 @@ import cn from 'classnames';
 
 import styles from './styles.css';
 
-/**
- * Navigation tabs.
- */
 const Navigation = ({ className, tabs, currentIndex = 0, setCurrentIndex }) => {
   return (
     <div className={cn(className, styles.navigation)}>

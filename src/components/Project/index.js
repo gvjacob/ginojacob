@@ -6,7 +6,15 @@ import Block from '../Block';
 import styles from './styles.css';
 
 const Project = ({ className, project }) => {
-  const { title, subtitle, description, images = [] } = project;
+  const {
+    title,
+    subtitle,
+    description,
+    images = [],
+    shadow = false,
+    link,
+    tags,
+  } = project;
   const columnWidth = Math.floor(100 / Math.min(4, images.length));
 
   return (
@@ -14,7 +22,10 @@ const Project = ({ className, project }) => {
       {images.length > 0 && (
         <StackGrid columnWidth={`${columnWidth}%`} monitorImagesLoaded>
           {images.map((image) => (
-            <img className={styles.image} src={image} />
+            <img
+              className={cn(styles.image, { [styles.shadow]: shadow })}
+              src={image}
+            />
           ))}
         </StackGrid>
       )}
@@ -23,6 +34,8 @@ const Project = ({ className, project }) => {
         title={title}
         subtitle={subtitle}
         description={description}
+        link={link}
+        tags={tags}
       />
     </div>
   );
