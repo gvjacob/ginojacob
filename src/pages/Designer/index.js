@@ -8,7 +8,7 @@ const Designer = ({ className }) => {
   return (
     <div className={className}>
       {designer.map((project) => (
-        <Project className={styles.project} content={project} />
+        <Project className={styles.project} project={project} />
       ))}
     </div>
   );

@@ -4,7 +4,6 @@ import styles from './styles.css';
 import Block from '../../components/Block';
 import { ballroomDancer } from '../../content';
 import smooth from '../../assets/images/smooth.jpg';
-import latin from '../../assets/images/latin.jpg';
 
 const BallroomDancer = ({ className }) => {
   const { title, subtitle, description } = ballroomDancer;
@@ -18,7 +17,6 @@ const BallroomDancer = ({ className }) => {
         subtitle={subtitle}
         description={description}
       />
-      <img className={styles.latin} src={latin} />
     </div>
   );
 };

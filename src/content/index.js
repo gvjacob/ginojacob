@@ -1,4 +1,42 @@
-import mobsquad from '../assets/images/MobSquad-black.png';
+// MobSquad
+import mobSquad from '../assets/images/MobSquad-Black.png';
+
+// Memoree
+import memoree from '../assets/images/Memoree.png';
+
+// Pomodoro
+import pomodoroHome from '../assets/images/Pomodoro-home.png';
+import pomodoroSettings from '../assets/images/Pomodoro-settings.png';
+
+// TestDocs
+import testDocs from '../assets/images/testdocs-logo.png';
+
+// Abstract series
+import leaf from '../assets/images/leaf.png';
+import roses from '../assets/images/roses.png';
+import tree from '../assets/images/tree.png';
+
+// NU Eats
+import nuEats from '../assets/images/NUEats.png';
+
+// Textures
+import combinedTextures from '../assets/images/combinedTextures.jpg';
+import lines from '../assets/images/lines.jpg';
+import polygons from '../assets/images/polygons.jpg';
+import roseCascade from '../assets/images/roseCascade.jpg';
+
+// Typography
+import aksidenz from '../assets/images/Aksidenz.jpg';
+import bigCaslon from '../assets/images/BigCaslon.jpg';
+import didot from '../assets/images/Didot.jpg';
+import din from '../assets/images/DIN.jpg';
+import logotypesSanSerifOne from '../assets/images/LogotypesSanSerifOne.jpg';
+import logotypesSanSerifTwo from '../assets/images/LogotypesSanSerifTwo.jpg';
+import logotypesSerifOne from '../assets/images/LogotypesSerifOne.jpg';
+import logotypesSerifTwo from '../assets/images/LogotypesSerifTwo.jpg';
+
+// Thanksgiving
+import thanksgivingPie from '../assets/images/thanksgivingPie.jpg';
 
 export const about = {
   title: 'Gino Jacob',
@@ -24,7 +62,7 @@ export const developer = [
       'Managing mob sessions with your team can be a challenge. MobSquad is a native macOS application that helps mobbbers establish and enforce rotations, while staying unobtrusive.',
       'With MobSquad, developers can manage their place in the cycle, and decide on the cadence of their rotations.',
     ],
-    images: [mobsquad],
+    images: [mobSquad],
   },
   {
     title: 'responsive-jsx',
@@ -49,6 +87,7 @@ export const developer = [
       'Memoree is a memory retention game for pediatric therapy.',
       'It was developed in Unity for ReGameVR Laboratory and the FITBoard project, and submitted to 2017 Rehabilitation Engineering and Assistive Technology Society of North America (RESNA) Student Design Competition.',
     ],
+    images: [memoree],
   },
   {
     title: 'Pomodoro Timer',
@@ -57,6 +96,7 @@ export const developer = [
       'For those of you who are Pomodoro beginners, the Pomodoro Timer is the right tool to get your feet wet.',
       'Managing your pomodoro sessions is secondary work. Configurable to your needs and operating subtly behind the scenes, this site keeps track of your pomodoros so you can put all the focus on the work at hand, and provides analytics and insights to how you work.',
     ],
+    images: [pomodoroHome, pomodoroSettings],
   },
   {
     title: 'TestDocs',
@@ -64,6 +104,7 @@ export const developer = [
     description: [
       'Tests as documentation! This is a configurable VSCode extension that gives you a convenient lens to the tests of your Javascript symbols. Hovering over a symbol gives you a top down overview of its tests.',
     ],
+    images: [testDocs],
   },
 ];
 
@@ -75,6 +116,7 @@ export const designer = [
       'NU Eats is a platform for Northeastern students to access real-time information about campus dining services. This project from my Design, Process, Context and Systems course sought to alleviate a campus-wide problem with student access to information on their dining services.',
       'Information includes locations, schedule, pick-up availability, menus and general real-time updates such as occupancy levels and menu changes.',
     ],
+    images: [nuEats],
   },
   {
     title: '24 Logotypes & Typefaces',
@@ -82,6 +124,16 @@ export const designer = [
     description: [
       'This typography project explores 24 different typefaces, serif and san-serif, ranging from vanilla Helvetica and Aksidenz to royal Bembo and Didot.',
       'I wanted to see how the meticulously designed letters from the same typographic principles and precision of each typeface could interact with each other. Are their accents consistent? How rigid are they when broken down? Can they merge with each other while staying true to their character?',
+    ],
+    images: [
+      aksidenz,
+      bigCaslon,
+      didot,
+      din,
+      logotypesSanSerifOne,
+      logotypesSanSerifTwo,
+      logotypesSerifOne,
+      logotypesSerifTwo,
     ],
   },
   {
@@ -91,6 +143,7 @@ export const designer = [
       'What started out as Illustrator practice became designs for some of my own T-shirts.',
       'I took inspiration from different natural elements, translated them into simpler and more abstract shapes, imposed vibrant colors, and created contrast with more subdued backgrounds.',
     ],
+    images: [leaf, roses, tree],
   },
   {
     title: 'Texture Series',
@@ -99,6 +152,7 @@ export const designer = [
       'With the diversity of textures in the natural world, I wanted to capture the ways they could interact, complement, or even oppose each other in making a cohesive art piece.',
       'The textures that inspire this piece range from geodes and ceramics to bushes of roses.',
     ],
+    images: [roseCascade, lines, polygons, combinedTextures],
   },
   {
     title: "America's Favorite Thanksgiving Pie",
@@ -107,21 +161,7 @@ export const designer = [
       "As an Illustrator practice and project for my Data Visualization course, which was assigned around Thanksgiving, I decided to gather up some data about American's favorite pie during the season.",
       'Pie charts seemed fitting, so I rationed out portions of the pie according to the popularity of each type. I wanted this visualization to be simple yet appealing and reminiscent of retro visuals. Image tracing each colorful pie with high fidelity and imposing the pie chart on a neutral background gave this the right look and feel.',
     ],
-  },
-  {
-    title: 'Pomodoro Timer',
-    subtitle: "The study pal that doesn't slack",
-    description: [
-      'For those of you who are Pomodoro beginners, the Pomodoro Timer is the right tool to get your feet wet.',
-      'Managing your pomodoro sessions is secondary work. Configurable to your needs and operating subtly behind the scenes, this site keeps track of your pomodoros so you can put all the focus on the work at hand, and provides analytics and insights to how you work.',
-    ],
-  },
-  {
-    title: 'TestDocs',
-    subtitle: 'Javascript Tests as Documentation, Made Easy',
-    description: [
-      'Tests as documentation! This is a configurable VSCode extension that gives you a convenient lens to the tests of your Javascript symbols. Hovering over a symbol gives you a top down overview of its tests.',
-    ],
+    images: [thanksgivingPie],
   },
 ];
 

@@ -8,7 +8,7 @@ const Developer = ({ className }) => {
   return (
     <div className={className}>
       {developer.map((project, index) => (
-        <Project className={styles.project} content={project} key={index} />
+        <Project className={styles.project} project={project} key={index} />
       ))}
     </div>
   );

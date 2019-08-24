@@ -6,6 +6,8 @@ import Developer from '../Developer';
 import Designer from '../Designer';
 import BallroomDancer from '../BallroomDancer';
 
+import { about } from '../../content';
+
 import styles from './styles.css';
 
 const Base = () => {

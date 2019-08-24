@@ -1,5 +1,18 @@
 .base {
-  padding: 0 30%;
+  margin: auto;
+  width: 300px;
+}
+
+@media only screen and (min-width: 520px) {
+  .base {
+    width: 500px;
+  }
+}
+
+@media only screen and (min-width: 740px) {
+  .base {
+    width: 600px;
+  }
 }
 
 .navigation {
