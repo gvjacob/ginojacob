@@ -10,7 +10,7 @@ import styles from './styles.css';
 
 const Base = () => {
   const tabs = [
-    { title: 'Gino Jacob', body: GinoJacob },
+    { title: 'Gino', body: GinoJacob },
     { title: 'Developer', body: Developer },
     { title: 'Designer', body: Designer },
     { title: 'Ballroom Dancer', body: BallroomDancer },

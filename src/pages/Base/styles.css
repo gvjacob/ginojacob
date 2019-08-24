@@ -16,12 +16,13 @@
 }
 
 .navigation {
-  margin: 50px 0;
+  margin: 30px 0 50px 0;
   animation: fadeIn 0.5s;
 }
 
 .body {
   animation: fadeIn 0.5s;
+  margin-bottom: 100px;
 }
 
 @keyframes fadeIn {

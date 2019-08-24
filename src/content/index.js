@@ -43,7 +43,7 @@ import logotypesSerifTwo from '../assets/images/LogotypesSerifTwo.jpg';
 import thanksgivingPie from '../assets/images/thanksgivingPie.jpg';
 
 export const ginoJacob = {
-  title: 'Gino Jacob',
+  title: 'Gino V Jacob',
   subtitle: 'developer, designer, ballroom dancer',
   description: [
     'I’ve mocked up website designs, prototyped VR games, and learned to be an avid functional programmer beyond my professional web development career. I’m a self-taught developer and above all else, an unapologetically customer-centric designer.',

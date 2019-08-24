@@ -3,7 +3,7 @@ import styles from './styles.css';
 
 import Block from '../Block';
 
-const About = ({ className, title, subtitle, description, image }) => {
+const About = ({ className, title, subtitle, description, image, tags }) => {
   return (
     <div className={className}>
       <img className={styles.profile} src={image} />
@@ -12,6 +12,7 @@ const About = ({ className, title, subtitle, description, image }) => {
         title={title}
         subtitle={subtitle}
         description={description}
+        tags={tags}
       />
     </div>
   );
