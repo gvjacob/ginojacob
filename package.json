@@ -9,7 +9,8 @@
     "clean": "rm -rf ./dist ./.cache",
     "build": "parcel build ./public/index.html",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "mc": "./scripts/createComponent.js"
+    "mc": "./scripts/createComponent.js",
+    "deploy": "rm -rf dist && npm run build && surge ./dist ginojacob.surge.sh"
   },
   "repository": {
     "type": "git",

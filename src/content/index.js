@@ -1,3 +1,5 @@
+import React from 'react';
+
 // Gino Jacob and Ballroom Dancer
 import Gino from '../assets/images/Gino-Jacob.jpg';
 import smooth from '../assets/images/smooth.jpg';
@@ -44,7 +46,12 @@ import thanksgivingPie from '../assets/images/thanksgivingPie.jpg';
 
 export const ginoJacob = {
   title: 'Gino V Jacob',
-  subtitle: 'developer, designer, ballroom dancer',
+  subtitle: (
+    <div>
+      <div>Software Engineer at Pluralsight</div>
+      <div>RoleIQ, Assessment Engine</div>
+    </div>
+  ),
   description: [
     'I’ve mocked up website designs, prototyped VR games, and learned to be an avid functional programmer beyond my professional web development career. I’m a self-taught developer and above all else, an unapologetically customer-centric designer.',
     'You’d find me ballroom dancing when I’m not solving people’s problems.',
@@ -72,6 +79,8 @@ export const developer = [
     images: [mobSquad],
     shadow: true,
     tags: ['Swift', 'XCode', 'MacOS'],
+    link:
+      'https://www.dropbox.com/sh/srwktc15r5k1q7v/AAAwS7q5YDUzFd6BwrF_dKwIa?dl=0',
   },
   {
     title: 'responsive-jsx',
@@ -121,7 +130,7 @@ export const developer = [
     description: [
       'Tests as documentation! This is a configurable VSCode extension that gives you a convenient lens to the tests of your Javascript symbols. Hovering over a symbol gives you a top down overview of its tests.',
     ],
-    images: [testDocs],
+    // images: [testDocs],
     link:
       'https://marketplace.visualstudio.com/items?itemName=gvjacob.testdocs',
     tags: ['Javascript', 'VSCode Extension'],
@@ -197,7 +206,7 @@ export const designer = [
 
 export const ballroomDancer = {
   title: 'Ballroom Dancer',
-  subtitle: 'east coast collegiate: latin, standard, smooth',
+  subtitle: 'East coast collegiate: Latin, Standard, Smooth',
   description: [
     "I ballroom dance with my longtime partner, Tiffany. Catch me in a tailsuit I can't afford or NSFW latin shirt at your closest east coast collegiate competition!",
   ],
