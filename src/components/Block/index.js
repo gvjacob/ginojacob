@@ -15,12 +15,14 @@ const Block = ({
 }) => {
   return (
     <div className={className}>
-      <a href={link} target={'_blank'}>
-        <h1 className={cn(styles.title, { [styles.hovered]: link })}>
+      <h1 className={cn(styles.title, { [styles.hovered]: link })}>
+        <a className={styles.link} href={link} target={'_blank'}>
           {title}
-          {link && <img className={styles.link} src={linkIcon} />}
-        </h1>
-      </a>
+          {link && (
+            <img className={styles.linkIcon} src={linkIcon} title={'view me'} />
+          )}
+        </a>
+      </h1>
 
       <span className={styles.subtitle}>{subtitle}</span>
       {description.map((paragraph, index) => (

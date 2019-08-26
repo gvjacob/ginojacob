@@ -10,7 +10,11 @@
 }
 
 .link {
-  width: 15px;
+  display: flex;
+}
+
+.linkIcon {
+  width: 18px;
   margin-left: 10px;
 }
 
