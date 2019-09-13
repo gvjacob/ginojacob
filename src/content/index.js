@@ -41,6 +41,9 @@ import logotypesSanSerifTwo from '../assets/images/LogotypesSanSerifTwo.jpg';
 import logotypesSerifOne from '../assets/images/LogotypesSerifOne.jpg';
 import logotypesSerifTwo from '../assets/images/LogotypesSerifTwo.jpg';
 
+// Siena
+import siena from '../assets/images/siena.jpg';
+
 // Thanksgiving
 import thanksgivingPie from '../assets/images/thanksgivingPie.jpg';
 
@@ -169,6 +172,17 @@ export const designer = [
     ],
     shadow: true,
     tags: ['Illustrator', 'Photoshop', 'InDesign'],
+  },
+  {
+    title: '20th Festival Di Siena',
+    subtitle: 'Festival Internazionale Del Cinema',
+    description: [
+      'A reimagining of a film festival featuring the one and only Audrey Hepburn.',
+      "I've always loved Cannes Film Festival's posters, and I wanted to recreate the same magic with a vintage look and somewhat noir feel.",
+    ],
+    images: [siena],
+    tags: ['Photoshop', 'InDesign', 'Illustrator'],
+    shadow: true,
   },
   {
     title: 'Abstract Series',
