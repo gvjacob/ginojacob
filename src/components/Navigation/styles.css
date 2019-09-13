@@ -12,6 +12,10 @@
   align-items: center;
 }
 
+.tab:hover {
+  opacity: 1;
+}
+
 .icon {
   width: 30px;
   margin-right: 5px;
