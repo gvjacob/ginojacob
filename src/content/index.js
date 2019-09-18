@@ -150,7 +150,7 @@ export const designer = [
     ],
     images: [nuEats],
     link:
-      'https://projects.invisionapp.com/prototype/NU-Eats-cjpail4xn00euaf010b6o39a5/play/3f0116a8',
+      'https://projects.invisionapp.com/prototype/NU-Eats-cjpail4xn00euaf010b6o39a5/play/ac717e46?origin=v7',
     tags: ['Invision Studio', 'Photoshop'],
   },
   {
