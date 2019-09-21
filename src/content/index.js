@@ -7,6 +7,10 @@ import smooth from '../assets/images/smooth.jpg';
 // MobSquad
 import mobSquad from '../assets/images/MobSquad-Black.png';
 
+// Jive
+import JiveHome from '../assets/images/Jive-home.png';
+import JiveDJ from '../assets/images/Jive-dj.png';
+
 // Memoree
 import memoree from '../assets/images/Memoree.png';
 
@@ -71,6 +75,17 @@ export const developer = [
     ],
     link: 'https://github.com/gvjacob/chef',
     tags: ['React', 'NestJS', 'PostgreSQL', 'Typescript', 'Docker'],
+  },
+  {
+    title: 'Jive',
+    subtitle: 'Automated Spotify DJ',
+    description: [
+      'Automated DJ for choosing various ballroom songs from different dance styles when running an open floor. Built with React and the Spotify Web API.',
+    ],
+    link: 'https://github.com/gvjacob/jive',
+    tags: ['React', 'Spotify Web API'],
+    images: [JiveHome, JiveDJ],
+    shadow: true,
   },
   {
     title: 'MobSquad',
