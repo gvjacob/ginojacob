@@ -10,7 +10,7 @@
     "build": "parcel build ./public/index.html",
     "test": "echo \"Error: no test specified\" && exit 1",
     "mc": "./scripts/createComponent.js",
-    "deploy": "rm -rf dist && npm run build && surge ./dist www.ginojacob.com"
+    "deploy": "rm -rf dist && npm run build && surge ./dist https://www.ginojacob.com"
   },
   "repository": {
     "type": "git",

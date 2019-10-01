@@ -6,8 +6,10 @@ import styles from './styles.css';
 const Tags = ({ className, tags }) => {
   return (
     <div className={cn(styles.tags, className)}>
-      {tags.map((tag) => (
-        <div className={styles.tag}>{tag}</div>
+      {tags.map((tag, index) => (
+        <div className={styles.tag} key={index}>
+          {tag}
+        </div>
       ))}
     </div>
   );

@@ -7,8 +7,8 @@ import styles from './styles.css';
 const Designer = ({ className }) => {
   return (
     <div className={className}>
-      {designer.map((project) => (
-        <Project className={styles.project} project={project} />
+      {designer.map((project, index) => (
+        <Project key={index} className={styles.project} project={project} />
       ))}
     </div>
   );

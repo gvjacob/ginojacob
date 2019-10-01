@@ -21,8 +21,9 @@ const Project = ({ className, project }) => {
     <div className={cn(styles.project, className)}>
       {images.length > 0 && (
         <StackGrid columnWidth={`${columnWidth}%`} monitorImagesLoaded>
-          {images.map((image) => (
+          {images.map((image, index) => (
             <img
+              key={index}
               className={cn(styles.image, { [styles.shadow]: shadow })}
               src={image}
             />

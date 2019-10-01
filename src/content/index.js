@@ -8,7 +8,6 @@ import smooth from '../assets/images/smooth.jpg';
 import mobSquad from '../assets/images/MobSquad-Black.png';
 
 // Jive
-import JiveHome from '../assets/images/Jive-home.png';
 import JiveDJ from '../assets/images/Jive-dj.png';
 
 // Memoree
@@ -82,9 +81,9 @@ export const developer = [
     description: [
       'Automated DJ for choosing various ballroom songs from different dance styles when running an open floor. Built with React and the Spotify Web API.',
     ],
-    link: 'https://github.com/gvjacob/jive',
+    link: 'https://jive.surge.sh/',
     tags: ['React', 'Spotify Web API'],
-    images: [JiveHome, JiveDJ],
+    images: [JiveDJ],
     shadow: true,
   },
   {
