@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import cn from 'classnames';
 import StackGrid from 'react-stack-grid';
 
@@ -16,16 +16,24 @@ const Project = ({ className, project }) => {
     tags,
   } = project;
   const columnWidth = Math.floor(100 / Math.min(4, images.length));
+  const [loadedCount, setLoadedCount] = useState(0);
 
   return (
     <div className={cn(styles.project, className)}>
       {images.length > 0 && (
-        <StackGrid columnWidth={`${columnWidth}%`} monitorImagesLoaded>
+        <StackGrid
+          className={cn({
+            [styles.hideStackGrid]: loadedCount !== images.length,
+          })}
+          columnWidth={`${columnWidth}%`}
+          monitorImagesLoaded
+        >
           {images.map((image, index) => (
             <img
               key={index}
               className={cn(styles.image, { [styles.shadow]: shadow })}
               src={image}
+              onLoad={() => setLoadedCount(loadedCount + 1)}
             />
           ))}
         </StackGrid>

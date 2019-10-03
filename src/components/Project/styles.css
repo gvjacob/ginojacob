@@ -1,4 +1,6 @@
-.project {
+.hideStackGrid {
+  visibility: hidden;
+  height: 0 !important;
 }
 
 .title {
