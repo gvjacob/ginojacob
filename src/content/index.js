@@ -79,10 +79,10 @@ export const developer = [
     title: 'Jive',
     subtitle: 'Automated Spotify DJ',
     description: [
-      'Automated DJ for choosing various ballroom songs from different dance styles when running an open floor. Built with React and the Spotify Web API.',
+      'Automated Spotify DJ for playing various songs from your curated playlists.',
     ],
-    link: 'https://jive.surge.sh/',
-    tags: ['React', 'Spotify Web API'],
+    link: 'https://jive.now.sh/',
+    tags: ['React', 'Spotify Web API', 'GitLab'],
     images: [JiveDJ],
     shadow: true,
   },
