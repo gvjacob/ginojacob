@@ -2,7 +2,7 @@ import React from 'react';
 
 // Gino Jacob and Ballroom Dancer
 import Gino from '../assets/images/Gino-Jacob.jpg';
-import smooth from '../assets/images/smooth.jpg';
+import latin from '../assets/images/latin.jpeg';
 
 // MobSquad
 import mobSquad from '../assets/images/MobSquad-Black.png';
@@ -238,5 +238,5 @@ export const ballroomDancer = {
   description: [
     "I ballroom dance with my longtime partner, Tiffany. Catch me in a tailsuit I can't afford or NSFW latin shirt at your closest east coast collegiate competition!",
   ],
-  image: smooth,
+  image: latin,
 };
