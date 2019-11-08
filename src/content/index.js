@@ -5,7 +5,7 @@ import Gino from '../assets/images/Gino-Jacob.jpg';
 import latin from '../assets/images/latin.jpeg';
 
 // MobSquad
-import mobSquad from '../assets/images/MobSquad-Black.png';
+import mobSquad from '../assets/images/MobSquad-black.png';
 
 // Jive
 import JiveDJ from '../assets/images/Jive-dj.png';
