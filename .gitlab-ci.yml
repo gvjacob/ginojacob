@@ -23,4 +23,5 @@ deploy:
   stage: deploy
   script:
     - npm install -g now
+    - cp now.json dist/now.json
     - now dist --token ${NOW_TOKEN} --prod
