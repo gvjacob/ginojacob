@@ -1,0 +1,26 @@
+image: node:latest
+
+stages:
+  - build
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+build:
+  stage: build
+  script:
+    - make install
+    - make build
+  artifacts:
+    paths:
+      - node_modules/
+      - dist/
+
+deploy:
+  image: node:latest
+  stage: deploy
+  script:
+    - npm install -g now
+    - now dist --token ${NOW_TOKEN} --prod
