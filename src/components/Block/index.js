@@ -16,12 +16,20 @@ const Block = ({
   return (
     <div className={className}>
       <h1 className={cn(styles.title, { [styles.hovered]: link })}>
-        <a href={link} target={'_blank'}>
-          {title}
-          {link && (
-            <img className={styles.linkIcon} src={linkIcon} title={'view me'} />
-          )}
-        </a>
+        {link ? (
+          <a href={link} target={'_blank'}>
+            {title}
+            {link && (
+              <img
+                className={styles.linkIcon}
+                src={linkIcon}
+                title={'view me'}
+              />
+            )}
+          </a>
+        ) : (
+          title
+        )}
       </h1>
 
       <span className={styles.subtitle}>{subtitle}</span>
