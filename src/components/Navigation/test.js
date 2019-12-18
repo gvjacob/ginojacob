@@ -1,37 +1,36 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { RouterContext } from 'next/dist/next-server/lib/router-context';
 
 import Navigation from './';
 
 describe('Navigation', () => {
-  let props;
-  let tabs;
+  const tabs = [
+    { text: 'Gino', href: '/' },
+    { text: 'Developer', href: '/developer' },
+    { text: 'Designer', href: '/designer' },
+    { text: 'Ballroom Dancer', href: '/ballroomdancer' },
+  ];
 
-  beforeEach(() => {
-    tabs = [
-      { text: 'Gino', href: '/' },
-      { text: 'Developer', href: '/developer' },
-      { text: 'Designer', href: '/designer' },
-      { text: 'Ballroom Dancer', href: '/ballroomdancer' },
-    ];
-
-    props = {
-      tabs,
-    };
-  });
+  const router = {
+    asPath: '/',
+  };
 
   it('renders', () => {
-    const { getByTestId } = render(<Navigation {...props} />);
+    const { getByTestId } = render(
+      <RouterContext.Provider value={router}>
+        <Navigation />
+      </RouterContext.Provider>,
+    );
     expect(getByTestId('Navigation')).toBeInTheDocument();
   });
 
-  it('renders none when tabs are not given', () => {
-    const { queryByTestId } = render(<Navigation />);
-    expect(queryByTestId('Navigation')).toBeNull();
-  });
-
   it('renders all tabs and urls', () => {
-    const { getByText, container } = render(<Navigation {...props} />);
+    const { getByText, container } = render(
+      <RouterContext.Provider value={router}>
+        <Navigation />
+      </RouterContext.Provider>,
+    );
 
     tabs.forEach(({ text, href }) => {
       expect(getByText(text)).toBeInTheDocument();

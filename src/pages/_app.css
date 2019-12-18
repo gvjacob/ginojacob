@@ -1,0 +1,33 @@
+:root {
+  --primary: #ff3366;
+  --secondary: #828282;
+
+  --typeSmall: 12px;
+  --typeRegular: 18px;
+  --typeMedium: 24px;
+  --typeLarge: 36px;
+  --typeXLarge: 48px;
+  --typeHuge: 64px;
+}
+
+@font-face {
+  font-family: 'Cera';
+  src: url('/typefaces/Cera-Regular.otf');
+}
+
+@font-face {
+  font-family: 'Cera';
+  src: url('/typefaces/Cera-Bold.otf');
+  font-weight: bold;
+}
+
+body {
+  font-family: 'Cera';
+  font-size: var(--typeRegular);
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

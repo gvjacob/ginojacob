@@ -1,5 +1,11 @@
-import Link from 'next/link';
+import Head from 'next/head';
 
-const Index = () => <div></div>;
+const Index = () => (
+  <div>
+    <Head>
+      <title>Gino</title>
+    </Head>
+  </div>
+);
 
 export default Index;

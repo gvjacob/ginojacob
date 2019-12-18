@@ -1,5 +1,6 @@
 import React from 'react';
 import App from 'next/app';
+import './_app.css';
 
 import Navigation from '../components/Navigation';
 
@@ -17,54 +18,11 @@ class CustomApp extends App {
   // }
 
   render() {
-    const tabs = [
-      { text: 'Gino', href: '/' },
-      { text: 'Developer', href: '/developer' },
-      { text: 'Designer', href: '/designer' },
-      { text: 'Ballroom Dancer', href: '/ballroomdancer' },
-    ];
-
     const { Component, pageProps } = this.props;
     return (
       <div className={'app'}>
-        <Navigation tabs={tabs} />
+        <Navigation />
         <Component {...pageProps} />
-
-        <style jsx global>{`
-          :root {
-            --primary: #ff3366;
-            --secondary: #828282;
-
-            --typeSmall: 12px;
-            --typeRegular: 18px;
-            --typeMedium: 24px;
-            --typeLarge: 36px;
-            --typeXLarge: 48px;
-            --typeHuge: 64px;
-          }
-
-          @font-face {
-            font-family: 'Cera';
-            src: url('/typefaces/Cera-Regular.otf');
-          }
-
-          @font-face {
-            font-family: 'Cera';
-            src: url('/typefaces/Cera-Bold.otf');
-            font-weight: bold;
-          }
-
-          body {
-            font-family: 'Cera';
-            font-size: var(--typeRegular);
-            color: black;
-          }
-
-          a {
-            text-decoration: none;
-            color: inherit;
-          }
-        `}</style>
 
         <style jsx>
           {`
