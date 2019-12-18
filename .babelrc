@@ -1,15 +1,18 @@
 {
-  "presets": [
-    "@babel/react",
-    [
-      "@babel/preset-env",
-      {
-        "modules": "commonjs"
-      }
-    ]
-  ],
   "env": {
+    "development": {
+      "presets": ["next/babel"]
+    },
     "test": {
+      "presets": [
+        "@babel/react",
+        [
+          "@babel/preset-env",
+          {
+            "modules": "commonjs"
+          }
+        ]
+      ],
       "plugins": [
         [
           "@babel/plugin-transform-runtime",
@@ -17,26 +20,26 @@
             "regenerator": true
           }
         ]
+      ],
+      "plugins": [
+        "@babel/plugin-syntax-dynamic-import",
+        [
+          "transform-imports",
+          {
+            "lodash": {
+              "transform": "lodash/${member}",
+              "preventFullImport": true
+            }
+          }
+        ],
+        [
+          "import",
+          {
+            "libraryName": "antd",
+            "libraryDirectory": "es"
+          }
+        ]
       ]
     }
-  },
-  "plugins": [
-    "@babel/plugin-syntax-dynamic-import",
-    [
-      "transform-imports",
-      {
-        "lodash": {
-          "transform": "lodash/${member}",
-          "preventFullImport": true
-        }
-      }
-    ],
-    [
-      "import",
-      {
-        "libraryName": "antd",
-        "libraryDirectory": "es"
-      }
-    ]
-  ]
+  }
 }
