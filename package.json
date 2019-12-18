@@ -1,42 +1,27 @@
 {
-  "name": "parcel-react",
+  "name": "ginojacob",
   "version": "1.0.0",
-  "description": "Starter React app built with Parcel",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel ./public/index.html -p 8080",
-    "restart": "npm run clean && npm run start",
-    "clean": "rm -rf ./dist ./.cache",
-    "build": "parcel build ./public/index.html",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "mc": "./scripts/createComponent.js",
-    "deploy": "rm -rf dist && npm run build && surge ./dist https://www.ginojacob.com"
+    "dev": "next ./src -p 8080",
+    "build": "next build ./src",
+    "start": "next start ./src"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gvjacob/parcel-react.git"
+    "url": "git+https://github.com/gvjacob/ginojacob.git"
   },
-  "author": "Gino Jacob",
-  "license": "MIT License",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gvjacob/parcel-react/issues"
+    "url": "https://github.com/gvjacob/ginojacob/issues"
   },
-  "homepage": "https://github.com/gvjacob/parcel-react#readme",
+  "homepage": "https://github.com/gvjacob/ginojacob#readme",
   "dependencies": {
-    "classnames": "^2.2.6",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.1",
-    "react-stack-grid": "^0.7.1",
-    "responsive-jsx": "^1.2.0"
-  },
-  "devDependencies": {
-    "parcel-bundler": "^1.12.3",
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
-    "@babel/preset-react": "^7.0.0",
-    "commander": "^2.20.0",
-    "css-modules": "^0.3.0",
-    "postcss-modules": "^1.4.1"
+    "next": "^9.1.5",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   }
 }
