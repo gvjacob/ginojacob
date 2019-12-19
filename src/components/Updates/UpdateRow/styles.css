@@ -1,0 +1,10 @@
+.story {
+  width: 60%;
+}
+
+.date {
+  text-align: right;
+  color: var(--secondary);
+
+  vertical-align: text-top;
+}

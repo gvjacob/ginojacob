@@ -1,5 +1,4 @@
 import React from 'react';
-import { gql } from 'apollo-boost';
 import { render, wait } from '@testing-library/react';
 import { MockedProvider } from '@apollo/react-testing';
 

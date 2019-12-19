@@ -1,0 +1,11 @@
+.spotifyActivity {
+}
+
+.track {
+  font-family: 'Cera';
+  margin-top: 4px;
+}
+
+.recommend {
+  color: var(--primary);
+}
