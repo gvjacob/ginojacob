@@ -41,8 +41,14 @@
     width: 100%;
 }
 
+.rest {
+  display:flex;
+  justify-content: space-evenly;
+
+  width: 60%;
+}
+
 
 .rightLink {
-  margin-left: 40px;
 }
 

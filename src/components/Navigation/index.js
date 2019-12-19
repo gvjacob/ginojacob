@@ -35,7 +35,7 @@ const Navigation = ({ className }) => {
         selected={isSelected(first.href)}
       />
 
-      <div className={'rest'}>
+      <div className={css.rest}>
         {rest.map(({ text, href }, index) => (
           <NavigationLink
             className={css.rightLink}
