@@ -52,8 +52,12 @@ class CustomApp extends App {
             ></script>
           </Head>
 
-          <Navigation />
-          <Social className={css.social} />
+          <div className={css.fixedContainer}>
+            <div className={css.fixed}>
+              <Navigation className={css.navigation} />
+              <Social className={css.social} />
+            </div>
+          </div>
 
           <div className={css.page}>
             <Component {...pageProps} />

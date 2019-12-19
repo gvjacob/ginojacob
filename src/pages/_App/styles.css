@@ -1,13 +1,32 @@
 .app {
   padding: 0 10%;
-  padding: 40px 10% 0 10%;
+  padding: 0 10% 0 10%;
+}
+
+.fixedContainer {
+  height: 100%;
+  width: 80%;
+
+  position: fixed;
+}
+
+.fixed {
+  height: 100%;
+  width: 100%;
+
+  position: relative;
+}
+
+.navigation {
+  position: absolute;
+  top: 0;
 }
 
 .social {
-  position: fixed;
   bottom: 0;
+  position: absolute;
 }
 
 .page {
-  padding: 40px 10% 0 10%;
+  padding: 0 10% 0 10%;
 }
