@@ -6,10 +6,10 @@ import ApolloClient, { InMemoryCache } from 'apollo-boost';
 import Head from 'next/head';
 import App from 'next/app';
 
-import Navigation from '../components/Navigation';
-import Social from '../components/Social';
-import css from './_app.css';
-import './index.css';
+import Navigation from '../../components/Navigation';
+import Social from '../../components/Social';
+import css from './styles.css';
+import '../index.css';
 
 const client = new ApolloClient({
   uri:
