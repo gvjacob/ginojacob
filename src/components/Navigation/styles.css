@@ -18,7 +18,7 @@
     background: var(--primary);
     transition: width .3s;
 
-    bottom: 10%;
+    bottom: 5%;
     left: 0;
     z-index: -1;
   }
@@ -32,7 +32,7 @@
   background: var(--primary);
   transition: width .3s;
 
-  bottom: 10%;
+  bottom: 5%;
   left: 0;
   z-index: -1;
 }

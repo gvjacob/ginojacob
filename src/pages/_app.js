@@ -1,8 +1,30 @@
 import React from 'react';
+import fetch from 'node-fetch';
+import { ApolloProvider } from '@apollo/react-hooks';
+import ApolloClient, { InMemoryCache } from 'apollo-boost';
+
+import Head from 'next/head';
 import App from 'next/app';
-import './_app.css';
 
 import Navigation from '../components/Navigation';
+import Social from '../components/Social';
+import css from './_app.css';
+import './index.css';
+
+const client = new ApolloClient({
+  uri:
+    'https://api.takeshape.io/project/4bb9e2e0-a18f-4c1a-99f3-3eab414085d7/graphql',
+
+  cache: new InMemoryCache({
+    addTypename: false,
+  }),
+
+  headers: {
+    'Content-Type': 'application/json',
+    Authorization: `Bearer dd4a14e9c44e4f5a9749f3fe2d6bb1ca`,
+  },
+  fetch,
+});
 
 class CustomApp extends App {
   // Only uncomment this method if you have blocking data requirements for
@@ -19,20 +41,22 @@ class CustomApp extends App {
 
   render() {
     const { Component, pageProps } = this.props;
-    return (
-      <div className={'app'}>
-        <Navigation />
-        <Component {...pageProps} />
 
-        <style jsx>
-          {`
-            .app {
-              padding: 0 10%;
-              padding: 40px 10% 0 10%;
-            }
-          `}
-        </style>
-      </div>
+    return (
+      <ApolloProvider client={client}>
+        <div className={css.app}>
+          <Head>
+            <script
+              src="https://kit.fontawesome.com/f9c2d11971.js"
+              crossOrigin="anonymous"
+            ></script>
+          </Head>
+
+          <Navigation />
+          <Social className={css.social} />
+          <Component {...pageProps} />
+        </div>
+      </ApolloProvider>
     );
   }
 }
