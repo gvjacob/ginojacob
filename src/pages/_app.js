@@ -54,7 +54,10 @@ class CustomApp extends App {
 
           <Navigation />
           <Social className={css.social} />
-          <Component {...pageProps} />
+
+          <div className={css.page}>
+            <Component {...pageProps} />
+          </div>
         </div>
       </ApolloProvider>
     );

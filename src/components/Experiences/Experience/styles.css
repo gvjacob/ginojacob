@@ -1,0 +1,62 @@
+.experience {
+  max-width: 250px;
+  height: 400px;
+
+  box-shadow: 0 0 1px;
+  display: flex;
+  flex-direction: column;
+
+  transition: transform 0.3s ease-in-out;
+}
+
+.experience:hover {
+  transform: translateY(-5px);
+}
+
+.experience:hover .company {
+  color: var(--primary);
+}
+
+.cover {
+  position: relative;
+}
+
+.asset {
+  height: 220px;
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.paint {
+  width: 100%;
+  height: 25px;
+  position: absolute;
+  bottom: 5px;
+
+  background: url('https://roomfive.net/wp-content/themes/roomfive-2019/images/paint-card.png');
+  background-size: cover;
+}
+
+.card {
+  padding: 20px;
+  flex-grow: 1;
+  position: relative;
+}
+
+.position {
+  font-family: 'Courier New';
+}
+
+.company {
+  transition: color 0.3s ease-in-out;
+}
+
+.url {
+  position: absolute;
+  bottom: 20px;
+  font-family: 'Courier New';
+}
+
+
+

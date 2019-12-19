@@ -19,9 +19,5 @@
   font-size: var(--typeMedium);
 
   margin-bottom: 20px;
-  transition: font-size 0.3s ease-in-out;
 }
 
-.icon:hover {
-  font-size: calc(var(--typeMedium) + 10px);
-}
