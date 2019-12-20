@@ -2,12 +2,18 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import cn from 'classnames';
 
+import withQuery from '../../hocs/withQuery';
+import { GINO_PNG_QUERY } from '../../queries';
 import css from './styles.css';
 
 /**
  * Full page headline for any of the pages.
  */
-const Headline = ({ className }) => {
+const Headline = ({ className, data }) => {
+  const {
+    getAsset: { sourceUrl },
+  } = data;
+
   const { asPath } = useRouter();
 
   const titles = [
@@ -22,16 +28,32 @@ const Headline = ({ className }) => {
   };
 
   return (
-    <div className={cn(css.headline, className)}>
-      {titles.map(({ title, href }) => {
-        return isSelected(href) ? (
-          <h1 key={title}>{title}</h1>
-        ) : (
-          <div key={title}>{title}</div>
-        );
-      })}
+    <div className={cn(css.headline, className)} data-testid={'Headline'}>
+      <div className={css.band}>
+        <img className={css.png} src={sourceUrl} />
+      </div>
+
+      <div className={css.titles}>
+        {titles.map(({ title, href }) => {
+          const selected = isSelected(href);
+
+          const titleClass = cn(css.title, {
+            [css.selected]: selected,
+          });
+
+          return selected ? (
+            <h1 className={titleClass} key={title}>
+              {title}
+            </h1>
+          ) : (
+            <div className={titleClass} key={title}>
+              {title}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
 
-export default Headline;
+export default withQuery(Headline, GINO_PNG_QUERY);

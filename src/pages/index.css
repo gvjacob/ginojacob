@@ -31,7 +31,11 @@ body {
   font-family: 'Cera';
   font-size: var(--typeRegular);
   color: black;
+
+  padding: 0;
+  margin: 0;
 }
+
 
 a {
   text-decoration: none;

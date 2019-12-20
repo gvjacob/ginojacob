@@ -1,3 +1,37 @@
 .headline {
   height: 100vh;
+
+  display: flex;
+}
+
+
+.titles {
+  margin: auto;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--typeHuge);
+  font-weight: bold;
+
+  &.selected {
+    color: var(--primary)
+  }
+}
+
+
+.band {
+  height: 100%;
+  width: 200px;
+  margin-left: 40px;
+
+  background-color: var(--primary);
+  position: relative;
+}
+
+.png {
+  width: 400px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }

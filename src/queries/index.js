@@ -1,5 +1,13 @@
 import { gql } from 'apollo-boost';
 
+export const GINO_PNG_QUERY = gql`
+  {
+    getAsset(_id: "70ea2750-5089-4608-b450-ff1a77bca47f") {
+      sourceUrl
+    }
+  }
+`;
+
 export const UPDATES_QUERY = gql`
   {
     getUpdateList(sort: [{ field: "date", order: "desc" }]) {
