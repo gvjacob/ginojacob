@@ -6,6 +6,7 @@
 }
 
 .link {
+  width: fit-content;
   position: relative;
 
   &.selected {
