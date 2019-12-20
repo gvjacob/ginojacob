@@ -23,7 +23,6 @@
 .band {
   height: 100%;
   width: 200px;
-  margin-left: 40px;
 
   background-color: var(--primary);
   position: relative;

@@ -20,32 +20,21 @@ const Navigation = ({ className }) => {
     { text: 'Ballroom Dancer', href: '/ballroomdancer' },
   ];
 
-  const first = tabs[0];
-  const rest = tabs.slice(1);
-
   const isSelected = (href) => {
     return asPath === href;
   };
 
   return (
     <div className={cn(css.navigation, className)} data-testid={'Navigation'}>
-      <NavigationLink
-        text={first.text}
-        href={first.href}
-        selected={isSelected(first.href)}
-      />
-
-      <div className={css.rest}>
-        {rest.map(({ text, href }, index) => (
-          <NavigationLink
-            className={css.rightLink}
-            text={text}
-            href={href}
-            selected={isSelected(href)}
-            key={text}
-          />
-        ))}
-      </div>
+      {tabs.map(({ text, href }, index) => (
+        <NavigationLink
+          className={css.rightLink}
+          text={text}
+          href={href}
+          selected={isSelected(href)}
+          key={text}
+        />
+      ))}
     </div>
   );
 };
