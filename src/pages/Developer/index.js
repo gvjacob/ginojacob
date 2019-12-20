@@ -7,11 +7,11 @@ import css from './styles.css';
 /**
  * Developer page ('/developer')
  */
-const Developer = () => {
+const Developer = ({ className }) => {
   const stack = [Headline];
 
   return (
-    <div>
+    <div className={className}>
       <Head>
         <title>Gino | Developer</title>
       </Head>

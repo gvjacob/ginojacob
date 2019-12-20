@@ -15,6 +15,14 @@ describe('JumpTo', () => {
     });
   });
 
+  it('renders Back to Top', async () => {
+    const { getByText } = render(<JumpTo />);
+
+    await wait(() => {
+      expect(getByText('Back to Top')).toBeInTheDocument();
+    });
+  });
+
   it('renders all ids', async () => {
     const { getByText } = render(<JumpTo />);
 
