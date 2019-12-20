@@ -9,13 +9,13 @@ import css from './styles.css';
 /**
  * Base page ('/'), showcasing Gino.
  */
-const Index = () => {
+const Index = ({ className }) => {
   const stack = [Headline, Updates, Experiences];
 
   return (
-    <div>
+    <div className={className}>
       <Head>
-        <title>Gino</title>
+        <title>Gino Jacob</title>
       </Head>
 
       {stack.map(($component, index) => (

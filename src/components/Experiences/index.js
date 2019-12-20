@@ -16,7 +16,11 @@ const Experiences = ({ className, data }) => {
   } = data;
 
   return (
-    <div className={cn(css.experiences, className)} data-testid={'Experiences'}>
+    <div
+      className={cn('jumpto', css.experiences, className)}
+      data-testid={'Experiences'}
+      id={'Experiences'}
+    >
       {experiences.map(({ asset, ...rest }) => (
         <Experience {...rest} asset={asset.sourceUrl} key={rest.company} />
       ))}

@@ -6,8 +6,8 @@ import ApolloClient, { InMemoryCache } from 'apollo-boost';
 import Head from 'next/head';
 import App from 'next/app';
 
-import Navigation from '../../components/Navigation';
-import Social from '../../components/Social';
+import Sidebar from '../../components/Sidebar';
+
 import css from './styles.css';
 import '../index.css';
 
@@ -52,16 +52,11 @@ class CustomApp extends App {
             ></script>
           </Head>
 
-          <div className={css.fixedContainer}>
-            <div className={css.fixed}>
-              <Navigation className={css.navigation} />
-              <Social className={css.social} />
-            </div>
+          <div className={css.sidebar}>
+            <Sidebar />
           </div>
 
-          <div className={css.page}>
-            <Component {...pageProps} />
-          </div>
+          <Component className={css.page} {...pageProps} />
         </div>
       </ApolloProvider>
     );

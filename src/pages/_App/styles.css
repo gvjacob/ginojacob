@@ -2,28 +2,11 @@
   padding: 0 10% 0 5%;
 }
 
-.fixedContainer {
+.sidebar {
   height: 100%;
-  width: 80%;
+  width: 20%;
 
   position: fixed;
-}
-
-.fixed {
-  height: 100%;
-  width: 100%;
-
-  position: relative;
-}
-
-.navigation {
-  position: absolute;
-  top: 0;
-}
-
-.social {
-  bottom: 0;
-  position: absolute;
 }
 
 .page {

@@ -1,0 +1,23 @@
+.sidebar {
+  height: 100%;
+  position: relative;
+}
+
+.jumpTo {
+  margin-top: 40px;
+  animation: fadeIn 0.3s linear;
+}
+
+.social {
+  bottom: 0;
+  position: absolute;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -20,7 +20,11 @@ const Updates = ({ className, data }) => {
   const [current, updates] = partition(items, ({ date }) => date === null);
 
   return (
-    <div className={cn(css.updates, className)} data-testid={'Updates'}>
+    <div
+      className={cn('jumpto', css.updates, className)}
+      data-testid={'Updates'}
+      id={'Updates'}
+    >
       <table className={css.table}>
         <tbody>
           <SpotifyActivity />
