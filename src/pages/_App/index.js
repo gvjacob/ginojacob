@@ -6,6 +6,7 @@ import ApolloClient, { InMemoryCache } from 'apollo-boost';
 import Head from 'next/head';
 import App from 'next/app';
 
+import Headline from '../../components/Headline';
 import Sidebar from '../../components/Sidebar';
 
 import css from './styles.css';
@@ -56,8 +57,9 @@ class CustomApp extends App {
             <Sidebar observable={'Page'} />
           </div>
 
-          <div id={'Page'}>
-            <Component className={css.page} {...pageProps} />
+          <div className={css.page} id={'Page'}>
+            <Headline className={css.headline} />
+            <Component {...pageProps} />
           </div>
         </div>
       </ApolloProvider>

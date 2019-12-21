@@ -1,6 +1,5 @@
 import Head from 'next/head';
 
-import Headline from '../../components/Headline';
 import Updates from '../../components/Updates';
 
 import css from './styles.css';
@@ -9,12 +8,12 @@ import css from './styles.css';
  * Developer page ('/developer')
  */
 const Developer = ({ className }) => {
-  const stack = [Headline, Updates];
+  const stack = [Updates];
 
   return (
     <div className={className}>
       <Head>
-        <title>Gino | Developer</title>
+        <title>Gino Jacob | Developer</title>
       </Head>
 
       {stack.map(($component, index) => (

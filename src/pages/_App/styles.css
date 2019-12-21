@@ -9,6 +9,10 @@
   position: fixed;
 }
 
+.headline {
+  margin-bottom: 150px;
+}
+
 .page {
   padding-left: 20%;
 }
