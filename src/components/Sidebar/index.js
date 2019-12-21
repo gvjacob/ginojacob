@@ -9,11 +9,11 @@ import css from './styles.css';
 /**
  * Sidebar containing <Navigation> and <Social>
  */
-const Sidebar = ({ className }) => {
+const Sidebar = ({ className, observable }) => {
   return (
     <div className={cn(css.sidebar, className)}>
       <Navigation className={css.navigation} />
-      <JumpTo className={css.jumpTo} />
+      <JumpTo className={css.jumpTo} observable={observable} />
       <Social className={css.social} />
     </div>
   );

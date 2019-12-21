@@ -53,10 +53,12 @@ class CustomApp extends App {
           </Head>
 
           <div className={css.sidebar}>
-            <Sidebar />
+            <Sidebar observable={'Page'} />
           </div>
 
-          <Component className={css.page} {...pageProps} />
+          <div id={'Page'}>
+            <Component className={css.page} {...pageProps} />
+          </div>
         </div>
       </ApolloProvider>
     );

@@ -3,9 +3,17 @@ import { render, wait } from '@testing-library/react';
 
 import JumpTo from './';
 
+class MutationObserver {
+  constructor(callback) {}
+  observe(element, config) {}
+}
+
 describe('JumpTo', () => {
   const elements = [{ id: '1' }, { id: '2' }];
+
+  window.MutationObserver = MutationObserver;
   document.getElementsByClassName = () => elements;
+  document.getElementById = () => null;
 
   it('renders', async () => {
     const { getByTestId } = render(<JumpTo />);

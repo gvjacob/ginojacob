@@ -8,19 +8,29 @@ import css from './styles.css';
  * Find and present all jump to components
  * in the document.
  */
-const JumpTo = ({ className }) => {
+const JumpTo = ({ className, observable }) => {
   const [jumpToElements, setJumpToElements] = useState([]);
 
-  const getJumpToIds = () => {
+  const setJumpToIds = () => {
     const elementsByClass = document.getElementsByClassName('jumpto');
     const array = Array.from(elementsByClass);
+    const ids = compact(array.map(({ id }) => id));
 
-    return compact(array.map(({ id }) => id));
+    setJumpToElements(ids);
   };
 
   useEffect(() => {
     setTimeout(() => {
-      setJumpToElements(getJumpToIds());
+      const mutationObserver = new MutationObserver(setJumpToIds);
+      const element = document.getElementById(observable);
+
+      mutationObserver.observe(element, {
+        attributes: true,
+        childList: true,
+        subtree: true,
+      });
+
+      setJumpToIds();
     }, 1000);
   }, []);
 
