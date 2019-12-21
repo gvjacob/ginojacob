@@ -1,0 +1,24 @@
+.footer  {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.name {
+  display: block;
+  font-weight: bold;
+
+  transition: color 0.3s ease-in-out;
+}
+
+.name:hover {
+  color: var(--primary);
+}
+
+.header {
+  font-family: 'Courier New';
+  color: var(--secondary);
+  margin-bottom: 10px;
+}
+
+

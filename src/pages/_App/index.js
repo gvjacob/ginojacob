@@ -8,6 +8,7 @@ import App from 'next/app';
 
 import Headline from '../../components/Headline';
 import Sidebar from '../../components/Sidebar';
+import Footer from '../../components/Footer';
 
 import css from './styles.css';
 import '../index.css';
@@ -60,6 +61,7 @@ class CustomApp extends App {
           <div className={css.page} id={'Page'}>
             <Headline className={css.headline} />
             <Component {...pageProps} />
+            <Footer />
           </div>
         </div>
       </ApolloProvider>

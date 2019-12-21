@@ -1,17 +1,15 @@
 import Head from 'next/head';
 
-import css from './styles.css';
-
 /**
- * Developer page ('/developer')
+ * Ballroom Dancer page ('/ballroomdancer')
  */
-const Developer = ({ className }) => {
+const BallroomDancer = ({ className }) => {
   const stack = [];
 
   return (
     <div className={className}>
       <Head>
-        <title>Gino Jacob | Developer</title>
+        <title>Gino Jacob | Ballroom Dancer</title>
       </Head>
 
       {stack.map(($component, index) => (
@@ -21,4 +19,4 @@ const Developer = ({ className }) => {
   );
 };
 
-export default Developer;
+export default BallroomDancer;

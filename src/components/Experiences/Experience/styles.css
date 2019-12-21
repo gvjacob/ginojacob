@@ -46,6 +46,7 @@
 
 .position {
   font-family: 'Courier New';
+  color: var(--secondary);
 }
 
 .company {
