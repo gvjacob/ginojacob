@@ -21,9 +21,6 @@ test:
   stage: test
   script:
     - make test
-  artifacts:
-    paths:
-      - node_modules/
 
 deploy:
   image: node:latest
