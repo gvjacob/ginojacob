@@ -17,7 +17,7 @@ const Headline = ({ className, data }) => {
   const { asPath } = useRouter();
 
   const titles = [
-    { title: 'Gino Jacob', href: '/' },
+    { title: 'Gino V Jacob', href: '/' },
     { title: 'Developer', href: '/developer' },
     { title: 'Designer', href: '/designer' },
     { title: 'Ballroom Dancer', href: '/ballroomdancer' },
