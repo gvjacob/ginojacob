@@ -13,7 +13,7 @@ describe('Headline', () => {
     asPath: '/',
   };
 
-  const titles = ['Gino Jacob', 'Developer', 'Designer', 'Ballroom Dancer'];
+  const titles = ['Gino V Jacob', 'Developer', 'Designer', 'Ballroom Dancer'];
 
   const mocks = [
     {
