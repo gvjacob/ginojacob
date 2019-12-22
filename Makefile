@@ -5,3 +5,6 @@ start:
 
 test:
 	npm test
+
+test-watch:
+	npm test -- --watchAll
