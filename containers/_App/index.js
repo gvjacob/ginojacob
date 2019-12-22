@@ -35,7 +35,12 @@ class CustomApp extends App {
             <script
               src="https://kit.fontawesome.com/f9c2d11971.js"
               crossOrigin="anonymous"
-            ></script>
+            />
+            <link
+              rel="icon"
+              type="image/png"
+              href="https://images.takeshape.io/4bb9e2e0-a18f-4c1a-99f3-3eab414085d7/dev/d32c9ec6-b33d-457b-adbf-0899e7598e8e/favicon.0701fb19.png?auto=format%2Ccompress"
+            />
           </Head>
 
           <div className={css.sidebar}>
