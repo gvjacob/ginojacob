@@ -1,32 +1,16 @@
 import React from 'react';
-import fetch from 'node-fetch';
 import { ApolloProvider } from '@apollo/react-hooks';
-import ApolloClient, { InMemoryCache } from 'apollo-boost';
 
 import Head from 'next/head';
 import App from 'next/app';
 
+import withApollo from '../../hocs/withApollo';
 import Headline from '../../components/Headline';
 import Sidebar from '../../components/Sidebar';
 import Footer from '../../components/Footer';
 
 import css from './styles.css';
-import '../index.css';
-
-const client = new ApolloClient({
-  uri:
-    'https://api.takeshape.io/project/4bb9e2e0-a18f-4c1a-99f3-3eab414085d7/graphql',
-
-  cache: new InMemoryCache({
-    addTypename: false,
-  }),
-
-  headers: {
-    'Content-Type': 'application/json',
-    Authorization: `Bearer dd4a14e9c44e4f5a9749f3fe2d6bb1ca`,
-  },
-  fetch,
-});
+import './index.css';
 
 class CustomApp extends App {
   // Only uncomment this method if you have blocking data requirements for
@@ -42,10 +26,10 @@ class CustomApp extends App {
   // }
 
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps, apollo } = this.props;
 
     return (
-      <ApolloProvider client={client}>
+      <ApolloProvider client={apollo}>
         <div className={css.app}>
           <Head>
             <script
@@ -69,4 +53,4 @@ class CustomApp extends App {
   }
 }
 
-export default CustomApp;
+export default withApollo(CustomApp);
