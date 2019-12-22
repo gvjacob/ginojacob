@@ -6,8 +6,7 @@
 }
 
 .link {
-  width: fit-content;
-  position: relative;
+  composes: highlight from global;
 
   &.selected {
     font-weight: bold;
@@ -16,23 +15,6 @@
   &.selected::after {
     width: 100%;
   }
-}
-
-.link::after {
-  position: absolute;
-  content: '';
-  width: 0;
-  height: 5px;
-  background: var(--primary) !important;
-  transition: width .3s;
-
-  top: 13px;
-  left: 0;
-  z-index: -1;
-}
-
-.link:hover::after {
-    width: 100%;
 }
 
 .rest {

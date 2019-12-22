@@ -41,3 +41,25 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+:global .highlight {
+  position: relative;
+  width: fit-content;
+}
+
+:global .highlight::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 5px;
+  background: var(--primary) !important;
+  transition: width .3s;
+
+  top: 13px;
+  left: 0;
+  z-index: -1;
+}
+
+:global .highlight:hover::after {
+    width: 100%;
+}

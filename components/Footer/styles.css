@@ -5,14 +5,10 @@
 }
 
 .name {
+  composes: highlight from global;
+
   display: block;
   font-weight: bold;
-
-  transition: color 0.3s ease-in-out;
-}
-
-.name:hover {
-  color: var(--primary);
 }
 
 .header {
