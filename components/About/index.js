@@ -20,12 +20,13 @@ const About = ({ className, data }) => {
   const { position, company, companyUrl } = items[0];
 
   return (
-    <div className={cn(className)} data-testid={'About'}>
+    <div className={cn('jumpto', className)} id={'About'} data-testid={'About'}>
       <div>
         <div className={css.header}>Currently</div>
         <h2 className={css.position}>{position}</h2>
-        <h2 className={css.company}>
-          <a href={companyUrl} target={'_blank'}>
+        <h2>
+          @{' '}
+          <a className={css.company} href={companyUrl} target={'_blank'}>
             {company}
           </a>
         </h2>
