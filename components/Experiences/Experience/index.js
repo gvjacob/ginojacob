@@ -17,7 +17,7 @@ const Experience = ({ className, company, position, url, asset }) => {
 
       <div className={css.card}>
         <div className={css.position}>{position}</div>
-        <h2 className={css.company}>{company}</h2>
+        <h3 className={css.company}>{company}</h3>
 
         {url && (
           <a className={css.url} href={url} target={'_blank'}>

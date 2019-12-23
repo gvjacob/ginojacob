@@ -6,7 +6,7 @@ import css from './styles.css';
 const GetInTouch = ({ className }) => {
   return (
     <div className={cn(className)} data-testid={'GetInTouch'}>
-      <div className={css.title}>Get in touch!</div>
+      <h2 className={css.title}>Get in touch!</h2>
       <p className={css.paragraph}>
         Feel free to{' '}
         <a className={css.cta} href={'mailto:gvjacob@outlook.com'}>

@@ -44,3 +44,19 @@ export const RESOURCES_QUERY = gql`
     }
   }
 `;
+
+export const ABOUT_QUERY = gql`
+  {
+    getBiography {
+      about
+    }
+    getExperienceList(filter: { match: { current: true } }) {
+      items {
+        position
+        company
+        companyUrl
+      }
+    }
+  }
+`;
+

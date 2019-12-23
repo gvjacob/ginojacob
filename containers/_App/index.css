@@ -42,6 +42,22 @@ a {
   color: inherit;
 }
 
+h1 {
+  font-size: var(--typeHuge);
+}
+
+h2 {
+  font-size: var(--typeLarge);
+}
+
+h3 {
+  font-size: var(--typeMedium);
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
 :global .highlight {
   position: relative;
   width: fit-content;

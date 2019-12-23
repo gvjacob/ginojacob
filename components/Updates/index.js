@@ -27,8 +27,6 @@ const Updates = ({ className, data }) => {
     >
       <table className={css.table}>
         <tbody>
-          <SpotifyActivity />
-
           {current.map((update) => (
             <UpdateRow key={update.story} {...update} />
           ))}
