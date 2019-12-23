@@ -13,9 +13,19 @@
   margin: 0;
   font-size: var(--typeHuge);
   font-weight: bold;
+  color: black;
 
   &.selected {
-    color: var(--primary)
+    color: var(--primary);
+    animation: changeColor 0.3s linear;
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    color: inherit;
+  } 100% {
+    color: var(--primary);
   }
 }
 
