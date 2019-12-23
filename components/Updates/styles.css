@@ -5,3 +5,14 @@
 .table {
   border-spacing: 0 20px;
 }
+
+.dots {
+  font-size: var(--typeMedium);
+  margin: auto;
+
+  border: none;
+  display: flex;
+
+  color: var(--primary);
+}
+

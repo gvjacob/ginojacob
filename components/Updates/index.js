@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { partition } from 'lodash';
 import cn from 'classnames';
 
@@ -17,7 +17,13 @@ const Updates = ({ className, data }) => {
     getUpdateList: { items },
   } = data;
 
-  const [current, updates] = partition(items, ({ date }) => date === null);
+  const [expanded, setExpanded] = useState(false);
+
+  const [bookmarked, updates] = partition(
+    items,
+    ({ bookmark }) => bookmark === true,
+  );
+  const truncatedUpdates = updates.slice(0, 3);
 
   return (
     <div
@@ -27,16 +33,30 @@ const Updates = ({ className, data }) => {
     >
       <table className={css.table}>
         <tbody>
-          {current.map((update) => (
+          {bookmarked.map((update) => (
             <UpdateRow key={update.story} {...update} />
           ))}
 
-          {updates.map((update) => (
+          {(expanded ? updates : truncatedUpdates).map((update) => (
             <UpdateRow key={update.story} {...update} />
           ))}
         </tbody>
       </table>
+      <Dots onClick={() => setExpanded(!expanded)} />
     </div>
+  );
+};
+
+const Dots = ({ className, onClick }) => {
+  return (
+    <button
+      type={'button'}
+      className={cn(css.dots, className)}
+      onClick={onClick}
+      data-testid={'Dots'}
+    >
+      <i className={'fas fa-ellipsis-h'} />
+    </button>
   );
 };
 

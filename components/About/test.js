@@ -17,6 +17,7 @@ describe('About', () => {
       story:
         'Currently working on a Spotify widget for peer-to-peer song recommendations',
       date: null,
+      bookmark: true,
     },
   ];
 

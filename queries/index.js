@@ -14,6 +14,7 @@ export const UPDATES_QUERY = gql`
       items {
         story
         date
+        bookmark
       }
     }
   }
@@ -59,4 +60,3 @@ export const ABOUT_QUERY = gql`
     }
   }
 `;
-
