@@ -27,6 +27,7 @@ const Updates = ({ className, data }) => {
 
   return (
     <div className={cn(css.updates, className)} data-testid={'Updates'}>
+      <div className={cn(css.header, css.events)}>Events</div>
       <table className={css.table}>
         <tbody>
           {bookmarked.map((update) => (

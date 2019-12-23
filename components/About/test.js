@@ -91,16 +91,4 @@ describe('About', () => {
       expect(getByText(about)).toBeInTheDocument();
     });
   });
-
-  it('renders <Updates>', async () => {
-    const { getByTestId } = render(
-      <MockedProvider mocks={mocks} addTypename={false}>
-        <About />
-      </MockedProvider>,
-    );
-
-    await wait(() => {
-      expect(getByTestId('Updates')).toBeInTheDocument();
-    });
-  });
 });

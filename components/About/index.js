@@ -3,7 +3,6 @@ import Markdown from 'react-markdown';
 import cn from 'classnames';
 
 import { ABOUT_QUERY } from '../../queries';
-import Updates from '../Updates';
 import withQuery from '../../hocs/withQuery';
 import css from './styles.css';
 
@@ -34,9 +33,6 @@ const About = ({ className, data }) => {
 
       <div className={css.header}>About Me</div>
       <Markdown className={css.about} source={about} />
-
-      <div className={cn(css.header, css.events)}>Events</div>
-      <Updates />
     </div>
   );
 };
