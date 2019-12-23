@@ -7,6 +7,8 @@
 }
 
 .dots {
+  composes: bounce from global;
+
   font-size: var(--typeMedium);
   margin: auto;
 

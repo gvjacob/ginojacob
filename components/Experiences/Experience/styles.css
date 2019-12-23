@@ -1,4 +1,6 @@
 .experience {
+  composes: bounce from global;
+
   max-width: 280px;
   height: 400px;
 
@@ -7,10 +9,6 @@
   flex-direction: column;
 
   transition: transform 0.3s ease-in-out;
-}
-
-.experience:hover {
-  transform: translateY(-5px);
 }
 
 .experience:hover .company {

@@ -15,14 +15,12 @@
 }
 
 .icon {
+  composes: bounce from global;
+
   color: var(--primary);
   font-size: var(--typeMedium);
 
   margin-bottom: 20px;
-  transition: transform 0.3s ease-in-out;
 }
 
-.icon:hover {
-  transform: translateY(-5px);
-}
 

@@ -58,6 +58,14 @@ h1, h2, h3 {
   margin: 0;
 }
 
+:global .bounce {
+  transition: transform 0.3s ease-in-out;
+}
+
+:global .bounce:hover {
+  transform: translateY(-5px);
+}
+
 :global .highlight {
   position: relative;
   width: fit-content;

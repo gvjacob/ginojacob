@@ -26,11 +26,7 @@ const Updates = ({ className, data }) => {
   const truncatedUpdates = updates.slice(0, 3);
 
   return (
-    <div
-      className={cn('jumpto', css.updates, className)}
-      data-testid={'Updates'}
-      id={'Updates'}
-    >
+    <div className={cn(css.updates, className)} data-testid={'Updates'}>
       <table className={css.table}>
         <tbody>
           {bookmarked.map((update) => (
