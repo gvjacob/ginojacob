@@ -1,0 +1,11 @@
+.story {
+  width: 60%;
+  font-family: 'Cera';
+}
+
+.date {
+  text-align: right;
+  color: var(--secondary);
+
+  vertical-align: text-top;
+}

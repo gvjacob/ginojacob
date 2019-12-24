@@ -1,0 +1,26 @@
+.social {
+  display: flex;
+  flex-direction: column;
+
+  width: var(--typeMedium);
+}
+
+.social::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100px;
+  background-color: var(--primary);
+  margin: 0px auto;
+}
+
+.icon {
+  composes: bounce from global;
+
+  color: var(--primary);
+  font-size: var(--typeMedium);
+
+  margin-bottom: 20px;
+}
+
+

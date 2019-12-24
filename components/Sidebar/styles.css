@@ -1,0 +1,22 @@
+.sidebar {
+  height: 100%;
+  position: relative;
+}
+
+.spotify {
+  margin-top: 40px;
+}
+
+.social {
+  bottom: 0;
+  position: absolute;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

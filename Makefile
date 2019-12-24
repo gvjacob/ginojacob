@@ -1,8 +1,10 @@
-install:
-	npm install
+.PHONY: test
 
 start:
-	npm start
+	npm run dev
 
-build:
-	npm run build
+test:
+	npm test
+
+test-watch:
+	npm test -- --watchAll

@@ -2,6 +2,7 @@ image: node:latest
 
 stages:
   - build
+  - test
   - deploy
 
 cache:
@@ -11,17 +12,19 @@ cache:
 build:
   stage: build
   script:
-    - make install
-    - make build
+    - npm install
   artifacts:
     paths:
       - node_modules/
-      - dist/
+
+test:
+  stage: test
+  script:
+    - make test
 
 deploy:
   image: node:latest
   stage: deploy
   script:
     - npm install -g now
-    - cp now.json dist/now.json
-    - now dist --token ${NOW_TOKEN} --prod
+    - now --token ${NOW_TOKEN} --prod
