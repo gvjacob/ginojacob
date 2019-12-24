@@ -9,7 +9,7 @@ import Card from '../Card';
 import css from './styles.css';
 
 /**
- * Row of <Experience />.
+ * Row of experience <Card />.
  */
 const Experiences = ({ className, data }) => {
   const {

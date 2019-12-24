@@ -9,7 +9,7 @@ const BallroomDancer = ({ className }) => {
   return (
     <div className={className}>
       <Head>
-        <title>Gino Jacob | Ballroom Dancer</title>
+        <title>Gino V Jacob | Ballroom Dancer</title>
       </Head>
 
       {stack.map(($component, index) => (

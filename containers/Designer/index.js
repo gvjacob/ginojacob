@@ -9,7 +9,7 @@ const Designer = ({ className }) => {
   return (
     <div className={className}>
       <Head>
-        <title>Gino Jacob | Designer</title>
+        <title>Gino V Jacob | Designer</title>
       </Head>
 
       {stack.map(($component, index) => (

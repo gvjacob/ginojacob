@@ -16,7 +16,7 @@ const Index = ({ className }) => {
   return (
     <div className={className}>
       <Head>
-        <title>Gino Jacob</title>
+        <title>Gino V Jacob</title>
       </Head>
 
       {stack.map(($component, index) => (
