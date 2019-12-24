@@ -44,7 +44,7 @@ describe('Experiences', () => {
     });
   });
 
-  it('renders all experiences', async () => {
+  it('renders all experience cards', async () => {
     const { getAllByTestId } = render(
       <MockedProvider mocks={mocks} addTypename={false}>
         <Experiences />
@@ -52,7 +52,7 @@ describe('Experiences', () => {
     );
 
     await wait(() => {
-      expect(getAllByTestId('Experience')).toHaveLength(experiences.length);
+      expect(getAllByTestId('Card')).toHaveLength(experiences.length);
     });
   });
 });

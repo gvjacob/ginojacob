@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import cn from 'classnames';
 
 import Navigation from '../Navigation';
-import JumpTo from '../JumpTo';
+import SpotifyActivity from '../SpotifyActivity';
 import Social from '../Social';
 import css from './styles.css';
 
@@ -13,7 +13,7 @@ const Sidebar = ({ className, observable }) => {
   return (
     <div className={cn(css.sidebar, className)}>
       <Navigation className={css.navigation} />
-      <JumpTo className={css.jumpTo} observable={observable} />
+      <SpotifyActivity className={css.spotify} />
       <Social className={css.social} />
     </div>
   );

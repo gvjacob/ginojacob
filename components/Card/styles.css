@@ -1,8 +1,7 @@
-.experience {
+.card {
   composes: bounce from global;
 
   max-width: 280px;
-  height: 400px;
 
   box-shadow: 0 0 1px;
   display: flex;
@@ -11,7 +10,7 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.experience:hover .company {
+.card:hover .title {
   color: var(--primary);
 }
 
@@ -36,18 +35,20 @@
   background-size: cover;
 }
 
-.card {
+.copy {
   padding: 20px;
   flex-grow: 1;
   position: relative;
+
+  height: 150px;
 }
 
-.position {
+.subtitle {
   font-family: 'Courier New';
   color: var(--secondary);
 }
 
-.company {
+.title {
   margin-top: 20px;
   transition: color 0.3s ease-in-out;
 }

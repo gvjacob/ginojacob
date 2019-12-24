@@ -5,7 +5,6 @@ import cn from 'classnames';
 import withQuery from '../../hocs/withQuery';
 import { UPDATES_QUERY } from '../../queries';
 import UpdateRow from './UpdateRow';
-import SpotifyActivity from './SpotifyActivity';
 import css from './styles.css';
 
 /**

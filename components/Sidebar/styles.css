@@ -3,9 +3,8 @@
   position: relative;
 }
 
-.jumpTo {
+.spotify {
   margin-top: 40px;
-  animation: fadeIn 0.3s linear;
 }
 
 .social {

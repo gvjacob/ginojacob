@@ -4,7 +4,7 @@ import cn from 'classnames';
 
 import withQuery from '../../hocs/withQuery';
 import { EXPERIENCES_QUERY } from '../../queries';
-import Experience from './Experience';
+import Card from '../Card';
 
 import css from './styles.css';
 
@@ -25,8 +25,13 @@ const Experiences = ({ className, data }) => {
       id={'Experiences'}
     >
       <StackGrid columnWidth={'33%'} enableSSR>
-        {experiences.map(({ asset, ...rest }) => (
-          <Experience {...rest} asset={asset.sourceUrl} key={rest.company} />
+        {experiences.map(({ company, position, url, asset }) => (
+          <Card
+            title={company}
+            subtitle={position}
+            url={url}
+            asset={asset.sourceUrl}
+          />
         ))}
       </StackGrid>
     </div>
