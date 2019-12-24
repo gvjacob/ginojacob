@@ -12,14 +12,14 @@ describe('DeveloperProjects', () => {
       subtitle: 'Spotify DJ',
       assets: [{ asset: { sourceUrl: 'jive.ginojacob.com' } }],
       url: 'jive.ginojacob.com',
-      repositoryUrl: 'jive.ginojacob.com',
+      repositoryUrl: 'jive.github.com',
     },
     {
       title: 'Chef',
       subtitle: 'recipe platform',
       assets: [{ asset: { sourceUrl: 'chef.ginojacob.com' } }],
       url: 'chef.ginojacob.com',
-      repositoryUrl: 'chef.ginojacob.com',
+      repositoryUrl: 'chef.github.com',
     },
   ];
 

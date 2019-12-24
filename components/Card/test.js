@@ -6,6 +6,10 @@ import Card from './';
 describe('Card', () => {
   const url = 'pluralsight.ginojacob.com';
   const asset = 'pluralsight.ginojacob.com';
+  const icons = [
+    { url: 'one.github.com', faClass: '' },
+    { url: 'two.github.com', faClass: '' },
+  ];
 
   const props = {
     title: 'Pluralsight',
@@ -30,6 +34,15 @@ describe('Card', () => {
   it('renders url if provided', () => {
     const { getByText, container } = render(<Card {...props} url={url} />);
 
+    expect(getByText('Learn more')).toBeInTheDocument();
     expect(container.querySelector(`a[href="${url}"]`)).toBeInTheDocument();
+  });
+
+  it('renders icons if provided', () => {
+    const { getByText, container } = render(<Card {...props} icons={icons} />);
+
+    icons.forEach(({ url }) => {
+      expect(container.querySelector(`a[href="${url}"]`)).toBeInTheDocument();
+    });
   });
 });

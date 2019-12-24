@@ -2,6 +2,7 @@
   composes: bounce from global;
 
   max-width: 280px;
+  box-sizing: border-box;
 
   box-shadow: 0 0 1px;
   display: flex;
@@ -53,10 +54,31 @@
   transition: color 0.3s ease-in-out;
 }
 
-.url {
+.bottom {
   position: absolute;
   bottom: 20px;
+  width: calc(100% - 40px);
+}
+
+.url {
+  composes: highlight from global;
+
   font-family: 'Courier New';
+  float: left;
+}
+
+
+.icons {
+  float: right;
+}
+
+.icon {
+  margin-left: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.icon:hover {
+  color: var(--primary);
 }
 
 

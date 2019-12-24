@@ -3,7 +3,7 @@ import { get } from 'lodash';
 import StackGrid from 'react-stack-grid';
 import cn from 'classnames';
 
-import Card from '../Card';
+import Card, { GITHUB, LINK } from '../Card';
 import withQuery from '../../hocs/withQuery';
 import { DEVELOPER_PROJECTS_QUERY } from '../../queries';
 
@@ -26,12 +26,16 @@ const DeveloperProjects = ({ className, data }) => {
         gutterWidth={10}
         enableSSR
       >
-        {items.map(({ title, subtitle, assets }) => (
+        {items.map(({ title, subtitle, assets, url, repositoryUrl }) => (
           <Card
             title={title}
             subtitle={subtitle}
             asset={get(assets, [0, 'asset', 'sourceUrl'], null)}
             key={title}
+            icons={[
+              { url: repositoryUrl, faClass: GITHUB },
+              { url: url, faClass: LINK },
+            ]}
           />
         ))}
       </StackGrid>
