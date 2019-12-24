@@ -26,7 +26,11 @@ const Updates = ({ className, data }) => {
   const truncatedUpdates = updates.slice(0, 3);
 
   return (
-    <div className={cn(css.updates, className)} data-testid={'Updates'}>
+    <div
+      className={cn('jumpto', css.updates, className)}
+      data-testid={'Updates'}
+      id={'Events'}
+    >
       <div className={cn(css.header, css.events)}>Events</div>
       <table className={css.table}>
         <tbody>
