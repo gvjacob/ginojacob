@@ -1,10 +1,14 @@
 import Head from 'next/head';
 
+import DesignerProjects from '../../components/DesignerProjects';
+
+import css from './styles.css';
+
 /**
  * Designer page ('/designer')
  */
 const Designer = ({ className }) => {
-  const stack = [];
+  const stack = [DesignerProjects];
 
   return (
     <div className={className}>

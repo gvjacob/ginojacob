@@ -41,7 +41,7 @@
   flex-grow: 1;
   position: relative;
 
-  height: 150px;
+  min-height: 150px;
 }
 
 .subtitle {
@@ -73,7 +73,7 @@
 }
 
 .icon {
-  margin-left: 10px;
+  margin-left: 20px;
   transition: color 0.3s ease-in-out;
 }
 
