@@ -60,3 +60,24 @@ export const ABOUT_QUERY = gql`
     }
   }
 `;
+
+export const DEVELOPER_PROJECTS_QUERY = gql`
+  {
+    getProjectList(
+      filter: { match: { type: "developer" } }
+      sort: { field: "_createdAt", order: "asc" }
+    ) {
+      items {
+        title
+        subtitle
+        url
+        repositoryUrl
+        assets {
+          asset {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+`;

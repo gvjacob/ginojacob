@@ -16,8 +16,6 @@ const Experiences = ({ className, data }) => {
     getExperienceList: { items: experiences },
   } = data;
 
-  const columnWidth = `${100 / 3}%`;
-
   return (
     <div
       className={cn('jumpto', css.experiences, className)}
@@ -31,6 +29,7 @@ const Experiences = ({ className, data }) => {
             subtitle={position}
             url={url}
             asset={asset.sourceUrl}
+            key={company}
           />
         ))}
       </StackGrid>

@@ -1,10 +1,42 @@
 import React from 'react';
+import { get } from 'lodash';
+import StackGrid from 'react-stack-grid';
 import cn from 'classnames';
+
+import Card from '../Card';
+import withQuery from '../../hocs/withQuery';
+import { DEVELOPER_PROJECTS_QUERY } from '../../queries';
 
 import css from './styles.css';
 
-const DeveloperProjects = ({ className }) => {
-  return <div className={className}></div>;
+const DeveloperProjects = ({ className, data }) => {
+  const {
+    getProjectList: { items },
+  } = data;
+
+  return (
+    <div
+      className={cn('jumpto', css.projects, className)}
+      data-testid={'DeveloperProjects'}
+      id={'Projects'}
+    >
+      <StackGrid
+        columnWidth={'33%'}
+        gutterHeight={10}
+        gutterWidth={10}
+        enableSSR
+      >
+        {items.map(({ title, subtitle, assets }) => (
+          <Card
+            title={title}
+            subtitle={subtitle}
+            asset={get(assets, [0, 'asset', 'sourceUrl'], null)}
+            key={title}
+          />
+        ))}
+      </StackGrid>
+    </div>
+  );
 };
 
-export default DeveloperProjects;
+export default withQuery(DeveloperProjects, DEVELOPER_PROJECTS_QUERY);
