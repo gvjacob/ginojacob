@@ -12,7 +12,7 @@ import css from './styles.css';
  */
 const BallroomStory = ({ className, data }) => {
   const {
-    getBallroom: { level, story, styles, assets },
+    getBallroom: { level, story, styles },
   } = data;
 
   const stylesDanced = `in ${join(

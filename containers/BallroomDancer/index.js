@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
 import BallroomStory from '../../components/BallroomStory';
+import BallroomPictures from '../../components/BallroomPictures';
 
 import css from './styles.css';
 
@@ -8,7 +9,7 @@ import css from './styles.css';
  * Ballroom Dancer page ('/ballroomdancer')
  */
 const BallroomDancer = ({ className }) => {
-  const stack = [BallroomStory];
+  const stack = [BallroomStory, BallroomPictures];
 
   return (
     <div className={className}>

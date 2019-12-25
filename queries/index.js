@@ -106,15 +106,22 @@ export const DESIGNER_PROJECTS_QUERY = gql`
 export const BALLROOM_STORY_QUERY = gql`
   {
     getBallroom {
-      assets {
-        asset {
-          sourceUrl
-        }
-      }
       level
       story
       styles {
         name
+      }
+    }
+  }
+`;
+
+export const BALLROOM_ASSETS_QUERY = gql`
+  {
+    getBallroom {
+      assets {
+        asset {
+          sourceUrl
+        }
       }
     }
   }
