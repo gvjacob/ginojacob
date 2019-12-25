@@ -12,9 +12,11 @@ const BallroomPictures = ({ className, data }) => {
     getBallroom: { assets },
   } = data;
 
+  const columnWidth = 100 / Math.max(2, Math.min(3, assets.length));
+
   return isEmpty(assets) ? null : (
     <div className={className}>
-      <StackGrid columnWidth={'33%'}>
+      <StackGrid columnWidth={`${columnWidth}%`}>
         {assets.map(({ asset }) => (
           <img className={css.asset} src={asset.sourceUrl} />
         ))}
