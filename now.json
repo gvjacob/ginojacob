@@ -1,5 +1,9 @@
 {
   "name": "ginojacob-v2",
   "version": 2,
-  "alias": ["ginojacob.com", "www.ginojacob.com", "v2.ginojacob.com"]
+  "alias": ["ginojacob.com", "www.ginojacob.com", "v2.ginojacob.com"],
+  "env": {
+    "TAKESHAPE_API_GRAPHQL": "@takeshape-api-graphql",
+    "TAKESHAPE_API_KEY": "@takeshape-api-key"
+  }
 }

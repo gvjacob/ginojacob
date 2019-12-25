@@ -25,6 +25,7 @@ const DeveloperProjects = ({ className, data }) => {
         gutterHeight={10}
         gutterWidth={10}
         enableSSR
+        monitorImagesLoaded
       >
         {items.map(({ title, subtitle, assets, url, repositoryUrl }) => (
           <Card
