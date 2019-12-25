@@ -16,6 +16,7 @@
   display: flex;
 
   color: var(--primary);
+  cursor: pointer;
 }
 
 .header {
