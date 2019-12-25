@@ -1,0 +1,16 @@
+.header {
+  font-family: 'Courier New';
+  color: var(--secondary);
+
+  margin-bottom: 10px;
+  margin-left: 2px;
+  margin-top: 40px;
+}
+
+.level {
+  color: var(--primary);
+}
+
+.story {
+  width: 66%;
+}
