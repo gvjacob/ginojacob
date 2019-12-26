@@ -13,7 +13,7 @@ const Sidebar = ({ className, observable }) => {
   return (
     <div className={cn(css.sidebar, className)}>
       <Navigation className={css.navigation} />
-      <SpotifyActivity className={css.spotify} />
+      {/*<SpotifyActivity className={css.spotify} /> */}
       <Social className={css.social} />
     </div>
   );
