@@ -16,7 +16,7 @@ const BallroomPictures = ({ className, data }) => {
 
   return isEmpty(assets) ? null : (
     <div className={className}>
-      <StackGrid columnWidth={`${columnWidth}%`}>
+      <StackGrid columnWidth={`${columnWidth}%`} monitorImagesLoaded>
         {assets.map(({ asset }) => (
           <img className={css.asset} src={asset.sourceUrl} />
         ))}

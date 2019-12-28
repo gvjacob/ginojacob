@@ -13,7 +13,7 @@
   margin: 0;
   font-size: var(--typeHuge);
   font-weight: bold;
-  color: black;
+  color: var(--body);
 
   &.selected {
     color: var(--primary);

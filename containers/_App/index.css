@@ -1,6 +1,7 @@
 :root {
   --primary: #F42272;
   --secondary: #828282;
+  --body: black;
 
   --typeSmall: 12px;
   --typeRegular: 18px;
@@ -30,7 +31,7 @@ body > div {
 body {
   font-family: 'Cera';
   font-size: var(--typeRegular);
-  color: black;
+  color: var(--body);
 
   padding: 0;
   margin: 0;
