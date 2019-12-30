@@ -111,6 +111,11 @@ export const BALLROOM_STORY_QUERY = gql`
       styles {
         name
       }
+      assets {
+        asset {
+          sourceUrl
+        }
+      }
     }
   }
 `;

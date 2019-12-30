@@ -12,7 +12,7 @@ import css from './styles.css';
  */
 const BallroomStory = ({ className, data }) => {
   const {
-    getBallroom: { level, story, styles },
+    getBallroom: { level, story, styles, assets },
   } = data;
 
   const stylesDanced = `in ${join(
@@ -22,7 +22,7 @@ const BallroomStory = ({ className, data }) => {
 
   return (
     <div
-      className={cn('jumpto', className)}
+      className={cn(css.ballroomStory, className)}
       id={'Story'}
       data-testid={'BallroomStory'}
     >
@@ -32,8 +32,11 @@ const BallroomStory = ({ className, data }) => {
         <h2>{stylesDanced}</h2>
       </div>
 
-      <div className={css.header}>My Story</div>
-      <Markdown className={css.story} source={story} />
+      <div className={css.copy}>
+        <div className={css.header}>My Story</div>
+        <Markdown className={css.story} source={story} />
+      </div>
+      <img className={css.asset} src={assets[0].asset.sourceUrl} />
     </div>
   );
 };
