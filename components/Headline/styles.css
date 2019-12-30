@@ -15,6 +15,7 @@
   font-weight: bold;
   color: var(--body);
 
+
   &.selected {
     color: var(--primary);
     animation: changeColor 0.3s linear;

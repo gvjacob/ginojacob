@@ -1,5 +1,6 @@
 import Head from 'next/head';
 
+import Headline from '../../components/Headline';
 import About from '../../components/About';
 import Updates from '../../components/Updates';
 import Experiences from '../../components/Experiences';
@@ -11,7 +12,7 @@ import css from './styles.css';
  * Base page ('/'), showcasing Gino.
  */
 const Index = ({ className }) => {
-  const stack = [About, Updates, Experiences, GetInTouch];
+  const stack = [Headline, About, Updates, Experiences, GetInTouch];
 
   return (
     <div className={className}>
