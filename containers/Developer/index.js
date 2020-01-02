@@ -12,7 +12,7 @@ const Developer = ({ className }) => {
   return (
     <div className={className}>
       <Head>
-        <title>Gino V Jacob | Developer</title>
+        <title>Gino Jacob | Developer</title>
       </Head>
 
       {stack.map(($component, index) => (

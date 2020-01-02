@@ -16,7 +16,7 @@ const Index = ({ className }) => {
   return (
     <div className={className}>
       <Head>
-        <title>Gino V Jacob</title>
+        <title>Gino Jacob</title>
       </Head>
 
       <About />
