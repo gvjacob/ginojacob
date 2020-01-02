@@ -1,13 +1,5 @@
 import { gql } from 'apollo-boost';
 
-export const GINO_PNG_QUERY = gql`
-  {
-    getAsset(_id: "70ea2750-5089-4608-b450-ff1a77bca47f") {
-      sourceUrl
-    }
-  }
-`;
-
 export const UPDATES_QUERY = gql`
   {
     getUpdateList(sort: [{ field: "date", order: "desc" }]) {
@@ -50,6 +42,9 @@ export const ABOUT_QUERY = gql`
   {
     getBiography {
       about
+      profile {
+        sourceUrl
+      }
     }
     getExperienceList(filter: { match: { current: true } }) {
       items {
@@ -57,6 +52,14 @@ export const ABOUT_QUERY = gql`
         company
         companyUrl
       }
+    }
+  }
+`;
+
+export const GINO_PNG_QUERY = gql`
+  {
+    getAsset(_id: "70ea2750-5089-4608-b450-ff1a77bca47f") {
+      sourceUrl
     }
   }
 `;
@@ -111,18 +114,6 @@ export const BALLROOM_STORY_QUERY = gql`
       styles {
         name
       }
-      assets {
-        asset {
-          sourceUrl
-        }
-      }
-    }
-  }
-`;
-
-export const BALLROOM_ASSETS_QUERY = gql`
-  {
-    getBallroom {
       assets {
         asset {
           sourceUrl

@@ -14,7 +14,7 @@ const BallroomDancer = ({ className }) => {
         <title>Gino V Jacob | Ballroom Dancer</title>
       </Head>
 
-      <BallroomStory className={css.ballroomStory} />
+      <BallroomStory />
     </div>
   );
 };

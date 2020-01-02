@@ -1,5 +1,7 @@
 .ballroomStory {
   position: relative;
+  height: 100vh;
+  padding-top: 20%;
 }
 
 .header {
