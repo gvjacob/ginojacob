@@ -1,7 +1,6 @@
 .card {
   composes: bounce from global;
 
-  max-width: 280px;
   box-sizing: border-box;
 
   box-shadow: 0 0 1px;
