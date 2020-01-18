@@ -1,0 +1,8 @@
+@mixin font-face($name, $file, $style: normal, $weight: 400) {
+  @font-face {
+    font-family: $name;
+    font-style: $style;
+    font-weight: $weight;
+    src: url('/fonts/#{$file}.otf');
+  }
+}

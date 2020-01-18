@@ -1,25 +1,20 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "ginojacob",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "ginojacob.com",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Gino Jacob <gvjacob@outlook.com>",
   "scripts": {
     "build": "gatsby build",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "gatsby develop -p 8080",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
-  "keywords": ["gatsby"],
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
     "gatsby": "^2.18.12",
