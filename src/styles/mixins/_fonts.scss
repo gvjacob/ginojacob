@@ -1,4 +1,5 @@
 @import '../variables.scss';
+@import '../functions/ms';
 
 @mixin font-face($name, $file, $style: normal, $weight: 400) {
   @font-face {
@@ -7,6 +8,11 @@
     font-weight: $weight;
     src: url('/fonts/#{$file}.otf');
   }
+}
+
+@mixin font-size($tier) {
+  font-size: ms($tier);
+  line-height: ms($tier + 2);
 }
 
 @mixin spaced($letter-spacing: 2px) {

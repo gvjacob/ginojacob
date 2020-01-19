@@ -1,0 +1,9 @@
+.title {
+  //margin-bottom: 10px;
+}
+
+@for $i from 0 to 4 {
+  .title:nth-child(#{$i + 1}) {
+    opacity: calc(1 - (0.2 * #{$i}));
+  }
+}

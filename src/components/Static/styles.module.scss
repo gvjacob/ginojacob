@@ -1,0 +1,13 @@
+@import '../../styles/mixins/spacing';
+
+.static {
+  @include flex(row, none);
+}
+
+.main {
+  @include flex(column, space-between);
+
+  padding: 100px;
+  height: 100vh;
+  box-sizing: border-box;
+}

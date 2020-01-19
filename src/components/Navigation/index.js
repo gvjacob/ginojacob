@@ -1,13 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { reverse } from 'lodash'
 import PropTypes from 'prop-types'
 
 import Links from './Links'
 import { cn } from '../../utils'
 import styles from './styles.module.scss'
 
-const Navigation = ({ className, tabs, links }) => {
+const Navigation = ({ className, tabs = [], links = [] }) => {
   const reversed = tabs.slice().reverse()
 
   return (

@@ -1,5 +1,6 @@
 @import './reset';
 @import './mixins/fonts';
+@import './functions/ms';
 
 /* Domaine and Cera fonts */
 @include font-face($name: 'Cera', $file: 'Cera-Regular');
@@ -8,6 +9,7 @@
 
 h1 {
   font-family: 'Domaine';
+  @include font-size(9);
 }
 
 body {
@@ -19,7 +21,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   font-family: 'Cera';
-  font-size: 18px;
+
+  @include font-size(0);
 }
 
 a {

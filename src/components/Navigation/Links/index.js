@@ -10,7 +10,7 @@ const Links = ({ className, links }) => {
     <VerticalRule>
       <div className={styles.links}>
         {links.map(({ name, fontAwesomeClass, url }, i) => (
-          <a href={url} target={'_blank'} key={i}>
+          <a href={url} target={'_blank'} rel="noopener noreferrer" key={i}>
             <i className={cn(fontAwesomeClass, styles.link)} />
           </a>
         ))}

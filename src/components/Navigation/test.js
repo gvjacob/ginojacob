@@ -29,8 +29,22 @@ describe('Navigation', () => {
       },
     ],
   }
-  it('renders tab name and slug', () => {
+
+  it('renders tabs and links', () => {
     const { getByText, container } = render(<Navigation {...props} />)
+
+    props.tabs.forEach(({ name, slug }) => {
+      expect(getByText(name)).toBeInTheDocument()
+      expect(container.querySelector(`a[href="${slug}"]`)).toBeInTheDocument()
+    })
+
+    props.links.forEach(({ name, url }) => {
+      expect(container.querySelector(`a[href="${url}"]`)).toBeInTheDocument()
+    })
+  })
+
+  it('renders tabs', () => {
+    const { getByText, container } = render(<Navigation tabs={props.tabs} />)
 
     props.tabs.forEach(({ name, slug }) => {
       expect(getByText(name)).toBeInTheDocument()
@@ -39,7 +53,7 @@ describe('Navigation', () => {
   })
 
   it('renders links', () => {
-    const { getByText, container } = render(<Navigation {...props} />)
+    const { getByText, container } = render(<Navigation links={props.links} />)
 
     props.links.forEach(({ name, url }) => {
       expect(container.querySelector(`a[href="${url}"]`)).toBeInTheDocument()
