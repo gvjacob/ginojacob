@@ -13,8 +13,8 @@ const Navigation = ({ className, tabs, links }) => {
   return (
     <nav className={cn(className, styles.navigation)}>
       <div className={styles.tabs}>
-        {reversed.map(({ name, slug }) => (
-          <Link className={styles.tab} to={slug}>
+        {reversed.map(({ name, slug }, i) => (
+          <Link className={styles.tab} to={slug} key={i}>
             {name}
           </Link>
         ))}
@@ -26,10 +26,19 @@ const Navigation = ({ className, tabs, links }) => {
 
 Navigation.propTypes = {
   className: PropTypes.string,
-  tabs: PropTypes.arrayOf({
-    name: PropTypes.string.isRequired,
-    slug: PropTypes.string.isRequired,
-  }).isRequired,
+  tabs: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      slug: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      fontAwesomeClass: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 }
 
 export default Navigation

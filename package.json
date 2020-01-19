@@ -9,6 +9,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "gatsby develop -p 8080",
     "serve": "gatsby serve",
+    "test": "jest --watchAll",
     "clean": "gatsby clean"
   },
   "license": "MIT",
@@ -36,6 +37,16 @@
     "sass": "^1.25.0"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "@testing-library/jest-dom": "^5.0.0",
+    "@testing-library/react": "^9.4.0",
+    "babel-jest": "^24.9.0",
+    "babel-preset-gatsby": "^0.2.27",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "react-test-renderer": "^16.12.0"
   }
 }
