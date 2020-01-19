@@ -1,0 +1,9 @@
+@import '../../styles/variables';
+
+.rule {
+  height: 100px;
+  width: 0;
+  margin: auto;
+
+  border-left: 1px solid $secondary-color;
+}

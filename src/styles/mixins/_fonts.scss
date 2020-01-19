@@ -1,3 +1,5 @@
+@import '../variables.scss';
+
 @mixin font-face($name, $file, $style: normal, $weight: 400) {
   @font-face {
     font-family: $name;
@@ -5,4 +7,29 @@
     font-weight: $weight;
     src: url('/fonts/#{$file}.otf');
   }
+}
+
+@mixin spaced($letter-spacing: 2px) {
+  letter-spacing: $letter-spacing;
+}
+
+@mixin bold {
+  font-weight: bold;
+}
+
+@mixin uppercase {
+  text-transform: uppercase;
+}
+
+@mixin vertical {
+  writing-mode: tb-rl;
+  transform: rotate(-180deg);
+}
+
+@mixin primary-color {
+  color: $primary-color;
+}
+
+@mixin secondary-color {
+  color: $secondary-color;
 }

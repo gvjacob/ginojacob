@@ -27,9 +27,16 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-sass',
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        implementation: require('sass'),
+        cssLoaderOptions: {
+          camelCase: true,
+          localIdentName: '[name]__[local]___[hash:base64:5]',
+          modules: true,
+        },
+      },
+    },
   ],
-}
+};
