@@ -1,11 +1,19 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`, // or '.env'
+})
+
+const config = require('gatsby-plugin-config').default
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `ginojacob.com`,
+    description: `I’m a self-taught developer and above all else, an unapologetically customer-centric designer. You’d find me ballroom dancing when I’m not solving people’s problems.`,
+    author: `Gino Jacob <gvjacob@outlook.com>`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -13,8 +21,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -38,5 +44,16 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        typeName: 'TakeShape',
+        fieldName: 'takeshape',
+        url: config.TAKESHAPE_API_URL,
+        headers: {
+          Authorization: `Bearer ${config.TAKESHAPE_API_TOKEN}`,
+        },
+      },
+    },
   ],
-};
+}

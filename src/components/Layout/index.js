@@ -7,6 +7,7 @@
 
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
 import Navigation from '../Navigation'
@@ -15,29 +16,29 @@ import styles from './styles.module.scss'
 import '../../styles/index.scss'
 
 const Layout = ({ children }) => {
+  const {
+    takeshape: {
+      getLinkList: { items: links },
+    },
+  } = useStaticQuery(graphql`
+    query MyQuery {
+      takeshape {
+        getLinkList {
+          items {
+            name
+            url
+            fontAwesomeClass
+          }
+        }
+      }
+    }
+  `)
+
   const tabs = [
     { name: 'About', slug: '/' },
     { name: 'Work', slug: '/work' },
     { name: 'Services', slug: '/services' },
     { name: 'Contact', slug: '/contact' },
-  ]
-
-  const links = [
-    {
-      name: 'Github',
-      fontAwesomeClass: 'fab fa-github',
-      url: 'https://github.com/gvjacob',
-    },
-    {
-      name: 'LinkedIn',
-      fontAwesomeClass: 'fab fa-linkedin-in',
-      url: 'https://www.linkedin.com/in/gvjacob',
-    },
-    {
-      name: 'Résumé',
-      fontAwesomeClass: 'fas fa-file-pdf',
-      url: 'https://indd.adobe.com/view/3d1c1fa1-6a12-4d15-b3d9-c0059cc1202b',
-    },
   ]
 
   return (
