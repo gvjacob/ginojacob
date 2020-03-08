@@ -1,7 +1,3 @@
-@import './reset';
-@import './mixins/fonts';
-@import './functions/ms';
-
 /* Domaine and Cera fonts */
 @include font-face($name: 'Cera', $file: 'Cera-Regular');
 @include font-face($name: 'Cera', $file: 'Cera-Bold', $weight: bold);

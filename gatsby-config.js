@@ -1,6 +1,11 @@
+const path = require('path')
+
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
+
+const SRC_DIR = path.resolve(__dirname, 'src')
+const STYLE_DIR = path.resolve(SRC_DIR, 'styles')
 
 const config = require('gatsby-plugin-config').default
 
@@ -37,6 +42,8 @@ module.exports = {
       resolve: 'gatsby-plugin-sass',
       options: {
         implementation: require('sass'),
+        data: `@import 'abstracts/index';`,
+        includePaths: [STYLE_DIR],
         cssLoaderOptions: {
           camelCase: true,
           localIdentName: '[name]__[local]___[hash:base64:5]',
