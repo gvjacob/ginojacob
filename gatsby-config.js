@@ -1,13 +1,13 @@
 require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`, // or '.env'
+  path: `.env.${process.env.NODE_ENV}`,
 })
 
 const config = require('gatsby-plugin-config').default
 
 module.exports = {
   siteMetadata: {
-    title: `ginojacob.com`,
-    description: `I’m a self-taught developer and above all else, an unapologetically customer-centric designer. You’d find me ballroom dancing when I’m not solving people’s problems.`,
+    title: 'Gino Jacob',
+    description: `I’m a self-taught developer and above all else, an unapologetically user-centric designer.`,
     author: `Gino Jacob <gvjacob@outlook.com>`,
   },
   plugins: [

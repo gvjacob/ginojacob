@@ -5,12 +5,6 @@
 /* Domaine and Cera fonts */
 @include font-face($name: 'Cera', $file: 'Cera-Regular');
 @include font-face($name: 'Cera', $file: 'Cera-Bold', $weight: bold);
-@include font-face($name: 'Domaine', $file: 'Domaine-Bold', $weight: bold);
-
-h1 {
-  font-family: 'Domaine';
-  @include font-size(9);
-}
 
 body {
   margin: 0;
