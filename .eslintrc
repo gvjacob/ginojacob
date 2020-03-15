@@ -1,0 +1,20 @@
+{
+  "settings": {
+    "react": {
+      "version": "detect",
+    }
+  },
+  "extends": ["@upstatement/eslint-config/react"],
+  "plugins": ["react-hooks", "jest"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "rules": {
+    "no-console": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react-hooks/rules-of-hooks": "error"
+  }
+}
