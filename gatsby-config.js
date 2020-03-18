@@ -1,13 +1,11 @@
-const path = require('path')
-
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
-const SRC_DIR = path.resolve(__dirname, 'src')
-const STYLE_DIR = path.resolve(SRC_DIR, 'styles')
+const config = require('gatsby-plugin-config').default;
 
-const config = require('gatsby-plugin-config').default
+const SRC_DIR = require('path').resolve(__dirname, 'src');
+const fromSource = (...files) => files.reduce((acc, file) => `${acc}/${file}`, SRC_DIR);
 
 module.exports = {
   siteMetadata: {
@@ -20,10 +18,16 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(fromSource('components', 'Layout')),
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: fromSource('images'),
       },
     },
     {
@@ -35,7 +39,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: fromSource('images', 'gatsby-icon.png'),
       },
     },
     {
@@ -43,7 +47,7 @@ module.exports = {
       options: {
         implementation: require('sass'),
         data: `@import 'abstracts/index';`,
-        includePaths: [STYLE_DIR],
+        includePaths: [fromSource('styles')],
         cssLoaderOptions: {
           camelCase: true,
           localIdentName: '[name]__[local]___[hash:base64:5]',
@@ -63,4 +67,4 @@ module.exports = {
       },
     },
   ],
-}
+};

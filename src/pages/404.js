@@ -1,12 +1,11 @@
-import React from 'react'
+import React, { Fragment } from 'react';
 
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
+import SEO from '../components/SEO';
 
 const NotFoundPage = () => (
-  <Layout>
+  <Fragment>
     <SEO title="404: Not found" />
-  </Layout>
-)
+  </Fragment>
+);
 
-export default NotFoundPage
+export default NotFoundPage;
