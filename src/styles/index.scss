@@ -1,18 +1,19 @@
-/* Domaine and Cera fonts */
 @include font-face($name: 'Cera', $file: 'Cera-Regular');
 @include font-face($name: 'Cera', $file: 'Cera-Bold', $weight: bold);
 
 body {
-  margin: 0;
-  background-color: black;
-  color: white;
+  @include margin(0);
+  @include size(100vw, 100vh);
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  font-family: 'Cera';
+  font-family: $cera;
+}
 
-  @include font-size(0);
+body > div,
+div[role='group'][tabindex] {
+  @include size(100%);
 }
 
 a {
