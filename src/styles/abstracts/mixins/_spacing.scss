@@ -3,3 +3,11 @@
   flex-direction: $direction;
   justify-content: $justification;
 }
+
+@mixin margin($value) {
+  @include shorthander(margin, $value);
+}
+
+@mixin padding($value) {
+  @include shorthander(padding, $value);
+}

@@ -1,0 +1,10 @@
+// Dependency of `~/style/mixins/shorthander`
+// http://upbase.upstatement.com/#function-auto
+
+@function auto($value) {
+  @if $value == 'a' {
+    @return auto;
+  } @else {
+    @return $value;
+  }
+}
