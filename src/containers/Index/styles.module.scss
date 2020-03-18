@@ -1,5 +1,7 @@
 .index {
   @include size(100%);
+  @include padding(40px);
+
   background-color: $background-color;
   color: $body-color;
 }

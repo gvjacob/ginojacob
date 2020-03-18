@@ -1,0 +1,8 @@
+.profile {
+  @include padding(20px);
+  background-color: $accent-color;
+}
+
+.headline {
+  @include bold;
+}
