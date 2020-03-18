@@ -24,22 +24,14 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: fromSource('images'),
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Gino Jacob`,
+        short_name: `Gino Jacob`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: fromSource('images', 'gatsby-icon.png'),
       },
     },
     {
