@@ -1,0 +1,9 @@
+@mixin heading($scale: 1) {
+  $heading-scale: nth([24, 18, 12, 6], $scale);
+  font-size: ms($heading-scale);
+}
+
+@mixin body($scale: 1) {
+  $heading-scale: nth([0, 2, 6], $scale);
+  font-size: ms($heading-scale);
+}

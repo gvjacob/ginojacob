@@ -1,0 +1,32 @@
+.spotify {
+  position: relative;
+}
+
+.image {
+  @include size(100%);
+}
+
+.metadata {
+  @include size(100%);
+  @include padding(20px);
+  @include flex(column, flex-end);
+  @include transition(opacity);
+  @include absolute(0);
+
+  background-color: $transparent-black;
+  opacity: 0;
+
+  @include on-focus {
+    opacity: 1;
+  }
+}
+
+.track-name {
+  @include heading(4);
+  @include bold;
+  @include margin(10px x);
+}
+
+.track-artist {
+  @include body(2);
+}

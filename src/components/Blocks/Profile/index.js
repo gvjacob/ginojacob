@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Column } from '../Templates';
 import styles from './styles.module.scss';
 

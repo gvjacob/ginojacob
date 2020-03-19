@@ -1,7 +1,10 @@
 @mixin flex($direction: row, $justification: none) {
   display: flex;
   flex-direction: $direction;
-  justify-content: $justification;
+
+  @if $justification != none {
+    justify-content: $justification;
+  }
 }
 
 @mixin margin($value) {

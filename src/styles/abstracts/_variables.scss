@@ -1,13 +1,25 @@
 /* Colors */
 $pink-color: #ff3366;
 $beige-color: #fdedb2;
+$black: black;
+$transparent-black: rgb(0, 0, 0, 0.8);
+$white: white;
 
 $primary-color: $beige-color;
-$secondary-color: white;
-$tertiary-color: black;
-$background-color: black;
+$secondary-color: $white;
+$tertiary-color: $black;
+$background-color: $black;
 $body-color: $secondary-color;
 $accent-color: $pink-color;
 
 /* Typography */
 $cera: 'Cera';
+
+/* Transitions */
+$sine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+$quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+$cube: cubic-bezier(0.645, 0.045, 0.355, 1);
+$circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+$back-out: cubic-bezier(0.35, 1.1, 0.65, 1.65);
+$transition-duration: 0.2s;
+$transition-default: $transition-duration $circ;
