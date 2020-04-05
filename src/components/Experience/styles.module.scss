@@ -1,0 +1,17 @@
+.overline {
+  @include type-gothic;
+  @include uppercase;
+  @include heading(4);
+  color: $body-color;
+}
+
+.organization {
+  @include type-gothic;
+  @include uppercase;
+  @include heading(2);
+}
+
+.description {
+  @include body;
+  margin-top: 20px;
+}

@@ -1,10 +1,10 @@
 .index {
   @include size(100%);
-
-  background-color: $background-color;
-  color: $body-color;
+  padding-left: 100px;
 }
 
 .column {
-  @include absolute(0 x x 0);
+  left: 0;
+  position: fixed;
+  top: 0;
 }
