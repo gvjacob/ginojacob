@@ -1,9 +1,15 @@
 @mixin heading($scale: 1) {
-  $heading-scale: nth([24, 18, 12, 6], $scale);
+  $heading-scale: nth([22, 18, 12, 6, 3, 1], $scale);
+
+  @include bold;
+
+  color: $primary-color;
+  font-family: $domaine;
   font-size: ms($heading-scale);
 }
 
 @mixin body($scale: 1) {
-  $heading-scale: nth([0, 2, 6], $scale);
+  $heading-scale: nth([0, 2, 6, 9], $scale);
   font-size: ms($heading-scale);
+  line-height: ms($heading-scale + 4);
 }

@@ -15,6 +15,9 @@
   "rules": {
     "no-console": "off",
     "react-hooks/exhaustive-deps": "off",
-    "react-hooks/rules-of-hooks": "error"
+    "react-hooks/rules-of-hooks": "error",
+    "react/prop-types": 0,
+    "react/display-name": 0
   }
 }
+

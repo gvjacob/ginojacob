@@ -1,0 +1,15 @@
+.introduction {
+  @include flex;
+  @include size(100%);
+}
+
+.name {
+  @include uppercase;
+
+  font-family: $gothic;
+  font-size: ms(4);
+}
+
+.media {
+  width: 30%;
+}
