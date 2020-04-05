@@ -1,16 +1,17 @@
 @import 'reset';
 
-@include font-face($name: 'Cera', $file: 'Cera-Regular');
-@include font-face($name: 'Cera', $file: 'Cera-Bold', $weight: bold);
+@include font-face($name: 'Object', $file: 'Object Sans - Regular.otf');
+@include font-face($name: 'Object', $file: 'Object Sans - Bold.otf', $weight: bold);
+@include font-face($name: 'Gothic', $file: 'Gothic.ttf');
 
 body {
   @include margin(0);
   @include size(100vw, 100vh);
 
+  font-family: $object;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  font-family: $cera;
 }
 
 body > div,

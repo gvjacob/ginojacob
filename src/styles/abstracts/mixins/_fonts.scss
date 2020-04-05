@@ -3,7 +3,7 @@
     font-family: $name;
     font-style: $style;
     font-weight: $weight;
-    src: url('/fonts/#{$file}.otf');
+    src: url('/fonts/#{$file}');
   }
 }
 
@@ -25,8 +25,8 @@
 }
 
 @mixin vertical {
-  writing-mode: tb-rl;
   transform: rotate(-180deg);
+  writing-mode: tb-rl;
 }
 
 @mixin primary-color {

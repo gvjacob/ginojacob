@@ -1,9 +1,9 @@
 /* Colors */
 $pink-color: #ff3366;
 $beige-color: #fdedb2;
-$black: black;
+$black: #000000;
 $transparent-black: rgb(0, 0, 0, 0.8);
-$white: white;
+$white: #ffffff;
 
 $primary-color: $beige-color;
 $secondary-color: $white;
@@ -13,7 +13,8 @@ $body-color: $secondary-color;
 $accent-color: $pink-color;
 
 /* Typography */
-$cera: 'Cera';
+$object: 'Object';
+$gothic: 'Gothic';
 
 /* Transitions */
 $sine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
