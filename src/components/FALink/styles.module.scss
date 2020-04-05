@@ -1,0 +1,22 @@
+.fa-link {
+  position: relative;
+  width: fit-content;
+}
+
+.icon {
+  @include on-focus {
+    + .name {
+      @include visible;
+    }
+  }
+}
+
+.name {
+  @include absolute(x x x calc(100% + 20px));
+  @include hidden;
+  @include transition;
+
+  color: $body-color;
+  font-size: ms(-1);
+  white-space: nowrap;
+}

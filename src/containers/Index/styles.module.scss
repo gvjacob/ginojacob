@@ -4,3 +4,7 @@
   background-color: $background-color;
   color: $body-color;
 }
+
+.column {
+  @include absolute(0 x x 0);
+}

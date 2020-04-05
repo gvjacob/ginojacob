@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 
 const SEO = ({ description, lang, meta, title }) => {
   const { site } = useStaticQuery(
@@ -16,10 +16,10 @@ const SEO = ({ description, lang, meta, title }) => {
         }
       }
     `,
-  )
+  );
 
-  const metaTitle = site.siteMetadata.title
-  const metaDescription = description || site.siteMetadata.description
+  const metaTitle = site.siteMetadata.title;
+  const metaDescription = description || site.siteMetadata.description;
 
   return (
     <Helmet
@@ -61,22 +61,23 @@ const SEO = ({ description, lang, meta, title }) => {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
-    />
-  )
-}
+      ].concat(meta)}>
+      <script src="https://kit.fontawesome.com/f9c2d11971.js" crossOrigin="anonymous" />
+    </Helmet>
+  );
+};
 
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
-}
+};
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-}
+};
 
-export default SEO
+export default SEO;

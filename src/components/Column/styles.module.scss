@@ -1,0 +1,26 @@
+.column {
+  @include size(100px, 100vh);
+  @include flex(column, flex-end);
+}
+
+.resources {
+  @include flex(column);
+
+  &::after {
+    @include size(1px, 100px);
+    @include margin(10px auto x);
+
+    background-color: $accent-color;
+    content: '';
+    display: block;
+    margin-top: 10px;
+  }
+}
+
+.resource {
+  @include body(2);
+  @include margin(10px auto);
+
+  color: $accent-color;
+  text-align: center;
+}
