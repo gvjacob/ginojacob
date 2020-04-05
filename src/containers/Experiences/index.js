@@ -21,6 +21,12 @@ const Experiences = () => {
               description
               website
             }
+            projects {
+              name
+              media {
+                ...IMAGE
+              }
+            }
           }
         }
       }
