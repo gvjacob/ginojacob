@@ -47,16 +47,5 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: 'gatsby-source-graphql',
-      options: {
-        typeName: 'TakeShape',
-        fieldName: 'takeshape',
-        url: config.TAKESHAPE_API_URL,
-        headers: {
-          Authorization: `Bearer ${config.TAKESHAPE_API_TOKEN}`,
-        },
-      },
-    },
   ],
 };
