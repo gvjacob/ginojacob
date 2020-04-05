@@ -2,10 +2,12 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-const config = require('gatsby-plugin-config').default;
+function fromSource(...files) {
+  const SRC_DIR = require('path').resolve(__dirname, 'src');
+  return files.reduce((acc, file) => `${acc}/${file}`, SRC_DIR);
+}
 
-const SRC_DIR = require('path').resolve(__dirname, 'src');
-const fromSource = (...files) => files.reduce((acc, file) => `${acc}/${file}`, SRC_DIR);
+const { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } = require('gatsby-plugin-config').default;
 
 module.exports = {
   siteMetadata: {
@@ -17,6 +19,13 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: CONTENTFUL_SPACE_ID,
+        accessToken: CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
     {
       resolve: `gatsby-plugin-layout`,
       options: {
