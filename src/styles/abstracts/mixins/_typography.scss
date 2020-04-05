@@ -13,3 +13,11 @@
   font-size: ms($heading-scale);
   line-height: ms($heading-scale + 4);
 }
+
+@mixin type-gothic {
+  font-family: $gothic;
+}
+
+@mixin type-object {
+  font-family: $object;
+}

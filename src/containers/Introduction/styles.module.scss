@@ -1,6 +1,13 @@
 .introduction {
+  @include size(100vw, 100vh);
+  position: relative;
+}
+
+.container {
+  @include absolute(50% x x 50%);
   @include flex;
-  @include size(100%);
+
+  transform: translate(-50%, -50%);
 }
 
 .name {
@@ -8,8 +15,16 @@
 
   font-family: $gothic;
   font-size: ms(4);
+  white-space: nowrap;
+  width: 200px;
 }
 
 .media {
-  width: 30%;
+  @include padding(20px);
+
+  width: 300px;
+}
+
+.biography {
+  @include body;
 }
