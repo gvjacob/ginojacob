@@ -16,15 +16,15 @@
   font-family: $gothic;
   font-size: ms(4);
   white-space: nowrap;
-  width: 200px;
+  width: fit-content;
 }
 
 .media {
-  @include padding(20px);
-
-  width: 300px;
+  @include padding(20px 100px);
+  width: 500px;
 }
 
 .biography {
   @include body;
+  width: 300px;
 }
