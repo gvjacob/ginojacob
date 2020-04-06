@@ -1,5 +1,5 @@
 .carousel {
-  width: 50%;
+  width: 100%;
 }
 
 .slider {
@@ -7,6 +7,7 @@
 }
 
 .image {
+  @include size(auto, 400px);
   padding-right: 5%;
 }
 
@@ -25,6 +26,21 @@
   }
 }
 
+@mixin arrow($translate) {
+  > span {
+    @include transition;
+
+    @include on-focus {
+      transform: translateX($translate);
+    }
+  }
+}
+
 .left-arrow {
+  @include arrow(-3px);
   border-right: 1px solid $accent-color;
+}
+
+.right-arrow {
+  @include arrow(3px);
 }

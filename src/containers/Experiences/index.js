@@ -34,7 +34,7 @@ const Experiences = () => {
   `);
 
   return (
-    <section>
+    <section className={styles.experiences}>
       {serializeEdges(experiences).map((experience, i) => (
         <Experience className={styles.experience} {...experience} key={i} />
       ))}

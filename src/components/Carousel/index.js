@@ -11,9 +11,11 @@ import styles from './styles.module.scss';
 const Navigator = ({ prev, next }) => (
   <nav className={styles.navigator}>
     <button className={styles.leftArrow} onClick={() => prev.current()}>
-      &larr;
+      <span>&larr;</span>
     </button>
-    <button onClick={() => next.current()}>&rarr;</button>
+    <button className={styles.rightArrow} onClick={() => next.current()}>
+      <span>&rarr;</span>
+    </button>
   </nav>
 );
 
@@ -52,7 +54,7 @@ const Carousel = ({ className, items = [] }) => {
       </Slider>
       <div className={styles.content}>
         <div>{content}</div>
-        <Navigator prev={prevSlide} next={nextSlide} />
+        {items.length > 1 && <Navigator prev={prevSlide} next={nextSlide} />}
       </div>
     </section>
   );
