@@ -4,8 +4,9 @@ import Carousel from '../Carousel';
 import styles from './styles.module.scss';
 
 const ProjectsCarousel = ({ className, projects }) => {
-  const items = projects.map(({ name, media }) => ({
+  const items = projects.map(({ name, link, media }) => ({
     media,
+    link,
     content: <span className={styles.name}>{name}</span>,
   }));
 

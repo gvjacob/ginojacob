@@ -2,17 +2,21 @@
   @include flex(row, space-between);
 }
 
+.container {
+  width: 50%;
+}
+
 .overline {
   @include type-gothic;
   @include uppercase;
-  @include heading(4);
+  @include heading(5);
   color: $body-color;
 }
 
 .organization {
   @include type-gothic;
   @include uppercase;
-  @include heading(2);
+  @include heading(3);
 }
 
 .description {

@@ -19,6 +19,18 @@ const Navigator = ({ prev, next }) => (
   </nav>
 );
 
+const CarouselItem = ({ media, link }) => {
+  const image = <Image className={cn(styles.image, link && styles.withLink)} image={media} />;
+
+  return link ? (
+    <a href={link} target={'_blank'} rel="noopener noreferrer">
+      {image}
+    </a>
+  ) : (
+    image
+  );
+};
+
 const Carousel = ({ className, items = [] }) => {
   const sliderRef = useRef();
   const nextSlide = useRef(noop);
@@ -48,8 +60,8 @@ const Carousel = ({ className, items = [] }) => {
         swipeToSlide
         beforeChange={beforeChange}
         ref={sliderRef}>
-        {items.map(({ media }, i) => (
-          <Image className={styles.image} image={media} key={i} />
+        {items.map(({ media, link }, i) => (
+          <CarouselItem media={media} link={link} key={i} />
         ))}
       </Slider>
       <div className={styles.content}>

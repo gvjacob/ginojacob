@@ -23,6 +23,7 @@ const Experiences = () => {
             }
             projects {
               name
+              link
               media {
                 ...IMAGE
               }

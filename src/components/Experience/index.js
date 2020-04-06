@@ -12,7 +12,7 @@ const Experience = ({ className, title, duration, description, organization, pro
 
   return (
     <section className={cn(styles.experience, className)}>
-      <div>
+      <div className={styles.container}>
         <span className={styles.overline}>{overline}</span>
         <h2 className={styles.organization}>{organizationName}</h2>
         <p className={styles.description}>{description || organizationDescription}</p>
