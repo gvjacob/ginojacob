@@ -1,3 +1,30 @@
+.carousel {
+  width: 50%;
+}
+
 .slider {
   width: 100%;
+}
+
+.image {
+  padding-right: 5%;
+}
+
+.content {
+  @include flex(row, space-between);
+  margin-top: 20px;
+}
+
+.navigator {
+  @include body(2);
+
+  margin-right: 5%;
+
+  button {
+    @include padding(x 10px);
+  }
+}
+
+.left-arrow {
+  border-right: 1px solid $accent-color;
 }

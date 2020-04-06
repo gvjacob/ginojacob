@@ -17,8 +17,10 @@ body {
   background-color: $background-color;
   color: $body-color;
 
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  overflow-x: hidden;
 }
 
 * {
@@ -33,4 +35,12 @@ div[role='group'][tabindex] {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  color: $body-color;
+  cursor: pointer;
+  font-size: 100%;
 }
