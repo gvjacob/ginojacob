@@ -24,7 +24,7 @@ const Column = ({ className }) => {
   const ref = useRef(null);
 
   useEffect(() => {
-    gsap.fromTo(ref.current, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1, delay: 1.5 });
+    gsap.fromTo(ref.current, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1, delay: 1 });
   }, []);
 
   return (

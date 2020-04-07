@@ -1,5 +1,6 @@
 .experience {
   @include flex(row, space-between);
+  opacity: 0;
 }
 
 .container {
