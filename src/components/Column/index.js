@@ -22,11 +22,13 @@ const Column = ({ className }) => {
 
   return (
     <aside className={cn(styles.column, className)}>
-      <div className={styles.resources}>
+      <ul className={styles.resources}>
         {resources.map((resource, i) => (
-          <FALink className={styles.resource} {...resource} key={i} />
+          <li className={styles.resource} key={i}>
+            <FALink {...resource} />
+          </li>
         ))}
-      </div>
+      </ul>
     </aside>
   );
 };
