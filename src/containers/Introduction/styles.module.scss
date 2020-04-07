@@ -3,6 +3,15 @@ $inset: -60px;
 .introduction {
   @include size(100vw, 100vh);
   @include flex(row, flex-start, center);
+
+  @include on-focus {
+    > .media {
+      @include padding(10px);
+
+      border: 2px solid $accent-color;
+      filter: grayscale(0);
+    }
+  }
 }
 
 .name {
@@ -14,6 +23,9 @@ $inset: -60px;
 }
 
 .media {
+  @include transition;
+
+  filter: grayscale(100%);
   width: 400px;
   z-index: -1;
 }
