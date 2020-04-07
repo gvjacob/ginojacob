@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { classNames as cn } from 'peculiarity';
+import gsap from 'gsap';
 
 import FALink from '../FALink';
 import styles from './styles.module.scss';
@@ -20,8 +21,14 @@ const Column = ({ className }) => {
 
   const { resources } = biography;
 
+  const ref = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(ref.current, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1, delay: 1.5 });
+  }, []);
+
   return (
-    <aside className={cn(styles.column, className)}>
+    <aside className={cn(styles.column, className)} ref={ref}>
       <ul className={styles.resources}>
         {resources.map((resource, i) => (
           <li className={styles.resource} key={i}>

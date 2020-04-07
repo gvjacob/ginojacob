@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { gsap } from 'gsap';
+import gsap from 'gsap';
 
 import { Image } from '../../components';
 import styles from './styles.module.scss';
