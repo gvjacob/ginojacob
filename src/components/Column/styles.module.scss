@@ -20,7 +20,12 @@
 .resource {
   @include body(2);
   @include margin(10px auto);
+  @include transition;
 
   color: $accent-color;
   text-align: center;
+
+  @include on-focus {
+    transform: translateY(-4px);
+  }
 }
