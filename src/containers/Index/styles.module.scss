@@ -1,6 +1,6 @@
 .index {
   @include size(100%);
-  padding-left: $inset-left * 3;
+  @include padding(x $inset-left * 3);
 }
 
 .column {
