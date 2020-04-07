@@ -1,7 +1,6 @@
 @mixin heading($scale: 1) {
   $heading-scale: nth([22, 18, 16, 14, 6, 3, 1], $scale);
 
-  @include bold;
   @include type-gothic;
 
   color: $primary-color;

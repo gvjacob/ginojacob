@@ -21,11 +21,9 @@ const Introduction = () => {
 
   return (
     <section className={styles.introduction}>
-      <div className={styles.container}>
-        <h1 className={styles.name}>{name}</h1>
-        <Image className={styles.media} image={media} />
-        <p className={styles.biography}>{biographyTease}</p>
-      </div>
+      <h1 className={styles.name}>{name}</h1>
+      <Image className={styles.media} image={media} />
+      <p className={styles.biography}>{biographyTease}</p>
     </section>
   );
 };

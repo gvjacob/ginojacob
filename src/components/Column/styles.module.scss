@@ -1,5 +1,5 @@
 .column {
-  @include size(100px, 100vh);
+  @include size($inset-left, 100vh);
   @include flex(column, flex-end);
 }
 

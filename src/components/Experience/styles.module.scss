@@ -20,7 +20,7 @@
 }
 
 .description {
-  @include body;
+  @include body(2);
   margin-top: 20px;
 }
 
