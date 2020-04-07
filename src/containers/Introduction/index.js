@@ -35,7 +35,7 @@ const Introduction = () => {
 
   return (
     <section className={styles.introduction}>
-      <h1 id={'name'} className={styles.name} ref={nameRef}>
+      <h1 className={styles.name} ref={nameRef}>
         {name}
       </h1>
       <Image className={styles.media} image={media} ref={mediaRef} />
