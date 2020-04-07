@@ -27,4 +27,20 @@ $transition-default: $transition-duration $circ;
 
 /* Layout */
 $column-width: 100px;
-$inset-left: 10px;
+
+/* Responsive */
+$bp-xxl: 1800px;
+$bp-xl: 1440px;
+$bp-lg: 1125px;
+$bp-md-lg: 950px;
+$bp-md: 850px;
+$bp-md-sm: 600px;
+$bp-sm: 425px;
+$bp-xs: 375px;
+$bp-xxs: 320px;
+
+$sp-xs: 20px;
+$sp-sm: 40px;
+$sp-md: 80px;
+$sp-lg: 100px;
+$sp-xl: 200px;

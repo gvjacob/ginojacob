@@ -1,6 +1,10 @@
 .index {
   @include size(100%);
-  padding-left: $column-width + ($inset-left * 3);
+  @include padding(x $column-width + $sp-sm);
+
+  @include respond-to($bp-xl) {
+    @include padding(x $column-width + $sp-xl);
+  }
 }
 
 .column {
