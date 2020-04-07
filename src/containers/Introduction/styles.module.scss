@@ -6,7 +6,7 @@ $inset: -60px;
 
   @include on-focus {
     > .media {
-      @include padding(10px);
+      @include padding(20px);
 
       border: 2px solid $accent-color;
       filter: grayscale(0);
@@ -26,6 +26,7 @@ $inset: -60px;
   @include transition;
 
   filter: grayscale(100%);
+  visibility: hidden;
   width: 400px;
   z-index: -1;
 }
