@@ -4,8 +4,10 @@
 }
 
 .image {
-  @include size(auto, 300px);
+  @include size(100%, auto);
   @include transition;
+
+  padding-right: 20px;
 
   &.withLink {
     @include on-focus {
