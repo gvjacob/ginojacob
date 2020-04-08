@@ -7,7 +7,7 @@ import styles from './styles.module.scss';
 const FALink = ({ className, name, link, fontAwesomeClass }) => (
   <Link className={cn(styles.faLink, className)} to={link} newTab>
     <i className={cn(styles.icon, fontAwesomeClass)} />
-    <span className={styles.name}>{name}</span>
+    {name && <span className={styles.name}>{name}</span>}
   </Link>
 );
 
