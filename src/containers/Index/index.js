@@ -9,7 +9,7 @@ const Index = () => (
   <div className={styles.index}>
     <SEO title="Developer, Designer, Ballroom Dancer" />
     <Introduction />
-    <Experiences />
+    <Experiences className={styles.experiences} />
     <Column className={styles.column} />
   </div>
 );
