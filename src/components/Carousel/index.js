@@ -5,7 +5,7 @@ import { get, noop } from 'lodash';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import { Image } from '../../components';
+import { Image, Link } from '../../components';
 import styles from './styles.module.scss';
 
 const Navigator = ({ prev, next }) => (
@@ -18,18 +18,6 @@ const Navigator = ({ prev, next }) => (
     </button>
   </nav>
 );
-
-const CarouselItem = ({ media, link }) => {
-  const image = <Image className={cn(styles.image, link && styles.withLink)} image={media} />;
-
-  return link ? (
-    <a href={link} target={'_blank'} rel="noopener noreferrer">
-      {image}
-    </a>
-  ) : (
-    image
-  );
-};
 
 const Carousel = ({ className, items = [] }) => {
   const sliderRef = useRef();
@@ -61,7 +49,9 @@ const Carousel = ({ className, items = [] }) => {
         beforeChange={beforeChange}
         ref={sliderRef}>
         {items.map(({ media, link }, i) => (
-          <CarouselItem media={media} link={link} key={i} />
+          <Link to={link} key={i} newTab>
+            <Image className={cn(styles.image, link && styles.withLink)} image={media} />
+          </Link>
         ))}
       </Slider>
       <div className={styles.content}>
