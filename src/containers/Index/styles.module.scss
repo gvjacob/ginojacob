@@ -1,9 +1,9 @@
 .index {
   @include size(100%);
-  @include padding(x $column-width + $sp-sm);
+  @include padding(x $sp-sm x $column-width + $sp-sm);
 
   @include respond-to($bp-xl) {
-    @include padding(x $column-width + $sp-xl);
+    @include padding(x $sp-xl x $column-width + $sp-lg);
   }
 }
 
