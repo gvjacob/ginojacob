@@ -7,6 +7,11 @@ function fromSource(...files) {
   return files.reduce((acc, file) => `${acc}/${file}`, SRC_DIR);
 }
 
+function fromStatic(...files) {
+  const STATIC_DIR = require('path').resolve(__dirname, 'static');
+  return files.reduce((acc, file) => `${acc}/${file}`, STATIC_DIR);
+}
+
 const { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } = require('gatsby-plugin-config').default;
 
 module.exports = {
@@ -41,6 +46,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
+        icon: fromStatic('assets', 'favicon.ico'),
       },
     },
     {
