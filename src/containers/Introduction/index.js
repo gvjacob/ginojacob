@@ -1,23 +1,10 @@
 import React, { useEffect, useRef } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import gsap from 'gsap';
 
 import { Image } from '../../components';
 import styles from './styles.module.scss';
 
-const Introduction = () => {
-  const { biography } = useStaticQuery(graphql`
-    {
-      biography: contentfulBiography {
-        name
-        biographyTease
-        media {
-          ...IMAGE
-        }
-      }
-    }
-  `);
-
+const Introduction = ({ biography }) => {
   const nameRef = useRef(null);
   const mediaRef = useRef(null);
   const biographyRef = useRef(null);
