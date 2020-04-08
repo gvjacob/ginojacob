@@ -4,11 +4,16 @@ import { useIntersection } from 'react-use';
 import { compact } from 'lodash';
 import gsap from 'gsap';
 
+import Link from '../Link';
 import ProjectsCarousel from '../ProjectsCarousel';
 import styles from './styles.module.scss';
 
 const Experience = ({ className, title, duration, description, organization, projects }) => {
-  const { name: organizationName, description: organizationDescription } = organization;
+  const {
+    name: organizationName,
+    description: organizationDescription,
+    website: organizationWebsite,
+  } = organization;
   const overline = compact([title, duration]).join(' | ');
 
   const ref = useRef(null);
@@ -29,7 +34,9 @@ const Experience = ({ className, title, duration, description, organization, pro
     <section className={cn(styles.experience, className)} ref={ref}>
       <div className={styles.container}>
         <span className={styles.overline}>{overline}</span>
-        <h2 className={styles.organization}>{organizationName}</h2>
+        <Link to={organizationWebsite} newTab>
+          <h2 className={styles.organization}>{organizationName}</h2>
+        </Link>
         <p className={styles.description}>{description || organizationDescription}</p>
       </div>
       <ProjectsCarousel className={styles.projects} projects={projects} />

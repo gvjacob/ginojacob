@@ -5,3 +5,4 @@ export { default as FALink } from './FALink';
 export { default as Experience } from './Experience';
 export { default as Carousel } from './Carousel';
 export { default as ProjectsCarousel } from './ProjectsCarousel';
+export { default as Link } from './Link';

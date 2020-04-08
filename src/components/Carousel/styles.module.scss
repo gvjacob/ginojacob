@@ -22,8 +22,6 @@
 .navigator {
   @include body(2);
 
-  margin-right: 5%;
-
   button {
     @include padding(x 10px);
   }

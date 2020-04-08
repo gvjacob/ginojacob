@@ -18,6 +18,11 @@
   @include type-gothic;
   @include uppercase;
   @include heading(3);
+  @include transition;
+
+  @include on-focus {
+    opacity: 0.7;
+  }
 }
 
 .description {
