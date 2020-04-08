@@ -8,7 +8,6 @@ $inset: -60px;
     > .media {
       @include padding(20px);
 
-      border: 2px solid $accent-color;
       filter: grayscale(0);
     }
   }
@@ -27,8 +26,12 @@ $inset: -60px;
 
   filter: grayscale(100%);
   visibility: hidden;
-  width: 400px;
+  width: 300px;
   z-index: -1;
+
+  @include respond-to($bp-xl) {
+    width: 400px;
+  }
 }
 
 .biography {
