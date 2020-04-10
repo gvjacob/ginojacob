@@ -1,4 +1,7 @@
-import '@testing-library/jest-dom/extend-expect';
-import { cleanup } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect'
 
-afterEach(cleanup);
+beforeAll(() => {
+  global.___loader = {
+    enqueue: jest.fn(),
+  }
+})

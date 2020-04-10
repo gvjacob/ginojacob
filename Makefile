@@ -1,10 +1,5 @@
-.PHONY: test
+.PHONY: start
 
 start:
-	npm run dev
-
-test:
-	npm test
-
-test-watch:
-	npm test -- --watchAll
+	npm run clean
+	npm start

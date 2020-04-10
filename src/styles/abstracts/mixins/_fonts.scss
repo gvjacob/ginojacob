@@ -1,0 +1,38 @@
+@mixin font-face($name, $file, $style: normal, $weight: 400) {
+  @font-face {
+    font-family: $name;
+    font-style: $style;
+    font-weight: $weight;
+    src: url('/fonts/#{$file}');
+  }
+}
+
+@mixin font-size($tier) {
+  font-size: ms($tier);
+  line-height: ms($tier + 2);
+}
+
+@mixin spaced($letter-spacing: 2px) {
+  letter-spacing: $letter-spacing;
+}
+
+@mixin bold {
+  font-weight: bold;
+}
+
+@mixin uppercase {
+  text-transform: uppercase;
+}
+
+@mixin vertical {
+  transform: rotate(-180deg);
+  writing-mode: tb-rl;
+}
+
+@mixin primary-color {
+  color: $primary-color;
+}
+
+@mixin secondary-color {
+  color: $secondary-color;
+}

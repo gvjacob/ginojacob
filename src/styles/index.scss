@@ -1,0 +1,46 @@
+@import 'reset';
+
+@include font-face($name: 'Object', $file: 'Object Sans - Regular.otf');
+@include font-face($name: 'Object', $file: 'Object Sans - Bold.otf', $weight: bold);
+@include font-face($name: 'Gothic', $file: 'Gothic.ttf');
+
+html,
+body {
+  @include margin(0);
+  @include padding(0);
+}
+
+body {
+  @include size(100vw, 100vh);
+  @include type-object;
+
+  background-color: $background-color;
+  color: $body-color;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body > div,
+div[role='group'][tabindex] {
+  @include size(100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  color: $body-color;
+  cursor: pointer;
+  font-size: 100%;
+}

@@ -1,0 +1,17 @@
+.index {
+  @include size(100%);
+}
+
+.experiences {
+  @include padding(x $sp-sm x $column-width + $sp-sm);
+
+  @include respond-to($bp-xl) {
+    @include padding(x $sp-xl x $column-width + $sp-lg);
+  }
+}
+
+.column {
+  left: 0;
+  position: fixed;
+  top: 0;
+}
