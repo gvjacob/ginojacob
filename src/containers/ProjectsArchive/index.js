@@ -7,8 +7,6 @@ import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap';
 import { Link } from '../../components';
 import styles from './styles.module.scss';
 
-ScrollMagicPluginGsap(ScrollMagic, TweenLite);
-
 const Project = ({ className, project }) => {
   const { name, link } = project;
 
@@ -25,6 +23,7 @@ const ProjectsArchive = ({ className, projects }) => {
   const ref = useRef();
 
   useEffect(() => {
+    ScrollMagicPluginGsap(ScrollMagic, TweenLite);
     const controller = new ScrollMagic.Controller();
 
     const tween = TweenLite.fromTo(`.project`, { autoAlpha: 0 }, { autoAlpha: 1, stagger: 0.2 });

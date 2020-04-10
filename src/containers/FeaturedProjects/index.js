@@ -7,8 +7,6 @@ import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap';
 import { Image, Link } from '../../components';
 import styles from './styles.module.scss';
 
-ScrollMagicPluginGsap(ScrollMagic, TimelineLite);
-
 const Project = ({ className, project }) => {
   const imageRef = useRef();
   const copyRef = useRef();
@@ -16,6 +14,7 @@ const Project = ({ className, project }) => {
   const { name, description, link, media } = project;
 
   useEffect(() => {
+    ScrollMagicPluginGsap(ScrollMagic, TimelineLite);
     const controller = new ScrollMagic.Controller();
     const timeline = new TimelineLite();
 
