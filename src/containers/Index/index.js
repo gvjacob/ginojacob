@@ -46,7 +46,7 @@ const Index = () => {
       <SEO title="Developer, Designer, Ballroom Dancer" />
       <Introduction biography={biography} />
       <Experiences className={styles.padded} experiences={experiences} />
-      <FeaturedProjects className={styles.padded} projects={projects} />
+      <FeaturedProjects projects={projects} />
       <Column className={styles.column} />
     </div>
   );
