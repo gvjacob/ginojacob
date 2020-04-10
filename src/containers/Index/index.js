@@ -5,6 +5,7 @@ import { SEO, Column } from '../../components';
 import Introduction from '../Introduction';
 import Experiences from '../Experiences';
 import FeaturedProjects from '../FeaturedProjects';
+import ProjectsArchive from '../ProjectsArchive';
 import styles from './styles.module.scss';
 
 const Index = () => {
@@ -42,7 +43,7 @@ const Index = () => {
     }
   `);
 
-  const { biography, experiences, featuredProjects } = homepage;
+  const { biography, experiences, featuredProjects, projects } = homepage;
 
   return (
     <div className={styles.index}>
@@ -50,6 +51,7 @@ const Index = () => {
       <Introduction biography={biography} />
       <Experiences className={styles.padded} experiences={experiences} />
       <FeaturedProjects projects={featuredProjects} />
+      <ProjectsArchive className={styles.padded} projects={projects} />
       <Column className={styles.column} />
     </div>
   );
