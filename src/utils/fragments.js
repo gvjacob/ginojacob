@@ -7,4 +7,14 @@ export const imageFragment = graphql`
       url
     }
   }
+
+  fragment PROJECT on ContentfulProject {
+    name
+    description
+    link
+    github
+    media {
+      ...IMAGE
+    }
+  }
 `;

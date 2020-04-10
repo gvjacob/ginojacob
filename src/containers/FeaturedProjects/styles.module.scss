@@ -1,0 +1,10 @@
+.headline {
+  @include uppercase;
+  @include heading(5);
+  color: $body-color;
+}
+
+.image {
+  @include transition;
+  @include padding(400px);
+}
