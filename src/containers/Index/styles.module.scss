@@ -2,12 +2,16 @@
   @include size(100%);
 }
 
-.experiences {
+.padded {
   @include padding(x $sp-sm x $column-width + $sp-sm);
 
   @include respond-to($bp-xl) {
     @include padding(x $sp-xl x $column-width + $sp-lg);
   }
+}
+
+.featured-projects {
+  margin-top: 400px;
 }
 
 .column {
