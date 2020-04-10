@@ -48,7 +48,9 @@ const Project = ({ className, project }) => {
 
 const FeaturedProjects = ({ className, projects }) => (
   <section className={className}>
-    <Project project={projects[0]} />
+    {projects.map((project, i) => (
+      <Project project={project} key={i} />
+    ))}
   </section>
 );
 

@@ -32,6 +32,9 @@ const Index = () => {
             ...PROJECT
           }
         }
+        featuredProjects {
+          ...PROJECT
+        }
         projects {
           ...PROJECT
         }
@@ -39,14 +42,14 @@ const Index = () => {
     }
   `);
 
-  const { biography, experiences, projects } = homepage;
+  const { biography, experiences, featuredProjects } = homepage;
 
   return (
     <div className={styles.index}>
       <SEO title="Developer, Designer, Ballroom Dancer" />
       <Introduction biography={biography} />
       <Experiences className={styles.padded} experiences={experiences} />
-      <FeaturedProjects projects={projects} />
+      <FeaturedProjects projects={featuredProjects} />
       <Column className={styles.column} />
     </div>
   );
