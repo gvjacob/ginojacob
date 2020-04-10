@@ -50,7 +50,7 @@ const Index = () => {
       <SEO title="Developer, Designer, Ballroom Dancer" />
       <Introduction biography={biography} />
       <Experiences className={styles.padded} experiences={experiences} />
-      <FeaturedProjects projects={featuredProjects} />
+      <FeaturedProjects className={styles.featuredProjects} projects={featuredProjects} />
       <ProjectsArchive className={styles.padded} projects={projects} />
       <Column className={styles.column} />
     </div>
