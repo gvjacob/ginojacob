@@ -1,6 +1,10 @@
 .column {
   @include size($column-width, 100vh);
-  @include flex(column, flex-end);
+  @include flex(column, space-between, center);
+}
+
+.theme-switch {
+  margin-top: $column-width / 2;
 }
 
 .resources {
