@@ -8,9 +8,12 @@ const ThemeSwitch = ({ className }) => {
   const [isDarkMode, setIsDarkMode] = useContext(ThemeContext);
 
   return (
-    <button className={className} onClick={() => setIsDarkMode(!isDarkMode)}>
-      <i className={cn(`${isDarkMode ? 'fas' : 'far'} fa-moon`, styles.themeSwitch)} />
-    </button>
+    <div className={cn(styles.themeSwitch, className)}>
+      <button className={styles.button} onClick={() => setIsDarkMode(!isDarkMode)}>
+        <i className={cn(`${isDarkMode ? 'fas' : 'far'} fa-moon`)} />
+      </button>
+      <span className={styles.label}>Switch to {isDarkMode ? 'Light' : 'Dark'}</span>
+    </div>
   );
 };
 
