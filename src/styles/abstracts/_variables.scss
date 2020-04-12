@@ -2,15 +2,17 @@
 $pink-color: #ff3366;
 $beige-color: #fdedb2;
 $black: #000000;
-$transparent-black: rgb(0, 0, 0, 0.8);
 $white: #ffffff;
 
-$primary-color: $beige-color;
-$secondary-color: $white;
-$tertiary-color: $black;
-$background-color: $black;
-$body-color: $secondary-color;
-$accent-color: $beige-color;
+:root {
+  --primary: #{$beige-color};
+  --secondary: #{$white};
+  --tertiary: #{$black};
+}
+
+$background-color: var(--tertiary);
+$body-color: var(--secondary);
+$accent-color: var(--primary);
 
 /* Typography */
 $object: 'Object';
@@ -44,3 +46,10 @@ $sp-sm: 40px;
 $sp-md: 80px;
 $sp-lg: 100px;
 $sp-xl: 200px;
+
+:export {
+  varBeige: $beige-color;
+  varBlack: $black;
+  varPink: $pink-color;
+  varWhite: $white;
+}
