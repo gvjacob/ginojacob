@@ -10,7 +10,12 @@
 }
 
 .copy {
-  @include absolute(50% x x 300px);
+  @include absolute(50% x x x);
+  left: $column-width + $sp-sm;
+
+  @include respond-to($bp-xl) {
+    left: $column-width + $sp-lg;
+  }
 }
 
 .overline {

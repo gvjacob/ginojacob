@@ -18,7 +18,7 @@ const Project = ({ className, project }) => {
     const controller = new ScrollMagic.Controller();
     const timeline = new TimelineLite();
 
-    timeline.to(imageRef.current, { padding: 400, opacity: 0.2 });
+    timeline.to(imageRef.current, { padding: '400 0 400 400', opacity: 0.5 });
     timeline.fromTo(copyRef.current, { autoAlpha: 0 }, { autoAlpha: 1 });
 
     new ScrollMagic.Scene({
