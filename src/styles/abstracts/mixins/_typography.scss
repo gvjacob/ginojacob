@@ -1,7 +1,7 @@
 @mixin heading($scale: 1) {
   $heading-scale: nth([22, 18, 16, 14, 6, 3, 1], $scale);
 
-  @include type-gothic;
+  @include type-tiempos;
 
   color: $accent-color;
   font-size: ms($heading-scale);
@@ -13,8 +13,8 @@
   line-height: ms($heading-scale + 2);
 }
 
-@mixin type-gothic {
-  font-family: $gothic;
+@mixin type-tiempos {
+  font-family: $tiempos;
 }
 
 @mixin type-object {
