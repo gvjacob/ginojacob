@@ -1,44 +1,48 @@
+@mixin padded {
+  @include padding(x $column-gutter);
+}
+
 .biography {
-  display: grid;
-
-  grid-template-columns: $column-width $column-width $column-width;
-
-  grid-template-areas:
-    'name title resources'
-    '. organization organization'
-    '. . .'
-    '. . .'
-    '. . .'
-    '. . .'
-    '. . .'
-    '. . .'
-    'bio . .';
-
-  row-gap: 40px;
+  @include flex(column, space-between);
+  @include padding(10% x);
+  height: 100vh;
 
   padding-left: $column-margin;
 }
 
+.grid {
+  display: grid;
+
+  grid-template-areas:
+    'name title resources'
+    '. organization organization';
+
+  grid-template-columns: $column-width $column-width $column-width;
+
+  row-gap: 40px;
+}
+
 .name {
   @include body(2);
+  @include padded;
   grid-area: name;
-  padding-left: $column-gutter;
 }
 
 .title {
   @include body(2);
+  @include padded;
   grid-area: title;
-  padding-left: $column-gutter;
 }
 
 .organization {
   @include heading(2);
+  @include padded;
   grid-area: organization;
-  padding-left: $column-gutter;
 }
 
 .bio {
   @include body(2);
+  @include padded;
   grid-area: bio;
-  padding-left: $column-gutter;
+  width: $column-width;
 }
