@@ -2,6 +2,8 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import { SEO, Grid } from '../../components';
+import Biography from '../Biography';
+
 import styles from './styles.module.scss';
 
 const Index = () => {
@@ -10,9 +12,18 @@ const Index = () => {
       homepage: contentfulHomepage {
         biography {
           name
-          biographyTease
-          media {
-            ...IMAGE
+          biography
+          experience {
+            title
+            organization {
+              name
+              website
+            }
+          }
+          resources {
+            name
+            fontAwesomeClass
+            link
           }
         }
         experiences {
@@ -39,12 +50,13 @@ const Index = () => {
     }
   `);
 
-  const { biography, experiences, featuredProjects, projects } = homepage;
+  const { biography } = homepage;
 
   return (
     <div className={styles.index}>
       <SEO title="Developer, Designer, Ballroom Dancer" />
       <Grid className={styles.grid} />
+      <Biography className={styles.biography} biography={biography} />
     </div>
   );
 };

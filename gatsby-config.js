@@ -12,7 +12,11 @@ function fromStatic(...files) {
   return files.reduce((acc, file) => `${acc}/${file}`, STATIC_DIR);
 }
 
-const { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } = require('gatsby-plugin-config').default;
+const {
+  CONTENTFUL_SPACE_ID,
+  CONTENTFUL_ACCESS_TOKEN,
+  CONTENTFUL_ENVIRONMENT,
+} = require('gatsby-plugin-config').default;
 
 module.exports = {
   siteMetadata: {
@@ -29,6 +33,7 @@ module.exports = {
       options: {
         spaceId: CONTENTFUL_SPACE_ID,
         accessToken: CONTENTFUL_ACCESS_TOKEN,
+        environment: CONTENTFUL_ENVIRONMENT,
       },
     },
     {

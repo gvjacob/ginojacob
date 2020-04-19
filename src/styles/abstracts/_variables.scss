@@ -30,7 +30,7 @@ $transition-default: $transition-duration $circ;
 
 /* Layout */
 $column-width: 400px;
-$column-margin: calc((100% - (3 * $column-width)) / 2);
+$column-margin: calc((100% - (3 * #{$column-width})) / 2);
 $column-gutter: 20px;
 
 /* Responsive */

@@ -1,0 +1,44 @@
+.biography {
+  display: grid;
+
+  grid-template-columns: $column-width $column-width $column-width;
+
+  grid-template-areas:
+    'name title resources'
+    '. organization organization'
+    '. . .'
+    '. . .'
+    '. . .'
+    '. . .'
+    '. . .'
+    '. . .'
+    'bio . .';
+
+  row-gap: 40px;
+
+  padding-left: $column-margin;
+}
+
+.name {
+  @include body(2);
+  grid-area: name;
+  padding-left: $column-gutter;
+}
+
+.title {
+  @include body(2);
+  grid-area: title;
+  padding-left: $column-gutter;
+}
+
+.organization {
+  @include heading(2);
+  grid-area: organization;
+  padding-left: $column-gutter;
+}
+
+.bio {
+  @include body(2);
+  grid-area: bio;
+  padding-left: $column-gutter;
+}
