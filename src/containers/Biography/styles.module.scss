@@ -4,7 +4,7 @@
 
 .biography {
   @include flex(column, space-between);
-  @include padding(10% x);
+  @include padding(10% x 5% x);
   height: 100vh;
 
   padding-left: $column-margin;

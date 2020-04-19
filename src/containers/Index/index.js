@@ -26,24 +26,10 @@ const Index = () => {
             link
           }
         }
-        experiences {
-          title
-          duration
-          description
-          current
-          organization {
-            name
-            description
-            website
-          }
-          projects {
-            ...PROJECT
-          }
-        }
-        featuredProjects {
+        featuredProject {
           ...PROJECT
         }
-        projects {
+        archive {
           ...PROJECT
         }
       }
