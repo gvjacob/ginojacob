@@ -1,7 +1,7 @@
 import React from 'react';
 import { safeGet, classNames as cn } from 'peculiarity';
 
-import { Link } from '../../components';
+import { Link, Highlight } from '../../components';
 
 import styles from './styles.module.scss';
 
@@ -29,7 +29,9 @@ const Biography = ({ className, biography }) => {
           <Link to={website}>{organization}</Link>
         </h2>
       </div>
-      <p className={styles.bio}>{bio}</p>
+      <Highlight className={styles.bio}>
+        <p>{bio}</p>
+      </Highlight>
     </section>
   );
 };

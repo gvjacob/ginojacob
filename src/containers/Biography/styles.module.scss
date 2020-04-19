@@ -43,6 +43,5 @@
 .bio {
   @include body(2);
   @include padded;
-  grid-area: bio;
   width: $column-width;
 }
