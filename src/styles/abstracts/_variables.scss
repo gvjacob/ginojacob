@@ -1,19 +1,12 @@
 /* Colors */
-$pink-color: #ff3366;
 $beige-color: #fdedb2;
 $black: #000000;
 $grey: #242323;
 $white: #ffffff;
 
-:root {
-  --primary: #{$beige-color};
-  --secondary: #{$white};
-  --tertiary: #{$black};
-}
-
-$background-color: var(--tertiary);
-$body-color: var(--secondary);
-$accent-color: var(--primary);
+$background-color: $black;
+$body-color: $white;
+$accent-color: $beige-color;
 
 /* Typography */
 $object: 'Object';
@@ -53,10 +46,3 @@ $sp-sm: 40px;
 $sp-md: 80px;
 $sp-lg: 100px;
 $sp-xl: 200px;
-
-:export {
-  varBeige: $beige-color;
-  varBlack: $black;
-  varPink: $pink-color;
-  varWhite: $white;
-}
