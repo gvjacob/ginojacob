@@ -20,7 +20,7 @@
   padding-left: $column-margin;
 
   @include on-focus {
-    border-bottom: 5px solid $accent-color;
+    border-bottom: $highlight-width solid $accent-color;
   }
 }
 

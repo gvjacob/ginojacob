@@ -2,7 +2,7 @@
   @include flex(column);
 
   &::before {
-    border-top: 4px solid $accent-color;
+    border-top: $highlight-width solid $accent-color;
     content: '';
     margin-bottom: 20px;
     width: 50%;

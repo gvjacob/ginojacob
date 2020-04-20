@@ -1,0 +1,14 @@
+.footer {
+  @include in-column;
+  @include padded;
+}
+
+.resource {
+  @include margin($sp-xxs x);
+  @include transition;
+  @include body;
+
+  @include on-focus {
+    color: $accent-color;
+  }
+}

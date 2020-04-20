@@ -23,3 +23,7 @@
     top: -50%;
   }
 }
+
+.footer {
+  @include margin($sp-xl x $sp-sm x);
+}

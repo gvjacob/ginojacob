@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { SEO, Grid, Archive, Biography, FeaturedProject } from '../../components';
+import { SEO, Grid, Archive, Biography, FeaturedProject, Footer } from '../../components';
 
 import styles from './styles.module.scss';
 
@@ -44,6 +44,7 @@ const Index = () => {
       <Biography className={styles.biography} biography={biography} />
       <FeaturedProject className={styles.featuredProject} project={featuredProject} />
       <Archive projects={archive} />
+      <Footer className={styles.footer} resources={biography.resources} />
     </div>
   );
 };

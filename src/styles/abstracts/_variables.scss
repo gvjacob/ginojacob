@@ -33,6 +33,9 @@ $column-width: 400px;
 $column-margin: calc((100vw - (3 * #{$column-width})) / 2);
 $column-gutter: 20px;
 
+/* Line */
+$highlight-width: 4px;
+
 /* Responsive */
 $bp-xxl: 1800px;
 $bp-xl: 1440px;
