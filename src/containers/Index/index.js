@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import { SEO, Grid, Archive, Biography, FeaturedProject, Footer } from '../../components';
@@ -36,13 +36,18 @@ const Index = () => {
   `);
 
   const { biography, featuredProject, archive } = homepage;
+  const bioRef = useRef(null);
 
   return (
     <div className={styles.index}>
       <SEO title="Developer, Designer, Ballroom Dancer" />
       <Grid className={styles.grid} />
-      <Biography className={styles.biography} biography={biography} />
-      <FeaturedProject className={styles.featuredProject} project={featuredProject} />
+      <Biography className={styles.biography} biography={biography} ref={bioRef} />
+      <FeaturedProject
+        className={styles.featuredProject}
+        project={featuredProject}
+        bioRef={bioRef}
+      />
       <Archive projects={archive} />
       <Footer className={styles.footer} resources={biography.resources} />
     </div>

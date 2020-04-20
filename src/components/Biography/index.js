@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState, useImperativeHandle, forwardRef } from 'react';
 import { safeGet, classNames as cn } from 'peculiarity';
 
 import { Link, Highlight, FAResources } from '../';
 
 import styles from './styles.module.scss';
 
-const Biography = ({ className, biography }) => {
+const Biography = ({ className, biography }, ref) => {
   const { name, biography: bio, experience, resources } = safeGet(
     biography,
     'name',
@@ -21,6 +21,12 @@ const Biography = ({ className, biography }) => {
     ['organization', 'website'],
   );
 
+  const [showBio, setShowBio] = useState(true);
+
+  useImperativeHandle(ref, () => ({
+    setShowBio,
+  }));
+
   return (
     <section className={cn(styles.biography, className)}>
       <div className={styles.grid}>
@@ -31,11 +37,11 @@ const Biography = ({ className, biography }) => {
         </h2>
         <FAResources className={styles.resources} resources={resources} />
       </div>
-      <Highlight className={styles.bio}>
+      <Highlight className={cn(styles.bio, showBio && styles.show)}>
         <p>{bio}</p>
       </Highlight>
     </section>
   );
 };
 
-export default Biography;
+export default forwardRef(Biography);

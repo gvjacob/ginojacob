@@ -5,7 +5,7 @@ import { useIntersection } from 'react-use';
 import { Image, Highlight, Link } from '..';
 import styles from './styles.module.scss';
 
-const FeaturedProject = ({ className, project }) => {
+const FeaturedProject = ({ className, project, bioRef }) => {
   const { name, description, link, media } = project;
   const imageRef = useRef();
   const [tinted, setTinted] = useState(true);
@@ -22,6 +22,7 @@ const FeaturedProject = ({ className, project }) => {
     intersection.boundingClientRect.y > 0
   ) {
     setTinted(!tinted);
+    bioRef.current.setShowBio(!tinted);
   }
 
   return (

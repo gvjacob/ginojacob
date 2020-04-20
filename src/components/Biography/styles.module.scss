@@ -65,10 +65,16 @@
 
 .bio {
   @include body(2);
+  @include transition;
   @include padded;
+  @include hidden;
   width: 100%;
 
   @include mq($bp-md) {
     width: $column-width;
+  }
+
+  &.show {
+    @include visible;
   }
 }
