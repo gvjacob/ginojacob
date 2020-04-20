@@ -4,21 +4,22 @@
 }
 
 .grid {
-  @include absolute(0 x x 50%);
+  @include fixed(0 x x 50%);
   transform: translateX(-50%);
-  z-index: -2;
+  z-index: -1;
 }
 
 .biography {
-  z-index: 99;
+  position: relative;
+  z-index: 2;
 }
 
 .featured-project {
-  @include absolute(100vh x x x);
-  transform: translateY(-50%);
-  z-index: -1;
+  position: relative;
+  top: -20%;
+  z-index: 1;
 
   @include mq($bp-md) {
-    transform: translateY(-30%);
+    top: -50%;
   }
 }

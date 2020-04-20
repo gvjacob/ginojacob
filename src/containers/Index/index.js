@@ -40,9 +40,9 @@ const Index = () => {
   return (
     <div className={styles.index}>
       <SEO title="Developer, Designer, Ballroom Dancer" />
-      <Grid className={styles.grid} />
-      <FeaturedProject className={styles.featuredProject} project={featuredProject} />
       <Biography className={styles.biography} biography={biography} />
+      <FeaturedProject className={styles.featuredProject} project={featuredProject} />
+      <Grid className={styles.grid} />
     </div>
   );
 };
