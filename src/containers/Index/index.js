@@ -1,8 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { SEO, Grid } from '../../components';
-import Biography from '../Biography';
+import { SEO, Grid, Biography } from '../../components';
 
 import styles from './styles.module.scss';
 

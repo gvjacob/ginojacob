@@ -1,7 +1,7 @@
 import React from 'react';
 import { safeGet, classNames as cn } from 'peculiarity';
 
-import { Link, Highlight } from '../../components';
+import { Link, Highlight } from '../';
 
 import styles from './styles.module.scss';
 
