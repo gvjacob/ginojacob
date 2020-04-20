@@ -18,9 +18,15 @@
   grid-template-columns: $column-width calc(2 * #{$column-width});
   height: $sp-md;
   padding-left: $column-margin;
+  position: relative;
 
   @include on-focus {
     border-bottom: $highlight-width solid $accent-color;
+    z-index: 99;
+
+    > .image {
+      @include visible;
+    }
   }
 }
 
@@ -28,4 +34,15 @@
 .description {
   @include body(2);
   @include padded;
+
+  z-index: 1;
+}
+
+.image {
+  @include size(auto, $sp-md * 5);
+  @include hidden;
+  @include transition;
+
+  left: calc(100% - #{$sp-md});
+  position: absolute;
 }
