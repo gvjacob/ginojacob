@@ -57,6 +57,8 @@
 
 .resources {
   @include padded;
+  @include show-at($bp-md);
+
   align-items: center;
   grid-area: resources;
 }
