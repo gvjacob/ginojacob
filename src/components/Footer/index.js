@@ -10,7 +10,9 @@ const Footer = ({ className, resources }) => (
     <ul>
       {resources.map(({ name, link }, i) => (
         <li className={styles.resource} key={i}>
-          <Link to={link}>{name}</Link>
+          <Link className={styles.link} to={link}>
+            {name}
+          </Link>
         </li>
       ))}
     </ul>

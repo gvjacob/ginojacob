@@ -9,7 +9,7 @@ const FAResources = ({ className, resources }) => (
   <ul className={cn(styles.faResources, className)}>
     {resources.map((resource, i) => (
       <li className={styles.resource} key={i}>
-        <FALink {...resource} />
+        <FALink className={styles.faLink} {...resource} />
       </li>
     ))}
   </ul>
