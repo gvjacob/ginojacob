@@ -1,16 +1,17 @@
 import React from 'react';
 import { safeGet, classNames as cn } from 'peculiarity';
 
-import { Link, Highlight } from '../';
+import { Link, Highlight, FAResources } from '../';
 
 import styles from './styles.module.scss';
 
 const Biography = ({ className, biography }) => {
-  const { name, biography: bio, experience } = safeGet(
+  const { name, biography: bio, experience, resources } = safeGet(
     biography,
     'name',
     'biography',
     'experience',
+    'resources',
   );
 
   const { title, name: organization, website } = safeGet(
@@ -28,6 +29,7 @@ const Biography = ({ className, biography }) => {
         <h2 className={styles.organization}>
           <Link to={website}>{organization}</Link>
         </h2>
+        <FAResources className={styles.resources} resources={resources} />
       </div>
       <Highlight className={styles.bio}>
         <p>{bio}</p>

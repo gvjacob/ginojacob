@@ -21,8 +21,8 @@
     display: grid;
 
     grid-template-areas:
-      'name title resources'
-      '. organization organization';
+      'name title .'
+      'resources organization organization';
 
     grid-template-columns: $column-width $column-width $column-width;
 
@@ -57,6 +57,12 @@
     @include heading(3);
     margin-top: 0;
   }
+}
+
+.resources {
+  @include padded;
+  align-items: center;
+  grid-area: resources;
 }
 
 .bio {
