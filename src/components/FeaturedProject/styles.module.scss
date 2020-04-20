@@ -2,11 +2,15 @@
   position: relative;
 
   &::before {
+    @include transition;
     @include size(100%);
     @include absolute(0 x x 0);
 
-    background-color: rgba($color: #000000, $alpha: 0.7);
     content: '';
+  }
+
+  &.tinted::before {
+    background-color: rgba($color: #000000, $alpha: 0.7);
   }
 }
 
