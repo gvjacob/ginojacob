@@ -10,7 +10,7 @@ const FeaturedProject = ({ className, project }) => {
   return (
     <figure className={cn(styles.featuredProject, className)}>
       <div className={styles.image}>
-        <Image image={media} />
+        <Image image={media} fit />
       </div>
 
       <figcaption className={styles.caption}>
