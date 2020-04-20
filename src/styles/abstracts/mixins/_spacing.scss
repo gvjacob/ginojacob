@@ -18,3 +18,8 @@
 @mixin padding($value) {
   @include shorthander(padding, $value);
 }
+
+@mixin in-column($nth: 1) {
+  $multiplier: $nth - 1;
+  margin-left: calc(#{$column-margin} + #{$column-width * $multiplier});
+}

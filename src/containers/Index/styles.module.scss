@@ -6,5 +6,19 @@
 .grid {
   @include absolute(0 x x 50%);
   transform: translateX(-50%);
+  z-index: -2;
+}
+
+.biography {
+  z-index: 99;
+}
+
+.featured-project {
+  @include absolute(100vh x x x);
+  transform: translateY(-50%);
   z-index: -1;
+
+  @include mq($bp-md) {
+    transform: translateY(-30%);
+  }
 }

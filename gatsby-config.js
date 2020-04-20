@@ -2,6 +2,8 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+const postCssCalc = require('postcss-calc');
+
 function fromSource(...files) {
   const SRC_DIR = require('path').resolve(__dirname, 'src');
   return files.reduce((acc, file) => `${acc}/${file}`, SRC_DIR);
@@ -58,6 +60,13 @@ module.exports = {
       resolve: 'gatsby-plugin-sass',
       options: {
         implementation: require('sass'),
+        postCssPlugins: [
+          /*
+           * Reduces nested css calcs, for ie11 compatibility.
+           * https://github.com/postcss/postcss-calc
+           */
+          postCssCalc(),
+        ],
         data: `@import 'abstracts/index';`,
         includePaths: [fromSource('styles')],
         cssLoaderOptions: {

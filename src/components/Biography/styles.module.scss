@@ -54,7 +54,7 @@
   margin-top: $sp-xxs;
 
   @include mq($bp-md) {
-    @include heading(2);
+    @include heading(3);
     margin-top: 0;
   }
 }

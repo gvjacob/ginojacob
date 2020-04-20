@@ -1,0 +1,28 @@
+.image {
+  opacity: 0.2;
+}
+
+.caption {
+  @include padding(x $column-gutter);
+
+  @include mq($bp-md) {
+    @include in-column(2);
+  }
+}
+
+.name {
+  @include heading(5);
+  @include margin($sp-sm x);
+
+  @include mq($bp-md) {
+    @include heading(4);
+  }
+}
+
+.description {
+  @include body(2);
+
+  &::before {
+    width: $column-width / 2;
+  }
+}
