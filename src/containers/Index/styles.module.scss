@@ -10,13 +10,13 @@
 }
 
 .biography {
-  animation: fade-in 0.8s ease-out;
+  animation: fade-in 0.8s $sine;
   position: relative;
   z-index: 2;
 }
 
 .featured-project {
-  animation: fade-up 0.8s ease-out;
+  animation: fade-up 0.8s $cube;
   position: relative;
   top: -20%;
   z-index: 1;
