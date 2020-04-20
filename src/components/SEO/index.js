@@ -24,7 +24,7 @@ const SEO = ({ lang, meta, title }) => {
   );
 
   const metaTitle = biography.name || site.siteMetadata.title;
-  const metaDescription = biography.biographyTease || site.siteMetadata.description;
+  const metaDescription = biography.biography || site.siteMetadata.description;
 
   return (
     <Helmet
