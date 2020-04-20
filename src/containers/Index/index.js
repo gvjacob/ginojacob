@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { SEO, Grid, Biography, FeaturedProject } from '../../components';
+import { SEO, Grid, Archive, Biography, FeaturedProject } from '../../components';
 
 import styles from './styles.module.scss';
 
@@ -35,14 +35,15 @@ const Index = () => {
     }
   `);
 
-  const { biography, featuredProject } = homepage;
+  const { biography, featuredProject, archive } = homepage;
 
   return (
     <div className={styles.index}>
       <SEO title="Developer, Designer, Ballroom Dancer" />
+      <Grid className={styles.grid} />
       <Biography className={styles.biography} biography={biography} />
       <FeaturedProject className={styles.featuredProject} project={featuredProject} />
-      <Grid className={styles.grid} />
+      <Archive projects={archive} />
     </div>
   );
 };

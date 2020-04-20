@@ -1,0 +1,31 @@
+.headline {
+  @include heading(4);
+  @include in-column(1);
+  @include padded;
+}
+
+.projects {
+  background-color: $black;
+  width: calc(#{$column-margin} + #{$column-width * 2});
+}
+
+.project {
+  @include transition;
+
+  align-items: center;
+  border-bottom: 1px solid $grey;
+  display: grid;
+  grid-template-columns: $column-width calc(2 * #{$column-width});
+  height: $sp-md;
+  padding-left: $column-margin;
+
+  @include on-focus {
+    border-bottom: 5px solid $accent-color;
+  }
+}
+
+.name,
+.description {
+  @include body(2);
+  @include padded;
+}

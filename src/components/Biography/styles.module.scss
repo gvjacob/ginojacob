@@ -1,7 +1,3 @@
-@mixin padded {
-  @include padding(x $column-gutter);
-}
-
 .biography {
   @include flex(column, space-between);
   @include padding($column-gutter x);

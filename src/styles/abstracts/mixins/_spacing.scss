@@ -23,3 +23,7 @@
   $multiplier: $nth - 1;
   margin-left: calc(#{$column-margin} + #{$column-width * $multiplier});
 }
+
+@mixin padded {
+  @include padding(x $column-gutter);
+}
