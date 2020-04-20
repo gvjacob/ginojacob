@@ -22,7 +22,7 @@
 
     grid-template-columns: $column-width $column-width $column-width;
 
-    row-gap: 40px;
+    row-gap: $sp-xxs;
   }
 }
 
