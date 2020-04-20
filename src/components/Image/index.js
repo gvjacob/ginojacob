@@ -12,13 +12,7 @@ const Image = ({ className, image, fit, ...props }, ref) => {
   }
 
   return (
-    <img
-      className={cn(styles.image, fit && styles.fit, className)}
-      src={url}
-      alt={title}
-      {...props}
-      ref={ref}
-    />
+    <img className={cn(fit && styles.fit, className)} src={url} alt={title} {...props} ref={ref} />
   );
 };
 

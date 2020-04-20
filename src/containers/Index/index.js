@@ -1,11 +1,8 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { SEO, Column } from '../../components';
-import Introduction from '../Introduction';
-import Experiences from '../Experiences';
-import FeaturedProjects from '../FeaturedProjects';
-import ProjectsArchive from '../ProjectsArchive';
+import { SEO, Grid, Archive, Biography, FeaturedProject, Footer } from '../../components';
+
 import styles from './styles.module.scss';
 
 const Index = () => {
@@ -14,45 +11,40 @@ const Index = () => {
       homepage: contentfulHomepage {
         biography {
           name
-          biographyTease
-          media {
-            ...IMAGE
+          biography
+          experience {
+            title
+            organization {
+              name
+              website
+            }
           }
-        }
-        experiences {
-          title
-          duration
-          description
-          current
-          organization {
+          resources {
             name
-            description
-            website
-          }
-          projects {
-            ...PROJECT
+            fontAwesomeClass
+            link
           }
         }
-        featuredProjects {
+        featuredProject {
           ...PROJECT
         }
-        projects {
+        archive {
           ...PROJECT
         }
       }
     }
   `);
 
-  const { biography, experiences, featuredProjects, projects } = homepage;
+  const { biography, featuredProject, archive } = homepage;
 
   return (
     <div className={styles.index}>
       <SEO title="Developer, Designer, Ballroom Dancer" />
-      <Introduction biography={biography} />
-      <Experiences className={styles.padded} experiences={experiences} />
-      <FeaturedProjects className={styles.featuredProjects} projects={featuredProjects} />
-      <ProjectsArchive className={styles.padded} projects={projects} />
-      <Column className={styles.column} />
+      <Grid className={styles.grid} />
+      <Biography className={styles.biography} biography={biography} />
+      <FeaturedProject className={styles.featuredProject} project={featuredProject} />
+      <Archive projects={archive} />
+      <Footer className={styles.footer} resources={biography.resources} />
     </div>
   );
 };

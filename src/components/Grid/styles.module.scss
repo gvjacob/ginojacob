@@ -1,0 +1,7 @@
+$line-width: 1px;
+
+.grid {
+  @include size($column-width, 100%);
+  @include border(0 $line-width, solid, $grey);
+  @include show-at($bp-md);
+}

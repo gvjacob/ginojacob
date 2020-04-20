@@ -1,21 +1,29 @@
 .index {
   @include size(100%);
+  position: relative;
 }
 
-.padded {
-  @include padding(x $sp-sm x $column-width + $sp-sm);
+.grid {
+  @include fixed(0 x x 50%);
+  transform: translateX(-50%);
+  z-index: -1;
+}
 
-  @include respond-to($bp-xl) {
-    @include padding(x $sp-xl x $column-width + $sp-lg);
+.biography {
+  position: relative;
+  z-index: 2;
+}
+
+.featured-project {
+  position: relative;
+  top: -20%;
+  z-index: 1;
+
+  @include mq($bp-md) {
+    top: -40%;
   }
 }
 
-.featured-projects {
-  margin-top: 400px;
-}
-
-.column {
-  left: 0;
-  position: fixed;
-  top: 0;
+.footer {
+  @include margin($sp-xl x $sp-sm x);
 }

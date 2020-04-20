@@ -2,12 +2,13 @@
 
 @include font-face($name: 'Object', $file: 'Object Sans - Regular.otf');
 @include font-face($name: 'Object', $file: 'Object Sans - Bold.otf', $weight: bold);
-@include font-face($name: 'Gothic', $file: 'Gothic.ttf');
+@include font-face($name: 'Tiempos', $file: 'Tiempos Headline - Regular.otf');
 
 html,
 body {
   @include margin(0);
   @include padding(0);
+  overflow-x: hidden;
 }
 
 body {
@@ -19,8 +20,6 @@ body {
 
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-
-  overflow-x: hidden;
 }
 
 * {

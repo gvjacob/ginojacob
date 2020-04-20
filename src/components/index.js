@@ -1,10 +1,12 @@
 export { default as SEO } from './SEO';
-export { default as ThemeSwitch } from './ThemeSwitch';
+export { default as Archive } from './Archive';
 export { default as Image } from './Image';
-export { default as Column } from './Column';
+export { default as Highlight } from './Highlight';
+export { default as Footer } from './Footer';
+export { default as Biography } from './Biography';
+export { default as FeaturedProject } from './FeaturedProject';
 export { default as FALink } from './FALink';
 export { default as FAIcon } from './FAIcon';
-export { default as Experience } from './Experience';
-export { default as Carousel } from './Carousel';
-export { default as ProjectsCarousel } from './ProjectsCarousel';
+export { default as FAResources } from './FAResources';
 export { default as Link } from './Link';
+export { default as Grid } from './Grid';

@@ -1,10 +1,7 @@
 @mixin absolute($value) {
-  position: absolute;
+  @include shorthander(absolute, $value);
+}
 
-  $properties: top right bottom left;
-
-  @for $i from 1 through length($value) {
-    $current-value: nth($value, $i);
-    #{nth($properties, $i)}: $current-value;
-  }
+@mixin fixed($value) {
+  @include shorthander(fixed, $value);
 }

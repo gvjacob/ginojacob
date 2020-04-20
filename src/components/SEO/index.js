@@ -9,7 +9,7 @@ const SEO = ({ lang, meta, title }) => {
       {
         biography: contentfulBiography {
           name
-          biographyTease
+          biography
         }
 
         site {

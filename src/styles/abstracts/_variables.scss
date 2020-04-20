@@ -2,6 +2,7 @@
 $pink-color: #ff3366;
 $beige-color: #fdedb2;
 $black: #000000;
+$grey: #242323;
 $white: #ffffff;
 
 :root {
@@ -16,7 +17,7 @@ $accent-color: var(--primary);
 
 /* Typography */
 $object: 'Object';
-$gothic: 'Gothic';
+$tiempos: 'Tiempos';
 
 /* Transitions */
 $sine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
@@ -28,7 +29,12 @@ $transition-duration: 0.2s;
 $transition-default: $transition-duration $circ;
 
 /* Layout */
-$column-width: 100px;
+$column-width: 400px;
+$column-margin: calc((100vw - (3 * #{$column-width})) / 2);
+$column-gutter: 20px;
+
+/* Line */
+$highlight-width: 4px;
 
 /* Responsive */
 $bp-xxl: 1800px;
@@ -41,6 +47,7 @@ $bp-sm: 425px;
 $bp-xs: 375px;
 $bp-xxs: 320px;
 
+$sp-xxs: 10px;
 $sp-xs: 20px;
 $sp-sm: 40px;
 $sp-md: 80px;

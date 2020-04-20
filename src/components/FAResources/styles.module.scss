@@ -1,0 +1,9 @@
+.fa-resources {
+  @include flex;
+}
+
+.resource {
+  &:not(:first-child) {
+    margin-left: $sp-xs;
+  }
+}

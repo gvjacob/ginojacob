@@ -1,0 +1,17 @@
+.footer {
+  @include padded;
+
+  @include mq($bp-md) {
+    @include in-column;
+  }
+}
+
+.resource {
+  @include margin($sp-xxs x);
+  @include transition;
+  @include body;
+
+  @include on-focus {
+    color: $accent-color;
+  }
+}
