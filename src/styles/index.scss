@@ -8,6 +8,7 @@ html,
 body {
   @include margin(0);
   @include padding(0);
+  overflow-x: hidden;
 }
 
 body {
@@ -19,8 +20,6 @@ body {
 
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-
-  overflow-x: hidden;
 }
 
 * {

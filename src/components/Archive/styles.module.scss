@@ -1,41 +1,69 @@
 .headline {
-  @include heading(4);
-  @include in-column(1);
+  @include body(2);
   @include padded;
+
+  @include mq($bp-md) {
+    @include in-column(1);
+    @include heading(4);
+  }
 }
 
 .projects {
   background-color: $black;
-  width: calc(#{$column-margin} + #{$column-width * 2});
+
+  @include mq($bp-md) {
+    width: calc(#{$column-margin} + #{$column-width * 2});
+  }
 }
 
 .project {
   @include transition;
 
-  align-items: center;
   border-bottom: 1px solid $grey;
-  display: grid;
-  grid-template-columns: $column-width calc(2 * #{$column-width});
-  height: $sp-md;
   padding-left: $column-margin;
-  position: relative;
+
+  @include mq($bp-md) {
+    align-items: center;
+    display: grid;
+    grid-template-columns: $column-width calc(2 * #{$column-width});
+    height: $sp-md;
+    position: relative;
+  }
 
   @include on-focus {
     border-bottom: $highlight-width solid $accent-color;
     z-index: 99;
 
-    > .image {
-      @include visible;
+    @include mq($bp-md) {
+      > .image {
+        @include visible;
+      }
     }
   }
 }
 
 .name,
 .description {
-  @include body(2);
+  @include heading(5);
   @include padded;
 
   z-index: 1;
+
+  @include mq($bp-md) {
+    @include body(2);
+  }
+}
+
+.name {
+  @include padding($sp-xxs x);
+}
+
+.description {
+  display: none;
+
+  @include mq($bp-md) {
+    display: block;
+  }
 }
 
 .image {

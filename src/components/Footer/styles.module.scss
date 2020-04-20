@@ -1,6 +1,9 @@
 .footer {
-  @include in-column;
   @include padded;
+
+  @include mq($bp-md) {
+    @include in-column;
+  }
 }
 
 .resource {

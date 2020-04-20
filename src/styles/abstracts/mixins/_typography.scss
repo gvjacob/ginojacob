@@ -4,10 +4,14 @@
   @include type-tiempos;
 
   font-size: ms($heading-scale);
+  line-height: ms($heading-scale + 2);
 }
 
 @mixin body($scale: 1) {
   $heading-scale: nth([0, 2, 6, 9], $scale);
+
+  @include type-object;
+
   font-size: ms($heading-scale);
   line-height: ms($heading-scale + 2);
 }
