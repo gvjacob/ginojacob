@@ -9,7 +9,7 @@ const SEO = ({ lang, meta, title }) => {
       {
         biography: contentfulBiography {
           name
-          biography
+          tagline
         }
 
         site {
@@ -24,7 +24,7 @@ const SEO = ({ lang, meta, title }) => {
   );
 
   const metaTitle = biography.name || site.siteMetadata.title;
-  const metaDescription = biography.biography || site.siteMetadata.description;
+  const metaDescription = biography.tagline || site.siteMetadata.description;
 
   return (
     <Helmet

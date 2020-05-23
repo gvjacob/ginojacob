@@ -1,0 +1,24 @@
+.hero {
+  @include flex(column, center, center);
+  @include size(100%);
+}
+
+.line {
+  @include margin($sp-md x);
+  border-left: 1px solid $grey;
+  height: 200px;
+}
+
+.name {
+  @include heading(5);
+  color: $primary-color;
+  margin-bottom: $sp-sm;
+}
+
+.tagline {
+  margin-bottom: $sp-xxs;
+}
+
+.avatar {
+  width: 150px;
+}

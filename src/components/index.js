@@ -1,12 +1,3 @@
 export { default as SEO } from './SEO';
-export { default as Archive } from './Archive';
 export { default as Image } from './Image';
-export { default as Highlight } from './Highlight';
-export { default as Footer } from './Footer';
-export { default as Biography } from './Biography';
-export { default as FeaturedProject } from './FeaturedProject';
-export { default as FALink } from './FALink';
-export { default as FAIcon } from './FAIcon';
-export { default as FAResources } from './FAResources';
 export { default as Link } from './Link';
-export { default as Grid } from './Grid';

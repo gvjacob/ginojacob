@@ -1,3 +1,3 @@
-import Index from '../containers/Index';
+import Index from '../routes/Index';
 
 export default Index;
