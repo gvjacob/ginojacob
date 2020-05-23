@@ -32,7 +32,7 @@ const Index = () => {
 
   return (
     <div className={styles.index}>
-      <SEO title="Developer, Designer, Ballroom Dancer" />
+      <SEO title={biography.tagline} />
       <Hero {...biography} />
     </div>
   );
