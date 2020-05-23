@@ -1,10 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import { Hero } from '../../containers';
 import { SEO } from '../../components';
-
-import styles from './styles.module.scss';
 
 const Index = () => {
   const { homepage } = useStaticQuery(graphql`
@@ -31,10 +29,10 @@ const Index = () => {
   const { biography } = homepage;
 
   return (
-    <div className={styles.index}>
+    <Fragment>
       <SEO title={biography.tagline} />
       <Hero {...biography} />
-    </div>
+    </Fragment>
   );
 };
 
