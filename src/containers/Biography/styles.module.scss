@@ -1,0 +1,28 @@
+.biography {
+  @include flex(row);
+  @include size(100% x);
+  background-color: $primary-color;
+
+  @include on-mobile {
+    @include flex(column);
+  }
+}
+
+.headline {
+  @include heading(4);
+  @include padding($sp-sm);
+  color: $secondary-color;
+
+  @include on-desktop {
+    width: 50%;
+  }
+}
+
+.richText {
+  @include padding($sp-sm);
+  color: $invert-color;
+
+  @include on-desktop {
+    width: 50%;
+  }
+}

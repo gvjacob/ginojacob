@@ -11,3 +11,15 @@
     visibility: visible;
   }
 }
+
+@mixin on-mobile {
+  @include mq($bp-sm, 'max') {
+    @content;
+  }
+}
+
+@mixin on-desktop {
+  @include mq($bp-sm) {
+    @content;
+  }
+}

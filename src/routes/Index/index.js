@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { Hero } from '../../containers';
+import { Hero, Biography } from '../../containers';
 import { SEO } from '../../components';
 
 const Index = () => {
@@ -11,6 +11,10 @@ const Index = () => {
         biography {
           name
           tagline
+          headline
+          biography {
+            json
+          }
           avatar {
             ...IMAGE
           }
@@ -32,6 +36,7 @@ const Index = () => {
     <Fragment>
       <SEO title={biography.tagline} />
       <Hero {...biography} />
+      <Biography {...biography} />
     </Fragment>
   );
 };
