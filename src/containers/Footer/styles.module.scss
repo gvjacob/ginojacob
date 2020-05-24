@@ -1,0 +1,28 @@
+.footer {
+  @include padding($sp-sm);
+}
+
+.headline {
+  @include heading(5);
+  color: $primary-color;
+  margin-bottom: $sp-sm;
+  text-align: center;
+}
+
+.links {
+  @include flex(row, center, center);
+}
+
+.link {
+  @include margin(x $sp-xs);
+  color: $body-color;
+
+  @include on-focus {
+    text-decoration: underline;
+  }
+}
+
+.avatar {
+  @include size(100px, auto);
+  @include margin(x $sp-sm);
+}

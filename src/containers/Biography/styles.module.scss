@@ -21,6 +21,7 @@
 .richText {
   @include padding($sp-sm);
   color: $invert-color;
+  margin-top: $sp-xs;
 
   @include on-desktop {
     width: 50%;

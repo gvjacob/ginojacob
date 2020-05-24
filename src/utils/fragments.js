@@ -17,4 +17,9 @@ export const imageFragment = graphql`
       ...IMAGE
     }
   }
+
+  fragment LINK on ContentfulLink {
+    name
+    url
+  }
 `;

@@ -1,6 +1,7 @@
 .hero {
   @include flex(column, center, center);
   @include size(100%);
+  min-height: 100vh;
 }
 
 .line {
