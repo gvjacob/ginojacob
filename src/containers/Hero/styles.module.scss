@@ -4,10 +4,31 @@
   min-height: 100vh;
 }
 
+.avatar {
+  width: 150px;
+
+  @include on-mobile {
+    margin-bottom: $sp-md;
+  }
+}
+
 .line {
   @include margin($sp-md x);
   border-left: 1px solid $grey;
   height: 200px;
+
+  @include on-mobile {
+    display: none;
+  }
+
+  @include on-desktop {
+    @include margin($sp-sm-md x);
+    height: 150px;
+  }
+}
+
+.copy {
+  @include flex(column, center, center);
 }
 
 .name {
@@ -18,8 +39,4 @@
 
 .tagline {
   margin-bottom: $sp-xxs;
-}
-
-.avatar {
-  width: 150px;
 }

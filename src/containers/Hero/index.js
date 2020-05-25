@@ -23,9 +23,11 @@ const Hero = ({ name, tagline, avatar, experience }) => (
   <section className={styles.hero}>
     <Image className={styles.avatar} image={avatar} />
     <span className={styles.line} />
-    <h1 className={styles.name}>{name}</h1>
-    <p className={styles.tagline}>{tagline}</p>
-    <Experience experience={experience} />
+    <div className={styles.copy}>
+      <h1 className={styles.name}>{name}</h1>
+      <p className={styles.tagline}>{tagline}</p>
+      <Experience experience={experience} />
+    </div>
   </section>
 );
 

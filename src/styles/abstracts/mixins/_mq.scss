@@ -13,13 +13,29 @@
 }
 
 @mixin on-mobile {
-  @include mq($bp-sm, 'max') {
+  @include mq($bp-sm-md, 'max') {
     @content;
   }
 }
 
+@mixin on-tablet {
+  @include mq($bp-sm-md) {
+    @include mq($bp-md, 'max') {
+      @content;
+    }
+  }
+}
+
 @mixin on-desktop {
-  @include mq($bp-sm) {
+  @include mq($bp-md) {
+    @include mq($bp-xl, 'max') {
+      @content;
+    }
+  }
+}
+
+@mixin on-screen {
+  @include mq($bp-xl) {
     @content;
   }
 }

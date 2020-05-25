@@ -17,6 +17,10 @@
   @include on-desktop {
     width: 50%;
   }
+
+  @include on-screen {
+    width: 50%;
+  }
 }
 
 .richText {
@@ -25,6 +29,10 @@
   margin-top: $sp-xs;
 
   @include on-desktop {
+    width: 50%;
+  }
+
+  @include on-screen {
     width: 50%;
   }
 }

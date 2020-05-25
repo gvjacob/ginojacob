@@ -6,8 +6,13 @@
   @include size(50%, x);
   @include padding($sp-sm);
 
-  margin-top: -$sp-lg * 2;
+  margin-top: -$sp-xl * 2;
   object-fit: contain;
+
+  @include on-screen {
+    @include padding($sp-md);
+    margin-top: -$sp-lg * 2;
+  }
 }
 
 .copy {
