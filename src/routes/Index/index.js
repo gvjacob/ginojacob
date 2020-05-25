@@ -26,17 +26,20 @@ const Index = () => {
             }
           }
         }
+        featuredProject {
+          ...PROJECT
+        }
       }
     }
   `);
 
-  const { biography } = homepage;
+  const { biography, featuredProject } = homepage;
 
   return (
     <Fragment>
       <SEO title={biography.tagline} />
       <Hero {...biography} />
-      <Biography {...biography} />
+      <Biography {...biography} project={featuredProject} />
     </Fragment>
   );
 };

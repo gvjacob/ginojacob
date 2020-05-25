@@ -1,0 +1,47 @@
+.project {
+  @include flex;
+}
+
+.image {
+  @include size(50%, x);
+  @include padding($sp-sm);
+
+  margin-top: -$sp-lg * 2;
+  object-fit: contain;
+}
+
+.copy {
+  @include padding($sp-xs x x $sp-sm);
+  @include flex(column, flex-end);
+  @include size(100%, fit-content);
+
+  border-left: 1px solid $grey;
+  margin-top: $sp-xs;
+}
+
+.label {
+  @include heading(7);
+  margin-bottom: $sp-lg;
+}
+
+.caption {
+  h3 {
+    @include heading(5);
+
+    color: $primary-color;
+    margin-bottom: $sp-xxs;
+  }
+
+  p {
+    width: 50%;
+  }
+}
+
+.links {
+  margin-top: $sp-sm;
+
+  li {
+    @include body(1);
+    margin-top: $sp-xxs / 2;
+  }
+}

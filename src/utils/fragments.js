@@ -11,8 +11,12 @@ export const imageFragment = graphql`
   fragment PROJECT on ContentfulProject {
     name
     description
-    link
+    liveSite
     github
+    caseStudy
+    links {
+      ...LINK
+    }
     media {
       ...IMAGE
     }

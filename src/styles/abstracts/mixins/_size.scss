@@ -2,6 +2,12 @@
   @if ($height == null) {
     $height: $width;
   }
-  height: $height;
-  width: $width;
+
+  @if ($width != 'x') {
+    width: $width;
+  }
+
+  @if ($height != 'x') {
+    height: $height;
+  }
 }
