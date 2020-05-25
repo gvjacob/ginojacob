@@ -47,6 +47,9 @@
 
   li {
     @include body(1);
-    margin-top: $sp-xxs / 2;
+  }
+
+  a {
+    color: $body-color;
   }
 }
