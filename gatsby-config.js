@@ -23,7 +23,7 @@ const {
 module.exports = {
   siteMetadata: {
     title: 'Gino Jacob',
-    description: `I’m a self-taught developer and above all else, an unapologetically user-centric designer.`,
+    description: `I’ve mocked up website designs, prototyped VR games, and learned to be an avid functional programmer beyond my professional web development career. I’m an engineer and above all else, an unapologetically user-centric designer.`,
     author: `Gino Jacob <gvjacob@outlook.com>`,
   },
   plugins: [

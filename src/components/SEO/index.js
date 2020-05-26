@@ -4,9 +4,15 @@ import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const SEO = ({ lang, meta, title }) => {
-  const { site, biography } = useStaticQuery(
+  const { site, global, biography } = useStaticQuery(
     graphql`
       {
+        global: contentfulGlobal {
+          seo {
+            description
+          }
+        }
+
         biography: contentfulBiography {
           name
           tagline
@@ -24,7 +30,7 @@ const SEO = ({ lang, meta, title }) => {
   );
 
   const metaTitle = biography.name || site.siteMetadata.title;
-  const metaDescription = biography.tagline || site.siteMetadata.description;
+  const metaDescription = global.seo.description || site.siteMetadata.description;
 
   return (
     <Helmet
