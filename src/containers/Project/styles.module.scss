@@ -1,0 +1,81 @@
+.project {
+  @include flex;
+
+  @include on-mobile {
+    @include flex(column);
+  }
+}
+
+.image {
+  @include size(50%, x);
+  @include padding($sp-sm);
+
+  margin-top: -$sp-xl * 2;
+  object-fit: contain;
+
+  @include on-mobile {
+    @include size(100%, x);
+    @include padding($sp-xs);
+    margin-top: -$sp-lg;
+  }
+
+  @include on-screen {
+    @include padding($sp-md);
+    margin-top: -$sp-lg * 2;
+  }
+}
+
+.copy {
+  @include padding($sp-xs x x $sp-sm);
+  @include flex(column, flex-end);
+  @include size(100%, fit-content);
+
+  border-left: 1px solid $grey;
+  margin-top: $sp-xs;
+
+  @include on-mobile {
+    @include padding($sp-xs);
+    border-left: 0;
+  }
+}
+
+.label {
+  @include heading(7);
+  margin-bottom: $sp-lg;
+
+  @include on-mobile {
+    margin-bottom: $sp-xs;
+  }
+}
+
+.caption {
+  h3 {
+    @include heading(5);
+
+    color: $primary-color;
+    margin-bottom: $sp-xxs;
+  }
+
+  p {
+    width: 50%;
+
+    @include on-mobile {
+      width: 100%;
+    }
+  }
+}
+
+.links {
+  margin-top: $sp-sm;
+
+  li {
+    @include body(1);
+    @include on-mobile {
+      margin-top: $sp-xxs;
+    }
+  }
+
+  a {
+    color: $body-color;
+  }
+}

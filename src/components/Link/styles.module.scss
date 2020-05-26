@@ -1,3 +1,8 @@
 .link {
-  cursor: url('/assets/arrow.svg'), auto;
+  color: $secondary-color;
+  cursor: url('/assets/arrow.png'), auto;
+
+  @include on-focus {
+    text-decoration: underline;
+  }
 }

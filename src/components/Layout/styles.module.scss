@@ -1,3 +1,7 @@
-.layout {
-  @include size(100%);
+.footer {
+  margin-top: $sp-xl;
+
+  @include on-mobile {
+    margin-top: $sp-md;
+  }
 }

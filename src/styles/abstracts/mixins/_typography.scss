@@ -1,25 +1,23 @@
-@mixin heading($scale: 1) {
-  $heading-scale: nth([22, 18, 16, 14, 6, 3, 1], $scale);
+@mixin heading($scale: 4) {
+  $heading-scale: nth([22, 18, 16, 10, 6, 3, 1], $scale);
 
-  @include type-tiempos;
-
+  font-family: $ff-primary;
   font-size: ms($heading-scale);
   line-height: ms($heading-scale + 2);
 }
 
-@mixin body($scale: 1) {
-  $heading-scale: nth([0, 2, 6, 9], $scale);
+@mixin body($scale: 3) {
+  $body-scale: nth([0, 1, 2, 6, 9], $scale);
 
-  @include type-object;
-
-  font-size: ms($heading-scale);
-  line-height: ms($heading-scale + 2);
+  font-family: $ff-secondary;
+  font-size: ms($body-scale);
+  line-height: ms($body-scale + 2);
 }
 
-@mixin type-tiempos {
-  font-family: $tiempos;
+@mixin ff-primary {
+  font-family: $ff-primary;
 }
 
-@mixin type-object {
-  font-family: $object;
+@mixin ff-secondary {
+  font-family: $ff-secondary;
 }

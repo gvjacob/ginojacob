@@ -1,0 +1,46 @@
+.hero {
+  @include flex(column, center, center);
+  @include size(100%);
+  min-height: 100vh;
+}
+
+.avatar {
+  width: 150px;
+
+  @include on-mobile {
+    margin-bottom: $sp-md;
+  }
+}
+
+.line {
+  @include margin($sp-md x);
+  border-left: 1px solid $grey;
+  height: 200px;
+
+  @include on-mobile {
+    display: none;
+  }
+
+  @include on-desktop {
+    @include margin($sp-sm-md x);
+    height: 150px;
+  }
+}
+
+.copy {
+  @include flex(column, center, center);
+}
+
+.name {
+  @include heading(5);
+  color: $primary-color;
+  margin-bottom: $sp-sm;
+}
+
+.tagline {
+  margin-bottom: $sp-xxs;
+
+  @include on-mobile {
+    display: none;
+  }
+}
