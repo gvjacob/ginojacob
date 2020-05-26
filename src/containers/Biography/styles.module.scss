@@ -8,6 +8,7 @@
 
   @include on-mobile {
     @include flex(column);
+    padding-bottom: $sp-lg;
   }
 }
 
@@ -30,7 +31,7 @@
   }
 }
 
-.richText {
+.rich-text {
   @include padding($sp-sm);
   color: $invert-color;
   margin-top: $sp-xs;
@@ -54,4 +55,10 @@
   @include absolute(x $sp-sm -25% x);
   @include size(250px);
   z-index: -1;
+
+  @include on-mobile {
+    @include absolute(x x 0 50%);
+    @include size(200px);
+    transform: translate(-50%, 50%);
+  }
 }

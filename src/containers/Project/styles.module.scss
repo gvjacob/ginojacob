@@ -1,5 +1,9 @@
 .project {
   @include flex;
+
+  @include on-mobile {
+    @include flex(column);
+  }
 }
 
 .image {
@@ -8,6 +12,12 @@
 
   margin-top: -$sp-xl * 2;
   object-fit: contain;
+
+  @include on-mobile {
+    @include size(100%, x);
+    @include padding($sp-xs);
+    margin-top: -$sp-lg;
+  }
 
   @include on-screen {
     @include padding($sp-md);
@@ -22,11 +32,20 @@
 
   border-left: 1px solid $grey;
   margin-top: $sp-xs;
+
+  @include on-mobile {
+    @include padding($sp-xs);
+    border-left: 0;
+  }
 }
 
 .label {
   @include heading(7);
   margin-bottom: $sp-lg;
+
+  @include on-mobile {
+    margin-bottom: $sp-xs;
+  }
 }
 
 .caption {
@@ -39,6 +58,10 @@
 
   p {
     width: 50%;
+
+    @include on-mobile {
+      width: 100%;
+    }
   }
 }
 
@@ -47,6 +70,9 @@
 
   li {
     @include body(1);
+    @include on-mobile {
+      margin-top: $sp-xxs;
+    }
   }
 
   a {
