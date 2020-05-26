@@ -12,6 +12,7 @@ const Biography = ({ headline, biography, project }) => (
       <div className={styles.richText}>
         <RichText content={biography} />
       </div>
+      <img className={styles.aztec} src="assets/aztec/aztec-1.png" alt="Aztec graphic" />
     </div>
     <Project project={project} />
   </section>
