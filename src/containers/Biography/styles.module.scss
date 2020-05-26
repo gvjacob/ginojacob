@@ -7,7 +7,7 @@
 
   @include on-mobile {
     @include flex(column);
-    padding-bottom: $sp-lg;
+    padding-bottom: $sp-lg-xl;
   }
 }
 
@@ -52,7 +52,7 @@
 }
 
 .aztec {
-  @include absolute(x $sp-sm -25% x);
+  @include absolute(x $sp-sm -40% x);
   @include size(250px);
 
   @include on-mobile {
