@@ -16,6 +16,10 @@
   @include padding($sp-sm);
   color: $secondary-color;
 
+  @include on-mobile {
+    padding-bottom: 0;
+  }
+
   @include on-desktop {
     width: 50%;
   }
@@ -29,6 +33,11 @@
   @include padding($sp-sm);
   color: $invert-color;
   margin-top: $sp-xs;
+
+  @include on-mobile {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
 
   @include on-desktop {
     width: 50%;
