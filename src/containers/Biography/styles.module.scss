@@ -17,6 +17,7 @@
   color: $secondary-color;
 
   @include on-mobile {
+    @include padding($sp-xs);
     padding-bottom: 0;
   }
 
@@ -35,6 +36,7 @@
   margin-top: $sp-xs;
 
   @include on-mobile {
+    @include padding($sp-xs);
     margin-top: 0;
     padding-bottom: 0;
   }

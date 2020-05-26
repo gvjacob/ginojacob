@@ -39,4 +39,8 @@
 
 .tagline {
   margin-bottom: $sp-xxs;
+
+  @include on-mobile {
+    display: none;
+  }
 }
