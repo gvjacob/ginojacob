@@ -2,9 +2,8 @@
   @include flex(row);
   @include size(100% x);
   background-color: $primary-color;
-  padding-bottom: $sp-sm;
+  padding-bottom: $sp-md;
   position: relative;
-  z-index: -1;
 
   @include on-mobile {
     @include flex(column);
@@ -35,6 +34,7 @@
   @include padding($sp-sm);
   color: $invert-color;
   margin-top: $sp-xs;
+  z-index: 1;
 
   @include on-mobile {
     @include padding($sp-xs);
@@ -54,11 +54,16 @@
 .aztec {
   @include absolute(x $sp-sm -25% x);
   @include size(250px);
-  z-index: -1;
 
   @include on-mobile {
     @include absolute(x x 0 50%);
     @include size(200px);
     transform: translate(-50%, 50%);
+  }
+}
+
+.project {
+  img {
+    z-index: 99;
   }
 }

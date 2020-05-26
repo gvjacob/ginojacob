@@ -14,7 +14,7 @@ const Biography = ({ headline, biography, project }) => (
       </div>
       <img className={styles.aztec} src="assets/aztec/aztec-1.png" alt="Aztec graphic" />
     </div>
-    <Project project={project} />
+    <Project className={styles.project} project={project} />
   </section>
 );
 

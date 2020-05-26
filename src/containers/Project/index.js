@@ -1,10 +1,11 @@
 import React from 'react';
+import { classNames as cn } from 'peculiarity';
 import { If } from 'peculiarity/dist/react';
 
 import { Image, Link } from '../../components';
 import styles from './styles.module.scss';
 
-const Project = ({ project }) => {
+const Project = ({ className, project }) => {
   const { name, description, media, liveSite, github, caseStudy, links } = project;
 
   const projectLinks = [
@@ -24,7 +25,7 @@ const Project = ({ project }) => {
   ];
 
   return (
-    <figure className={styles.project}>
+    <figure className={cn(styles.project, className)}>
       <Image className={styles.image} image={media} />
 
       <div className={styles.copy}>
