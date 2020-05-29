@@ -1,5 +1,5 @@
 .archive {
-  @include padding(x $sp-md);
+  @include padding($sp-sm $sp-md);
 
   @include on-mobile {
     @include padding(x $sp-xs);
@@ -23,25 +23,26 @@
   @include on-mobile {
     @include flex(column, left);
   }
-
-  li {
-    @include margin(x $sp-xxs);
-    @include heading(2);
-
-    @include on-mobile {
-      @include margin(0);
-      @include heading(4);
-    }
-  }
 }
 
 .link {
   @include transition;
+  @include margin(x $sp-xxs);
+  @include heading(2);
 
   color: $grey;
 
   @include on-focus {
     color: $primary-color;
     text-decoration: none;
+  }
+
+  @include on-mobile {
+    @include margin(0);
+    @include heading(4);
+  }
+
+  @include on-desktop {
+    @include heading(3);
   }
 }
