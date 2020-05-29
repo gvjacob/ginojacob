@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { Hero, Biography } from '../../containers';
+import { Hero, Biography, Archive } from '../../containers';
 import { SEO } from '../../components';
 
 const Index = () => {
@@ -29,17 +29,21 @@ const Index = () => {
         featuredProject {
           ...PROJECT
         }
+        archive {
+          ...PROJECT
+        }
       }
     }
   `);
 
-  const { biography, featuredProject } = homepage;
+  const { biography, featuredProject, archive } = homepage;
 
   return (
     <Fragment>
       <SEO title={biography.tagline} />
       <Hero {...biography} />
       <Biography {...biography} project={featuredProject} />
+      <Archive projects={archive} />
     </Fragment>
   );
 };

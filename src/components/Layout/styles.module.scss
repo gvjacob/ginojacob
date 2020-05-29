@@ -1,7 +1,5 @@
 .footer {
-  margin-top: $sp-xl;
-
   @include on-mobile {
-    margin-top: $sp-md;
+    margin-top: $sp-xs;
   }
 }
