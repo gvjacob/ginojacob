@@ -1,6 +1,6 @@
 import React from 'react';
 import { classNames as cn } from 'peculiarity';
-import { If } from 'peculiarity/dist/react';
+import { If } from 'peculiarity/react';
 
 import { Image, Link } from '../../components';
 import styles from './styles.module.scss';

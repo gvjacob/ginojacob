@@ -1,5 +1,5 @@
 import React from 'react';
-import { If } from 'peculiarity/dist/react';
+import { If } from 'peculiarity/react';
 
 import { Link } from '../../components';
 
