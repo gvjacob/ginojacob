@@ -31,13 +31,9 @@ const Project = ({ className, project }) => {
 
   useEffect(() => {
     ScrollMagicPluginGsap(ScrollMagic, gsap);
-    const controller = new ScrollMagic.Controller();
 
-    const tween = gsap.fromTo(
-      imageRef.current,
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.4 },
-    );
+    const controller = new ScrollMagic.Controller();
+    const tween = gsap.from(imageRef.current, { opacity: 0, y: 20, duration: 0.4 });
 
     new ScrollMagic.Scene({
       triggerElement: imageRef.current,
