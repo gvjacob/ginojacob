@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import { Footer } from '../../containers';
@@ -24,10 +24,10 @@ const Layout = ({ children }) => {
   `);
 
   return (
-    <Fragment>
-      <main className={styles.layout}>{children}</main>
+    <div className={styles.layout}>
+      <main>{children}</main>
       <Footer className={styles.footer} {...global} />
-    </Fragment>
+    </div>
   );
 };
 
