@@ -33,7 +33,7 @@
 .rich-text {
   @include padding($sp-sm);
   color: $invert-color;
-  margin-top: $sp-xs;
+  margin-top: $sp-xxs;
   z-index: 1;
 
   @include on-mobile {
