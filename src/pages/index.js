@@ -1,3 +1,5 @@
-import Index from '../routes/Index';
+const Index = () => {
+  return null;
+};
 
 export default Index;

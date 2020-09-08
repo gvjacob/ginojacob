@@ -9,7 +9,6 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "gatsby develop -p 8080",
     "serve": "gatsby serve",
-    "test": "jest --watchAll",
     "clean": "gatsby clean"
   },
   "license": "MIT",
@@ -18,8 +17,6 @@
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   },
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "^13.4.0",
-    "@contentful/rich-text-types": "^14.1.0",
     "dotenv": "^8.2.0",
     "gatsby": "^2.18.12",
     "gatsby-plugin-config": "^1.0.7",
@@ -29,28 +26,18 @@
     "gatsby-plugin-react-helmet": "^3.1.16",
     "gatsby-plugin-sass": "^2.1.27",
     "gatsby-plugin-sharp": "^2.3.5",
-    "gatsby-source-contentful": "^2.2.7",
     "gatsby-transformer-sharp": "^2.3.7",
-    "gsap": "^3.2.6",
     "lodash": "^4.17.15",
     "node-sass": "^4.13.0",
     "peculiarity": "^0.4.3",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
-    "react-use": "^14.0.0",
-    "sass": "^1.25.0",
-    "scrollmagic": "^2.0.7",
-    "scrollmagic-plugin-gsap": "^1.0.4"
+    "sass": "^1.25.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.3",
-    "@babel/core": "^7.8.3",
-    "@babel/preset-env": "^7.8.3",
-    "@babel/preset-react": "^7.8.3",
     "@upstatement/eslint-config": "^0.4.3",
     "@upstatement/prettier-config": "^0.3.0",
-    "babel-preset-gatsby": "^0.2.27",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-jest": "^23.8.2",

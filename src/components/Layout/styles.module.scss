@@ -1,9 +1,0 @@
-.layout {
-  @include animate-fade-in;
-}
-
-.footer {
-  @include on-mobile {
-    margin-top: $sp-xs;
-  }
-}

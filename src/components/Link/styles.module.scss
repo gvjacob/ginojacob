@@ -1,7 +1,0 @@
-.link {
-  color: $secondary-color;
-
-  @include on-focus {
-    text-decoration: underline;
-  }
-}
