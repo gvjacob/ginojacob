@@ -65,5 +65,13 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: fromSource('pages'),
+      },
+    },
+    `gatsby-plugin-mdx`,
   ],
 };
