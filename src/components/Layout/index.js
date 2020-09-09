@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+
+import Navigation from '../Navigation';
+
 import '../../styles/index.scss';
 
 const Layout = ({ children }) => {
-  return <main>{children}</main>;
+  return (
+    <Fragment>
+      <Navigation />
+      <main>{children}</main>
+    </Fragment>
+  );
 };
 
 export default Layout;
