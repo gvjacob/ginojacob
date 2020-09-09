@@ -4,26 +4,23 @@ require('dotenv').config({
 
 const postCssCalc = require('postcss-calc');
 
+function from(dir, files) {
+  const DIR = require('path').resolve(__dirname, dir);
+  return files.reduce((acc, file) => `${acc}/${file}`, DIR);
+}
+
 function fromSource(...files) {
-  const SRC_DIR = require('path').resolve(__dirname, 'src');
-  return files.reduce((acc, file) => `${acc}/${file}`, SRC_DIR);
+  return from('src', files);
 }
 
 function fromStatic(...files) {
-  const STATIC_DIR = require('path').resolve(__dirname, 'static');
-  return files.reduce((acc, file) => `${acc}/${file}`, STATIC_DIR);
+  return from('static', files);
 }
-
-const {
-  CONTENTFUL_SPACE_ID,
-  CONTENTFUL_ACCESS_TOKEN,
-  CONTENTFUL_ENVIRONMENT,
-} = require('gatsby-plugin-config').default;
 
 module.exports = {
   siteMetadata: {
     title: 'Gino Jacob',
-    description: `I’ve mocked up website designs, prototyped VR games, and learned to be an avid functional programmer beyond my professional web development career. I’m an engineer and above all else, an unapologetically user-centric designer.`,
+    description: `Lucky to have built a life-saving app, democratized technology skills, and developed some really pretty websites. I'm an engineer, and above all else, an unapologetically user-centric designer.`,
     author: `Gino Jacob <gvjacob@outlook.com>`,
   },
   plugins: [
