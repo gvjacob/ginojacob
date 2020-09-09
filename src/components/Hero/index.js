@@ -1,15 +1,20 @@
 import React from 'react';
-import styles from './styles.module.scss';
+import Markdown from 'react-markdown';
 
-const Hero = ({ headline, name, title, description }) => {
+import './styles.scss';
+
+const Hero = ({ headline, name, title, description, image }) => {
   return (
     <section>
-      <h1>{headline}</h1>
-      <div>
-        <h2>{name}</h2>
-        <p>{title}</p>
+      <div className="hero-topper">
+        <h1 className="hero-headline">{headline}</h1>
+        <div className="hero-bio">
+          <h2 className="hero-name">{name}</h2>
+          <Markdown source={title} />
+        </div>
       </div>
       <p>{description}</p>
+      <img src={image.src} alt={image.alt} />
     </section>
   );
 };
