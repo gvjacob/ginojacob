@@ -1,9 +1,10 @@
 component:
   prompt:
     - name
-    - directory
+  base:
+    template: .temples
+    output: src/components
   temples:
-    - template: .temples/templates/component.template
-      output: src/{{ directory }}/{{ name }}/index.js
-    - template: .temples/templates/styles.template
-      output: src/{{ directory }}/{{ name }}/styles.module.scss
+    - template: component.hbs
+      output: /{{ name }}/index.js
+    - output: /{{ name }}/styles.module.scss
