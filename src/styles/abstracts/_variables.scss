@@ -22,14 +22,6 @@ $back-out: cubic-bezier(0.35, 1.1, 0.65, 1.65);
 $transition-duration: 0.2s;
 $transition-default: $transition-duration $circ;
 
-/* Layout */
-$column-width: 400px;
-$column-margin: calc((100vw - (3 * #{$column-width})) / 2);
-$column-gutter: 20px;
-
-/* Line */
-$highlight-width: 4px;
-
 /* Responsive */
 $bp-xxl: 1800px;
 $bp-xl: 1440px;

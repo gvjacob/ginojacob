@@ -3,6 +3,15 @@
    License: none (public domain)
 */
 
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 html,
 body,
 div,
