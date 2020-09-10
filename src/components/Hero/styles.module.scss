@@ -1,0 +1,50 @@
+.hero {
+  display: grid;
+
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas:
+    'info headline'
+    'image description';
+
+  gap: $sp-xs $sp-sm;
+}
+
+.headline {
+  @include heading(2);
+
+  align-self: end;
+  grid-area: headline;
+  margin-bottom: -$sp-xs;
+}
+
+.info {
+  @include flex;
+
+  align-items: baseline;
+  align-self: end;
+  grid-area: info;
+  width: 50%;
+}
+
+.name {
+  @include heading;
+  display: inline-block;
+}
+
+.title {
+  display: inline-block;
+  margin-left: $sp-xs;
+}
+
+.description {
+  @include padding($sp-lg * 2 50% x x);
+
+  border-top: 1px solid $orange;
+  grid-area: description;
+}
+
+.image {
+  grid-area: image;
+  width: 100%;
+}

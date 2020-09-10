@@ -2,14 +2,14 @@ import React, { Fragment } from 'react';
 
 import Navigation from '../Navigation';
 
+import css from './styles.module.scss';
 import '../../styles/index.scss';
-import './styles.scss';
 
 const Layout = ({ children }) => {
   return (
     <Fragment>
       <Navigation />
-      <main className="layout__main">{children}</main>
+      <main className={css.layoutMain}>{children}</main>
     </Fragment>
   );
 };
