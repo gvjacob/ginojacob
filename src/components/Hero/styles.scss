@@ -1,18 +1,28 @@
-.hero-headline {
-  @include heading(2);
-  margin-bottom: -24px;
-}
-
-.hero-topper {
+.hero__topper {
   @include flex(row-reverse);
-}
-
-.hero-bio {
-  @include flex(row);
   align-items: flex-end;
 }
 
-.hero-name {
+.hero__headline {
+  @include flex;
+  align-items: baseline;
+}
+
+.hero__headline-text {
+  @include heading(2);
+  display: inline-block;
+}
+
+.hero__bio {
+  @include flex;
+  align-items: baseline;
+}
+
+.hero__name {
   @include heading;
-  margin-bottom: -12px;
+  display: inline-block;
+}
+
+.hero__title {
+  display: inline-block;
 }
