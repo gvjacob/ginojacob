@@ -1,0 +1,10 @@
+.link {
+  @include transition;
+
+  color: $orange;
+  font-weight: bold;
+
+  @include on-focus {
+    color: inherit;
+  }
+}
