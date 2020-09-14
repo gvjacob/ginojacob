@@ -1,6 +1,6 @@
 .notice {
   @include padding($sp-xs $sp-sm);
 
-  background-color: $black;
-  color: white;
+  background-color: $primary-color;
+  color: $inverse-color;
 }
