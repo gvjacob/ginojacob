@@ -1,0 +1,6 @@
+.notice {
+  @include padding($sp-xs $sp-sm);
+
+  background-color: $black;
+  color: white;
+}
