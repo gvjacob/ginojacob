@@ -1,3 +1,7 @@
+.footer {
+  margin-top: $sp-lg;
+}
+
 .copyright {
   @include flex(row, space-between);
   width: 100%;

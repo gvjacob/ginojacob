@@ -2,10 +2,9 @@ import React from 'react';
 
 import css from './styles.module.scss';
 
-const Footer = ({ email, copyright }) => {
+const Footer = ({ copyright }) => {
   return (
-    <footer>
-      <span>{email}</span>
+    <footer className={css.footer}>
       <div className={css.copyright}>
         <span>{copyright}</span>
       </div>
