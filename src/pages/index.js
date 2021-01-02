@@ -1,7 +1,7 @@
 import React from "react";
 
 const IndexPage = ({ className }) => {
-  return null;
+  return "gno";
 };
 
 export default IndexPage;

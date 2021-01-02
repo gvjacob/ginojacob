@@ -1,4 +1,5 @@
 const path = require("path");
+
 /**
  * Get path relative to static/ directory
  *
