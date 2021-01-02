@@ -1,0 +1,11 @@
+$white: #fefefe;
+$black: #111111;
+$meteor-gray: #333333;
+$pale-gray: #e0e0e0;
+
+:export {
+  white: $white;
+  black: $black;
+  meteorgray: $meteor-gray;
+  palegray: $pale-gray;
+}

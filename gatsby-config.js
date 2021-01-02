@@ -11,6 +11,7 @@ function fromStatic(...nodes) {
 }
 
 const SITE_NAME = "Gno";
+const SITE_ICON = "gno.svg";
 
 module.exports = {
   siteMetadata: {
@@ -25,6 +26,7 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
@@ -44,7 +46,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        //icon: fromStatic('assets', SITE_ICON),
+        icon: fromStatic("assets", SITE_ICON),
       },
     },
   ],

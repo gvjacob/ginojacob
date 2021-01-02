@@ -1,5 +1,7 @@
 import React from "react";
-import "@src/reset.css";
+
+import "@styles/reset.scss";
+import "@styles/layout.scss";
 
 const Layout = ({ className, children }) => {
   return (
