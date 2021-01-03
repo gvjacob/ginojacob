@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react';
 
-import "@styles/reset.scss";
-import "@styles/layout.scss";
+import '@styles/index.scss';
+import 'normalize.css';
 
-const Layout = ({ className, children }) => {
-  return (
-    <>
-      <header />
-      <main>{children}</main>
-      <footer />
-    </>
-  );
-};
+import styled from './styled';
+
+const Layout = ({ children }) => (
+  <>
+    <header />
+    <styled.Main>{children}</styled.Main>
+    <footer />
+  </>
+);
 
 export default Layout;

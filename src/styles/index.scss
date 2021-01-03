@@ -4,3 +4,8 @@ body {
   background-color: $white;
   background-image: url("/assets/grain.png");
 }
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}

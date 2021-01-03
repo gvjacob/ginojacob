@@ -1,3 +1,8 @@
-import variables from "./variables.scss";
+import variables from './variables.scss';
 
-console.log(variables);
+export const spacing = {
+  small: '20px',
+  smallMedium: '40px',
+};
+
+export const colors = variables;
