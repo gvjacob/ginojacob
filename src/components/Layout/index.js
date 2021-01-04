@@ -1,6 +1,7 @@
 import React from 'react';
 
 import SEO from '@components/SEO';
+import Announcement from '@components/Announcement';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 
@@ -32,6 +33,7 @@ const Layout = ({ children }) => {
         description="Lucky to have built a life-saving app, democratized technology skills, and developed some really pretty websites. I'm an engineer, and above all else, an unapologetically user-centric designer."
         image="/assets/gno.svg"
       />
+      <Announcement />
       <Header links={links} />
       <styled.Main>{children}</styled.Main>
       <Footer
