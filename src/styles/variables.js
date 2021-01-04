@@ -1,4 +1,4 @@
-import variables from './variables.scss';
+import variables from './variables.module.scss';
 
 export const spacing = {
   gap: '10px',
