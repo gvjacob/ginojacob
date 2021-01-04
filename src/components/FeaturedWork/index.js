@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import Link from "@components/Link";
+import Link from '@components/Link';
 
-import styled from "./styled";
+import styled from './styled';
 
-const Work = ({ className, title, description, image, link }) => (
-  <article>
+const Tease = ({ className, title, description, image, link }) => (
+  <article className={className}>
     <styled.ProjectImage src={image} />
     <h3>
       <Link to={link}>{title}</Link>
@@ -14,14 +14,12 @@ const Work = ({ className, title, description, image, link }) => (
   </article>
 );
 
-const FeaturedWork = ({ className, featured }) => {
-  return (
-    <styled.Container className={className}>
-      {featured.map((work, i) => (
-        <Work key={i} {...work} />
-      ))}
-    </styled.Container>
-  );
-};
+const FeaturedWork = ({ className, featured }) => (
+  <styled.Container className={className}>
+    {featured.map((work, i) => (
+      <Tease key={i} {...work} />
+    ))}
+  </styled.Container>
+);
 
 export default FeaturedWork;
