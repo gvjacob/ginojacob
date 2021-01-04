@@ -1,4 +1,5 @@
 import React from 'react';
+import cn from 'classnames';
 import { Link as GatsbyLink } from 'gatsby';
 
 const Link = ({ className, to, children }) => {
@@ -6,11 +7,13 @@ const Link = ({ className, to, children }) => {
     return children;
   }
 
+  const cssClass = cn('link', className);
+
   // Check if url is an external link
   if (to.startsWith('http') || to.startsWith('www')) {
     return (
       <a
-        className={className}
+        className={cssClass}
         href={to}
         target="_blank"
         rel="noopener noreferrer"
@@ -21,7 +24,7 @@ const Link = ({ className, to, children }) => {
   }
 
   return (
-    <GatsbyLink className={className} to={to}>
+    <GatsbyLink className={cssClass} to={to}>
       {children}
     </GatsbyLink>
   );

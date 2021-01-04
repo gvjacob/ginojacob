@@ -1,5 +1,6 @@
 @import "./fonts";
 @import "./variables";
+@import "./mixins";
 
 body {
   background-color: $white;
@@ -33,6 +34,14 @@ body {
   font-family: $ff-mono;
   font-size: 16px;
   line-height: 22px;
+}
+
+.link {
+  transition: opacity 0.2s ease-in-out;
+
+  @include on-focus {
+    opacity: 0.5;
+  }
 }
 
 /**
