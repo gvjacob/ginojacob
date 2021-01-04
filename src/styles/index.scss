@@ -4,6 +4,28 @@
 body {
   background-color: $white;
   background-image: url("/assets/grain.png");
+
+  font-family: $ff-sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.ff-sans-serif-title {
+  font-family: $ff-sans-serif;
+  font-size: 48px;
+  line-height: 56px;
+}
+
+.ff-sans-serif-body {
+  font-family: $ff-sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.ff-sans-serif-body-sub {
+  font-family: $ff-sans-serif;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 /**
@@ -16,4 +38,9 @@ body {
 
 li {
   list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
