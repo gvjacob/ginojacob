@@ -3,6 +3,7 @@ import React from 'react';
 import SEO from '@components/SEO';
 import Announcement from '@components/Announcement';
 import Header from '@components/Header';
+import LifeUpdates from '@components/LifeUpdates';
 import Footer from '@components/Footer';
 
 import '@styles/index.scss';
@@ -36,6 +37,34 @@ const Layout = ({ children }) => {
       <Announcement />
       <Header links={links} />
       <styled.Main>{children}</styled.Main>
+      <LifeUpdates
+        updates={[
+          {
+            date: 'Dec 16th, 2020',
+            text: 'Finished Fall 2020 semester at Northeastern University',
+          },
+          {
+            date: 'Nov 13th, 2020',
+            text: 'Left Upstatement',
+          },
+          {
+            date: 'Dec 16th, 2020',
+            text: 'Finished Fall 2020 semester at Northeastern University',
+          },
+          {
+            date: 'Nov 13th, 2020',
+            text: 'Left Upstatement',
+          },
+          {
+            date: 'Dec 16th, 2020',
+            text: 'Finished Fall 2020 semester at Northeastern University',
+          },
+          {
+            date: 'Nov 13th, 2020',
+            text: 'Left Upstatement',
+          },
+        ]}
+      />
       <Footer
         links={[
           {

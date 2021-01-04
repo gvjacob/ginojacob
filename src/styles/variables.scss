@@ -2,7 +2,8 @@
 $white: #fefefe;
 $black: #111111;
 $meteor-gray: #333333;
-$pale-gray: #e0e0e0;
+$stone-gray: #828282;
+$light-gray: #e0e0e0;
 
 // Fonts
 $ff-sans-serif: "Tomato Grotesk", Arial, sans-serif;
@@ -12,5 +13,6 @@ $ff-mono: "Courier Prime", monospace;
   white: $white;
   black: $black;
   meteorgray: $meteor-gray;
-  palegray: $pale-gray;
+  stonegray: $stone-gray;
+  lightgray: $light-gray;
 }
