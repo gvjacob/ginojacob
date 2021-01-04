@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import mixins from "@styles/mixins";
-import { spacing } from "@styles/variables";
+import mixins from '@styles/mixins';
+import { spacing } from '@styles/variables';
 
 export default {
   Hero: styled.section`
-    ${mixins.grid({ columns: "repeat(12, 1fr)", gap: "10px" })}
+    ${mixins.grid({ columns: 'repeat(12, 1fr)', gap: spacing.gap })}
 
     grid-template-rows: 2fr;
     width: 100%;
@@ -34,12 +34,12 @@ export default {
   `,
 
   PhotoDate: styled.span`
-    ${mixins.absolute({ left: "-30px" })};
+    ${mixins.absolute({ left: '-30px' })};
     writing-mode: vertical-rl;
   `,
 
   Name: styled.span`
-    ${mixins.absolute({ right: "-30px" })};
+    ${mixins.absolute({ right: '-30px' })};
     writing-mode: vertical-rl;
   `,
 };
