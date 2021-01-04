@@ -20,4 +20,12 @@ export default {
     ${squash(rows, `grid-template-rows: ${rows};`)}
     ${squash(gap, `grid-gap: ${gap};`)}
   `,
+
+  absolute: ({ top, bottom, left, right }) => `
+    position: absolute;
+    ${squash(top, `top: ${top};`)}
+    ${squash(bottom, `bottom: ${bottom};`)}
+    ${squash(left, `left: ${left};`)}
+    ${squash(right, `right: ${right};`)}
+  `,
 };

@@ -1,14 +1,17 @@
-import React from "react";
+import React from 'react';
 
-import Profile from "@components/Profile";
-import styled from "./styled";
-
-const CenterProfile = styled.center(Profile);
+import styled from './styled';
 
 const Hero = ({ className }) => {
   return (
-    <styled.Hero>
-      <CenterProfile />
+    <styled.Hero className={className}>
+      <styled.Logotype src="/assets/gno.svg" />
+      <styled.Position>Currently leading a project at Scout</styled.Position>
+      <styled.PhotoContainer>
+        <styled.PhotoDate className="ff-mono-body">02.16.2020</styled.PhotoDate>
+        <styled.Photo src="/assets/profile.jpg" />
+        <styled.Name className="ff-mono-body">Gino Jacob</styled.Name>
+      </styled.PhotoContainer>
     </styled.Hero>
   );
 };
