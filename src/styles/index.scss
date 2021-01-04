@@ -1,3 +1,4 @@
+@import "./fonts";
 @import "./variables";
 
 body {
@@ -5,7 +6,14 @@ body {
   background-image: url("/assets/grain.png");
 }
 
+/**
+ * CSS Resets
+ */
 * {
   margin: 0;
   box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
 }
