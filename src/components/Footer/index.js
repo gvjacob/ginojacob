@@ -17,7 +17,7 @@ const LinksList = ({ className, links }) => (
 const Footer = ({ className, links, resources, location, copyright }) => {
   return (
     <styled.Footer>
-      <img src="/assets/gno-inverted.svg" />
+      <styled.Logotype src="/assets/gno.svg" />
       <LinksList links={links} />
       <LinksList links={resources} />
       <p className="ff-sans-serif-body-sub">{copyright}</p>
