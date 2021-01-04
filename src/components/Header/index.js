@@ -9,13 +9,15 @@ import styled from './styled';
 const Header = ({ className, links }) => (
   <styled.Header className={className}>
     <If condition={!isEmpty(links)}>
-      <styled.HeaderLinks>
-        {links.map(({ label, to }) => (
-          <li className="ff-sans-serif-body-sub" key={label}>
-            <Link to={to}>{label}</Link>
-          </li>
-        ))}
-      </styled.HeaderLinks>
+      <nav>
+        <styled.HeaderLinks>
+          {links.map(({ label, to }) => (
+            <li className="ff-sans-serif-body-sub" key={label}>
+              <Link to={to}>{label}</Link>
+            </li>
+          ))}
+        </styled.HeaderLinks>
+      </nav>
     </If>
   </styled.Header>
 );
