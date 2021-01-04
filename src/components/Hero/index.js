@@ -1,16 +1,16 @@
-import React from 'react';
+import React from "react";
 
-import styled from './styled';
+import styled from "./styled";
 
-const Hero = ({ className }) => {
+const Hero = ({ className, name, photo, date, position }) => {
   return (
     <styled.Hero className={className}>
       <styled.Logotype src="/assets/gno.svg" />
-      <styled.Position>Currently leading a project at Scout</styled.Position>
+      <styled.Position>{position}</styled.Position>
       <styled.PhotoContainer>
-        <styled.PhotoDate className="ff-mono-body">02.16.2020</styled.PhotoDate>
-        <styled.Photo src="/assets/profile.jpg" />
-        <styled.Name className="ff-mono-body">Gino Jacob</styled.Name>
+        <styled.PhotoDate className="ff-mono-body">{date}</styled.PhotoDate>
+        <styled.Photo src={photo} />
+        <styled.Name className="ff-mono-body">{name}</styled.Name>
       </styled.PhotoContainer>
     </styled.Hero>
   );
