@@ -7,6 +7,10 @@ import Link from '@components/Link';
 export default {
   Container: styled.section`
     ${mixins.flex({ align: 'center' })}
+
+    h2 {
+      margin: ${spacing.small};
+    }
   `,
 
   ArrowCircle: styled(Link)`
@@ -15,7 +19,6 @@ export default {
     padding: ${spacing.gap};
     height: 100px;
     width: 100px;
-    margin-bottom: ${spacing.small};
 
     ${mixins.flex({ justify: 'center', align: 'center' })}
 
