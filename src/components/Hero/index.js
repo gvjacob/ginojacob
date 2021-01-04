@@ -1,22 +1,19 @@
 import React from 'react';
 
-import MD from '../MD';
-import css from './styles.module.scss';
+import styled from './styled';
 
-const Hero = ({ headline, name, title, description, image }) => (
-  <section className={css.hero}>
-    <h1 className={css.headline}>{headline}</h1>
-    <div className={css.info}>
-      <div>
-        <h2 className={css.name}>{name}</h2>
-      </div>
-      <div>
-        <MD className={css.title} source={title} />
-      </div>
-    </div>
-    <p className={css.description}>{description}</p>
-    <img className={css.image} src={image.src} alt={image.alt} />
-  </section>
-);
+const Hero = ({ className }) => {
+  return (
+    <styled.Hero className={className}>
+      <styled.Logotype src="/assets/gno.svg" />
+      <styled.Position>Currently leading a project at Scout</styled.Position>
+      <styled.PhotoContainer>
+        <styled.PhotoDate className="ff-mono-body">02.16.2020</styled.PhotoDate>
+        <styled.Photo src="/assets/profile.jpg" />
+        <styled.Name className="ff-mono-body">Gino Jacob</styled.Name>
+      </styled.PhotoContainer>
+    </styled.Hero>
+  );
+};
 
 export default Hero;

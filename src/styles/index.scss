@@ -1,35 +1,54 @@
-@import 'reset';
-
-@include font-face($name: $ff-primary, $file: 'Canela - Regular');
-@include font-face($name: $ff-primary, $file: 'Canela - Thin', $weight: 100);
-
-@include font-face($name: $ff-secondary, $file: 'GT America - Regular.otf');
-@include font-face($name: $ff-secondary, $file: 'GT America - Regular Italic.otf', $style: italic);
-@include font-face($name: $ff-secondary, $file: 'GT America - Bold.otf', $weight: bold);
-
-html,
-body {
-  @include margin(0);
-  @include padding(0);
-  overflow-x: hidden;
-}
+@import "./fonts";
+@import "./variables";
 
 body {
-  @include size(100vw, 100vh);
-  @include body;
+  background-color: $white;
+  background-image: url("/assets/grain.png");
+  color: $black;
 
-  background-color: $background-color;
-  color: $body-color;
-
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+  font-family: $ff-sans-serif;
+  font-size: 24px;
+  line-height: 32px;
 }
 
-body > div,
-div[role='group'][tabindex] {
-  @include size(100%);
+.ff-sans-serif-title {
+  font-family: $ff-sans-serif;
+  font-size: 48px;
+  line-height: 56px;
 }
 
-b {
-  font-weight: bold;
+.ff-sans-serif-body {
+  font-family: $ff-sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.ff-sans-serif-body-sub {
+  font-family: $ff-sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.ff-mono-body {
+  font-family: $ff-mono;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+/**
+ * CSS Resets
+ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

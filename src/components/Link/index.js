@@ -1,35 +1,29 @@
 import React from 'react';
-import { If, Then, Else } from 'react-if';
 import { Link as GatsbyLink } from 'gatsby';
-import { isEmpty } from 'lodash';
-import { classNames as cn } from 'peculiarity';
 
-import css from './styles.module.scss';
-
-const Link = ({ className, href, children }) => {
-  if (isEmpty(href)) {
+const Link = ({ className, to, children }) => {
+  if (!to) {
     return children;
   }
 
-  const internal = /^\/(?!\/)/.test(href);
-
-  const props = {
-    className: cn(css.link, className),
-  };
+  // Check if url is an external link
+  if (to.startsWith('http') || to.startsWith('www')) {
+    return (
+      <a
+        className={className}
+        href={to}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {children}
+      </a>
+    );
+  }
 
   return (
-    <If condition={internal}>
-      <Then>
-        <GatsbyLink to={href} {...props}>
-          {children}
-        </GatsbyLink>
-      </Then>
-      <Else>
-        <a href={href} {...props} target="_blank" rel="noopener noreferrer">
-          {children}
-        </a>
-      </Else>
-    </If>
+    <GatsbyLink className={className} to={to}>
+      {children}
+    </GatsbyLink>
   );
 };
 

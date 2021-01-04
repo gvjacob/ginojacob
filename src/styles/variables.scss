@@ -1,0 +1,16 @@
+// Colors
+$white: #fefefe;
+$black: #111111;
+$meteor-gray: #333333;
+$pale-gray: #e0e0e0;
+
+// Fonts
+$ff-sans-serif: "Tomato Grotesk", Arial, sans-serif;
+$ff-mono: "Courier Prime", monospace;
+
+:export {
+  white: $white;
+  black: $black;
+  meteorgray: $meteor-gray;
+  palegray: $pale-gray;
+}

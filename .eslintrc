@@ -1,11 +1,11 @@
 {
   "settings": {
     "react": {
-      "version": "detect",
+      "version": "detect"
     }
   },
   "extends": ["@upstatement/eslint-config/react"],
-  "plugins": ["react-hooks", "jest"],
+  "plugins": ["react-hooks"],
   "env": {
     "browser": true,
     "node": true,
@@ -20,4 +20,3 @@
     "react/display-name": 0
   }
 }
-

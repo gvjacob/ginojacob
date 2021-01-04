@@ -1,77 +1,53 @@
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-});
+const path = require("path");
 
-const postCssCalc = require('postcss-calc');
-
-function from(dir, files) {
-  const DIR = require('path').resolve(__dirname, dir);
-  return files.reduce((acc, file) => `${acc}/${file}`, DIR);
+/**
+ * Get path relative to static/ directory
+ *
+ * @param {array} nodes
+ * @returns {string}
+ */
+function fromStatic(...nodes) {
+  return `${__dirname}/static/${nodes.join("/")}`;
 }
 
-function fromSource(...files) {
-  return from('src', files);
-}
-
-function fromStatic(...files) {
-  return from('static', files);
-}
+const SITE_NAME = "Gno";
+const SITE_ICON = "gno.svg";
 
 module.exports = {
   siteMetadata: {
-    title: 'Gino Jacob',
-    description: `Lucky to have built a life-saving app, democratized technology skills, and developed some really pretty websites. I'm an engineer, and above all else, an unapologetically user-centric designer.`,
-    author: `Gino Jacob <gvjacob@outlook.com>`,
+    title: SITE_NAME,
+    description: ``,
+    author: ``,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-remark-source-name`,
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
     {
-      resolve: `gatsby-plugin-layout`,
+      resolve: `gatsby-plugin-alias-imports`,
       options: {
-        component: require.resolve(fromSource('components', 'Layout')),
+        alias: {
+          "@src": path.resolve(__dirname, "./src"),
+          "@styles": path.resolve(__dirname, "./src/styles"),
+          "@components": path.resolve(__dirname, "./src/components"),
+        },
       },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gino Jacob`,
-        short_name: `Gino Jacob`,
+        name: SITE_NAME,
+        short_name: SITE_NAME,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: fromStatic('assets', 'favicon.ico'),
+        icon: fromStatic("assets", SITE_ICON),
       },
     },
-    {
-      resolve: 'gatsby-plugin-sass',
-      options: {
-        implementation: require('sass'),
-        postCssPlugins: [
-          /*
-           * Reduces nested css calcs, for ie11 compatibility.
-           * https://github.com/postcss/postcss-calc
-           */
-          postCssCalc(),
-        ],
-        data: `@import 'abstracts/index';`,
-        includePaths: [fromSource('styles')],
-        cssLoaderOptions: {
-          camelCase: true,
-          localIdentName: '[name]__[local]___[hash:base64:5]',
-          module: true,
-        },
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: fromSource('pages'),
-      },
-    },
-    `gatsby-plugin-mdx`,
   ],
 };
