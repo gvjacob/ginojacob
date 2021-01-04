@@ -53,6 +53,16 @@ body {
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+  font-family: $ff-sans-serif;
+  font-size: 48px;
+  line-height: 56px;
+}
+
 li {
   list-style-type: none;
 }
