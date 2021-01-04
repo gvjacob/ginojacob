@@ -8,7 +8,7 @@ export default {
     padding: ${spacing.smallMedium};
   `,
   HeaderLinks: styled.ul`
-    ${mixins.flex('row')}
+    ${mixins.flex({ direction: 'row' })}
 
     li {
       margin-right: ${spacing.medium};

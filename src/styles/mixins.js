@@ -1,17 +1,20 @@
-import isEmpty from "lodash.isempty";
+import isEmpty from 'lodash.isempty';
 
 /**
  * Return output if condition is met.
  * Empty string otherwise.
  */
 function squash(condition, output) {
-  return isEmpty(condition) ? "" : output;
+  return isEmpty(condition) ? '' : output;
 }
 
 export default {
-  flex: (direction = "column") => `
+  flex: ({ direction = 'column', justify, align }) => `
     display: flex;
     flex-direction: ${direction};
+
+    ${squash(justify, `justify-content: ${justify};`)}
+    ${squash(align, `align-items: ${align};`)}
   `,
 
   grid: ({ columns, rows, gap }) => `
