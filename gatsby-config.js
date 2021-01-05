@@ -1,4 +1,4 @@
-const path = require("path");
+const path = require('path');
 
 /**
  * Get path relative to static/ directory
@@ -7,11 +7,21 @@ const path = require("path");
  * @returns {string}
  */
 function fromStatic(...nodes) {
-  return `${__dirname}/static/${nodes.join("/")}`;
+  return `${__dirname}/static/${nodes.join('/')}`;
 }
 
-const SITE_NAME = "Gno";
-const SITE_ICON = "gno.svg";
+/**
+ * Get path relative to static/ directory
+ *
+ * @param {array} nodes
+ * @returns {string}
+ */
+function fromContent(...nodes) {
+  return `${__dirname}/content/${nodes.join('/')}`;
+}
+
+const SITE_NAME = 'Gno';
+const SITE_ICON = 'gno.svg';
 
 module.exports = {
   siteMetadata: {
@@ -31,10 +41,17 @@ module.exports = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
-          "@src": path.resolve(__dirname, "./src"),
-          "@styles": path.resolve(__dirname, "./src/styles"),
-          "@components": path.resolve(__dirname, "./src/components"),
+          '@src': path.resolve(__dirname, './src'),
+          '@styles': path.resolve(__dirname, './src/styles'),
+          '@components': path.resolve(__dirname, './src/components'),
         },
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: fromContent('projects'),
       },
     },
     {
@@ -46,7 +63,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: fromStatic("assets", SITE_ICON),
+        icon: fromStatic('assets', SITE_ICON),
       },
     },
   ],
