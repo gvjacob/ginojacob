@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Link from '@components/Link';
+
 import Layout from '@components/Layout';
 import Hero from '@components/Hero';
 import Biography from '@components/Biography';
@@ -25,7 +27,12 @@ const IndexPage = () => (
       name="Gino Jacob"
       photo="/assets/profile.jpg"
       date="02.16.2020"
-      position="Currently leading a project at Scout"
+      position={
+        <>
+          Currently leading a project at{' '}
+          <Link to="https://scout.camd.northeastern.edu/">Scout</Link>
+        </>
+      }
     />
     <StyledBiography
       about="Lucky to have built a life-saving app, democratized technology skills, and developed some really pretty websites. I'm an engineer, and above all else, an unapologetically user-centric designer."
