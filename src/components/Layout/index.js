@@ -35,7 +35,14 @@ const Layout = ({ children }) => {
         image="/assets/gno.svg"
       />
       <Announcement />
-      <Header links={links} />
+      <Header
+        status={{
+          emoji: '😎',
+          text: 'Open to opportunities in 2021',
+          to: 'mailto:gvjacob@outlook.com',
+        }}
+        links={links}
+      />
       <styled.Main>{children}</styled.Main>
       <LifeUpdates
         updates={[

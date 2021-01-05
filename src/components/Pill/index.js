@@ -6,19 +6,25 @@ import styled from './styled';
 
 const LinkPill = styled.Pill(Link);
 const ButtonPill = styled.Pill('button');
+const PlainPill = styled.Pill('span');
 
 const Pill = ({ className, children, to, onClick }) => (
   <If condition={to}>
     <Then>
-      <LinkPill className={className} to={to} basic>
+      <LinkPill className={className} to={to} basic isFocusable>
         {children}
       </LinkPill>
     </Then>
     <Else>
       <If condition={onClick}>
-        <ButtonPill className={className} onClick={onClick}>
-          {children}
-        </ButtonPill>
+        <Then>
+          <ButtonPill className={className} onClick={onClick} isFocusable>
+            {children}
+          </ButtonPill>
+        </Then>
+        <Else>
+          <PlainPill className={className}>{children}</PlainPill>
+        </Else>
       </If>
     </Else>
   </If>

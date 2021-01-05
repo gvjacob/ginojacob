@@ -3,10 +3,11 @@ import { If } from 'react-if';
 import isEmpty from 'lodash.isempty';
 
 import Link from '@components/Link';
+import Status from '@components/Status';
 
 import styled from './styled';
 
-const Header = ({ className, links }) => (
+const Header = ({ className, status, links }) => (
   <styled.Header className={className}>
     <If condition={!isEmpty(links)}>
       <nav>
@@ -19,6 +20,7 @@ const Header = ({ className, links }) => (
         </styled.HeaderLinks>
       </nav>
     </If>
+    <Status {...status} />
   </styled.Header>
 );
 

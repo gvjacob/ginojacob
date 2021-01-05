@@ -2,11 +2,14 @@ import styled from 'styled-components';
 import { spacing, colors } from '@styles/variables';
 
 export default {
-  Pill: (component) => styled(component)`
+  Pill: component => styled(component)`
     padding: ${spacing.gap} ${spacing.small};
     border: 1px solid ${colors.black};
     border-radius: 50px;
 
+    ${({ isFocusable }) =>
+    isFocusable &&
+      `
     transition: all 0.1s ease-in-out;
 
     :hover,
@@ -14,5 +17,6 @@ export default {
       background-color: ${colors.black};
       color: ${colors.white};
     }
+    `}
   `,
 };
