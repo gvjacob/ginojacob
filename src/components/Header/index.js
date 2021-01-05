@@ -1,13 +1,13 @@
-import React from 'react';
-import { If } from 'react-if';
-import isEmpty from 'lodash.isempty';
+import React from "react";
+import { If } from "react-if";
+import isEmpty from "lodash.isempty";
 
-import Link from '@components/Link';
-import Status from '@components/Status';
+import Link from "@components/Link";
+import Status from "@components/Status";
 
-import styled from './styled';
+import styled from "./styled";
 
-const Header = ({ className, status, links }) => (
+const Header = ({ className, status, links = [] }) => (
   <styled.Header className={className}>
     <If condition={!isEmpty(links)}>
       <nav>
