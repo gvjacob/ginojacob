@@ -6,8 +6,8 @@ import Header from '@components/Header';
 import LifeUpdates from '@components/LifeUpdates';
 import Footer from '@components/Footer';
 
-import '@styles/index.scss';
 import 'normalize.css';
+import '@styles/index.scss';
 
 import styled from './styled';
 

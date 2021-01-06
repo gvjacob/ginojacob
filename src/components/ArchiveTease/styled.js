@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import mixins from '@styles/mixins';
 import { spacing, colors } from '@styles/variables';
 
+import Categories from '@components/Categories';
 import Link from '@components/Link';
 
 export default {
@@ -32,5 +33,10 @@ export default {
       color: ${colors.white};
       transform: rotate(0);
     }
+  `,
+
+  Categories: styled(Categories)`
+    ${mixins.flex({ direction: 'row', justify: 'center', wrap: 'wrap' })}
+    width: 70%;
   `,
 };
