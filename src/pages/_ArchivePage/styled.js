@@ -19,7 +19,8 @@ export default {
   `,
 
   TeaseList: styled(TeaseList)`
-    margin: ${spacing.medium} 0;
     width: 50%;
+    margin-top: ${spacing.medium};
+    margin-bottom: ${spacing.large};
   `,
 };

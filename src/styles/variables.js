@@ -5,6 +5,7 @@ export const spacing = {
   small: '20px',
   smallMedium: '40px',
   medium: '80px',
+  large: '120px',
 };
 
 export const colors = variables;
