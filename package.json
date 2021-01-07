@@ -29,6 +29,7 @@
     "gatsby-transformer-sharp": "^2.5.19",
     "image-preloader": "^1.1.1",
     "lodash.isempty": "^4.4.0",
+    "lodash.partition": "^4.6.0",
     "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
     "react": "^16.12.0",

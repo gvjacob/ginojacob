@@ -4,9 +4,9 @@ import Link from '@components/Link';
 
 import styled from './styled';
 
-const Tease = ({ className, title, description, image, link }) => (
+const Tease = ({ className, title, description, cover, link }) => (
   <article className={className}>
-    {image && <styled.Image src={image} />}
+    {cover && <styled.Image src={cover} />}
     <h3>
       <Link to={link}>{title}</Link>
     </h3>

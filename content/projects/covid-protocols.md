@@ -6,4 +6,5 @@ cover: /assets/covid-protocols.png
 categories:
   - Mobile App
   - Backend
+featured: true
 ---

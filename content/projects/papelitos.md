@@ -1,9 +1,9 @@
 ---
-title: Covid Protocols
-tease: Definitive clinical guidelines for frontline workers during COVID-19.
-description: Definitive clinical guidelines for frontline workers during COVID-19.
-cover: /assets/covid-protocols.png
+title: papelitos
+tease: Real time charades for long distance friends. Inspired by COVID-19.
+description: Real time charades for long distance friends. Inspired by COVID-19.
 categories:
-  - Mobile App
+  - Web Design
+  - Front-end
   - Backend
 ---

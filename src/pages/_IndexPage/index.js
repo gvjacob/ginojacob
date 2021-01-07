@@ -45,14 +45,14 @@ const IndexPage = () => (
           description:
             'A simple and personal brand identity for a wellness experience service.',
           link: '#',
-          image: '/assets/b612.png',
+          cover: '/assets/b612.png',
         },
         {
           title: 'Covid Protocols',
           description:
             'Definitive clinical guidelines for frontline workers during COVID-19.',
           link: '#',
-          image: '/assets/covid-protocols.png',
+          cover: '/assets/covid-protocols.png',
         },
       ]}
     />
