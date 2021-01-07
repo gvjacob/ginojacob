@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import partition from 'lodash.partition';
 import styled from 'styled-components';
 
+import SEO from '@components/SEO';
 import Topper from '@components/Topper';
 import Categories from '@components/Categories';
 import TeaseList from '@components/TeaseList';
@@ -32,12 +33,14 @@ const ArchivePage = ({ data }) => {
   const projects = data.projects.edges.map(({ node }) => node.frontmatter);
   const [featured, rest] = partition(projects, ({ featured }) => !!featured);
 
+  const title = 'Archive';
+  const description =
+    'I’ve worked in the product and agency spaces. Over the years, I’ve had a hand in unique projects and taken multiple meaningful roles.';
+
   return (
     <Layout>
-      <StyledTopper
-        title="Archive"
-        description="I’ve worked in the product and agency spaces. Over the years, I’ve had a hand in unique projects and taken multiple meaningful roles."
-      />
+      <SEO title={title} description={description} />
+      <StyledTopper title={title} description={description} />
       <StyledCategories
         categories={[
           { name: 'Web Design' },

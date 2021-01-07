@@ -21,7 +21,7 @@ function fromContent(...nodes) {
 }
 
 const SITE_NAME = 'Gno';
-const SITE_ICON = 'gno.svg';
+const SITE_ICON = 'favicon.ico';
 
 module.exports = {
   siteMetadata: {
