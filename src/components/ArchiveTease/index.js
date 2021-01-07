@@ -15,7 +15,7 @@ const Arrow = ({ className, to }) => (
 
 const ArchiveTease = ({ className, categories }) => (
   <styled.Container className={className}>
-    <Arrow to="#" />
+    <Arrow to="/archive" />
     <h2>Archive</h2>
     <styled.Categories categories={categories} />
   </styled.Container>
