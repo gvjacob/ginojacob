@@ -15,15 +15,11 @@ const Layout = ({ children }) => {
   const links = [
     {
       label: 'Bio',
-      to: '#',
+      to: '/',
     },
     {
-      label: 'Work',
-      to: '#',
-    },
-    {
-      label: 'Case Studies',
-      to: '#',
+      label: 'Archive',
+      to: '/archive',
     },
   ];
 
