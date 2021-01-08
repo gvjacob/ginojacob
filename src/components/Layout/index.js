@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <SEO
-        title="Gino | Developer, Designer, Ballroom Dancer"
+        title="Gino — Developer, Designer, Ballroom Dancer"
         description="Lucky to have built a life-saving app, democratized technology skills, and developed some really pretty websites. I'm an engineer, and above all else, an unapologetically user-centric designer."
         image="/assets/gno.svg"
       />
