@@ -7,4 +7,4 @@ export const getUpdates = ({ edges }) =>
 export const getProjects = ({ edges }) =>
   edges.map(({ node }) => node.frontmatter);
 
-export const getFooter = ({ frontmatter }) => frontmatter;
+export const getFrontmatter = ({ frontmatter }) => frontmatter;

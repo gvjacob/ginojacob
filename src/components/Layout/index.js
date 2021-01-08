@@ -7,7 +7,7 @@ import Header from '@components/Header';
 import LifeUpdates from '@components/LifeUpdates';
 import Footer from '@components/Footer';
 
-import { getUpdates, getFooter } from '@utils/serializers';
+import { getUpdates, getFrontmatter } from '@utils/serializers';
 
 import 'normalize.css';
 import '@styles/index.scss';
@@ -49,7 +49,7 @@ const Layout = ({ children }) => {
   `);
 
   const updates = getUpdates(data.updates);
-  const footer = getFooter(data.footer);
+  const footer = getFrontmatter(data.footer);
 
   const links = [
     {

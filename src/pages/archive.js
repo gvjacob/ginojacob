@@ -10,7 +10,7 @@ import TeaseList from '@components/TeaseList';
 import Layout from '@components/Layout';
 import FeaturedWork from '@components/FeaturedWork';
 
-import { getProjects } from '@utils/serializers';
+import { getProjects, getFrontmatter } from '@utils/serializers';
 import { spacing } from '@styles/variables';
 
 const StyledTopper = styled(Topper)`
@@ -31,12 +31,9 @@ const StyledTeaseList = styled(TeaseList)`
 `;
 
 const ArchivePage = ({ data }) => {
+  const { title, description } = getFrontmatter(data.archive);
   const projects = getProjects(data.projects);
   const [featured, rest] = partition(projects, ({ featured }) => !!featured);
-
-  const title = 'Archive';
-  const description =
-    'I’ve worked in the product and agency spaces. Over the years, I’ve had a hand in unique projects and taken multiple meaningful roles.';
 
   return (
     <Layout>
@@ -64,6 +61,13 @@ export default ArchivePage;
 
 export const query = graphql`
   query ArchiveQuery {
+    archive: markdownRemark(fields: { sourceName: { eq: "archive" } }) {
+      frontmatter {
+        title
+        description
+      }
+    }
+
     projects: allMarkdownRemark(
       filter: { fields: { sourceName: { eq: "projects" } } }
     ) {
