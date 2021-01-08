@@ -12,5 +12,5 @@ resources:
     to: mailto:gvjacob@outlook.com
 
 copyright: 2020 © Gino Jacob
-location: Boston, MA
+location: Based in Boston, MA
 ---

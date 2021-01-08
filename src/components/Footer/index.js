@@ -20,7 +20,9 @@ const Footer = ({ className, links, resources, location, copyright }) => (
     <LinksList links={links} />
     <LinksList links={resources} />
     <p className="ff-sans-serif-body-sub">{copyright}</p>
-    <p className="ff-mono-body">{location}</p>
+    <styled.Location className="ff-sans-serif-body-sub">
+      {location}
+    </styled.Location>
   </styled.Footer>
 );
 
