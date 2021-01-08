@@ -10,6 +10,7 @@ import TeaseList from '@components/TeaseList';
 import Layout from '@components/Layout';
 import FeaturedWork from '@components/FeaturedWork';
 
+import { getProjects } from '@utils/serializers';
 import { spacing } from '@styles/variables';
 
 const StyledTopper = styled(Topper)`
@@ -30,7 +31,7 @@ const StyledTeaseList = styled(TeaseList)`
 `;
 
 const ArchivePage = ({ data }) => {
-  const projects = data.projects.edges.map(({ node }) => node.frontmatter);
+  const projects = getProjects(data.projects);
   const [featured, rest] = partition(projects, ({ featured }) => !!featured);
 
   const title = 'Archive';

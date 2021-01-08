@@ -10,6 +10,8 @@ import Biography from '@components/Biography';
 import FeaturedWork from '@components/FeaturedWork';
 import ArchiveTease from '@components/ArchiveTease';
 
+import { getProjects } from '@utils/serializers';
+
 const StyledHero = styled(Hero)`
   margin-top: 20vh;
 `;
@@ -23,9 +25,7 @@ const StyledArchiveTease = styled(ArchiveTease)`
 `;
 
 const IndexPage = ({ data }) => {
-  const featuredProjects = data.featured.edges.map(
-    ({ node }) => node.frontmatter,
-  );
+  const featuredProjects = getProjects(data.featured);
 
   return (
     <Layout>
