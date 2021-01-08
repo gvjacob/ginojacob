@@ -63,6 +63,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `footer`,
+        path: fromContent('footer.md'),
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: SITE_NAME,

@@ -7,7 +7,7 @@ import Header from '@components/Header';
 import LifeUpdates from '@components/LifeUpdates';
 import Footer from '@components/Footer';
 
-import { getUpdates } from '@utils/serializers';
+import { getUpdates, getFooter } from '@utils/serializers';
 
 import 'normalize.css';
 import '@styles/index.scss';
@@ -30,10 +30,26 @@ const Layout = ({ children }) => {
           }
         }
       }
+
+      footer: markdownRemark(fields: { sourceName: { eq: "footer" } }) {
+        frontmatter {
+          links {
+            label
+            to
+          }
+          resources {
+            label
+            to
+          }
+          copyright
+          location
+        }
+      }
     }
   `);
 
   const updates = getUpdates(data.updates);
+  const footer = getFooter(data.footer);
 
   const links = [
     {
@@ -64,31 +80,7 @@ const Layout = ({ children }) => {
       />
       <styled.Main>{children}</styled.Main>
       <LifeUpdates updates={updates} />
-      <Footer
-        links={[
-          {
-            label: 'GitHub',
-            to: 'https://github.com/gvjacob',
-          },
-          {
-            label: 'LinkedIn',
-            to: 'https://www.linkedin.com/in/gvjacob/',
-          },
-        ]}
-        resources={[
-          {
-            label: 'Résumé',
-            to:
-              'https://indd.adobe.com/view/4b441bbf-c9c3-47d9-b0d4-e49ab74806cb',
-          },
-          {
-            label: 'gvjacob@outlook.com',
-            to: 'mailto:gvjacob@outlook.com',
-          },
-        ]}
-        location="2nd January 2021. Boston, MA. 37°F cloudy"
-        copyright="2020 © Gino Jacob"
-      />
+      <Footer {...footer} />
     </>
   );
 };
