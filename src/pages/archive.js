@@ -40,7 +40,7 @@ const ArchivePage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={title} description={description} />
+      <SEO title={`Gino — ${title}`} description={description} />
       <StyledTopper title={title} description={description} />
       <StyledCategories
         categories={[
