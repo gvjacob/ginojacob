@@ -17,7 +17,10 @@ import styled from './styled';
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query LayoutQuery {
-      updates: allFile(filter: { sourceInstanceName: { eq: "updates" } }) {
+      updates: allFile(
+        filter: { sourceInstanceName: { eq: "updates" } }
+        sort: { fields: name, order: DESC }
+      ) {
         edges {
           node {
             name
