@@ -89,9 +89,6 @@ const Layout = ({ children }) => {
             label: 'gvjacob@outlook.com',
             to: 'mailto:gvjacob@outlook.com',
           },
-          {
-            label: '(909) 213 - 4090',
-          },
         ]}
         location="2nd January 2021. Boston, MA. 37°F cloudy"
         copyright="2020 © Gino Jacob"
