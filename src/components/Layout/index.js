@@ -1,4 +1,5 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import SEO from '@components/SEO';
 import Announcement from '@components/Announcement';
@@ -6,12 +7,31 @@ import Header from '@components/Header';
 import LifeUpdates from '@components/LifeUpdates';
 import Footer from '@components/Footer';
 
+import { getUpdates } from '@utils/serializers';
+
 import 'normalize.css';
 import '@styles/index.scss';
 
 import styled from './styled';
 
 const Layout = ({ children }) => {
+  const data = useStaticQuery(graphql`
+    query LayoutQuery {
+      updates: allFile(filter: { sourceInstanceName: { eq: "updates" } }) {
+        edges {
+          node {
+            name
+            childMarkdownRemark {
+              html
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const updates = getUpdates(data.updates);
+
   const links = [
     {
       label: 'Bio',
@@ -40,34 +60,7 @@ const Layout = ({ children }) => {
         links={links}
       />
       <styled.Main>{children}</styled.Main>
-      <LifeUpdates
-        updates={[
-          {
-            date: 'Dec 16th, 2020',
-            text: 'Finished Fall 2020 semester at Northeastern University',
-          },
-          {
-            date: 'Nov 13th, 2020',
-            text: 'Left Upstatement',
-          },
-          {
-            date: 'Dec 16th, 2020',
-            text: 'Finished Fall 2020 semester at Northeastern University',
-          },
-          {
-            date: 'Nov 13th, 2020',
-            text: 'Left Upstatement',
-          },
-          {
-            date: 'Dec 16th, 2020',
-            text: 'Finished Fall 2020 semester at Northeastern University',
-          },
-          {
-            date: 'Nov 13th, 2020',
-            text: 'Left Upstatement',
-          },
-        ]}
-      />
+      <LifeUpdates updates={updates} />
       <Footer
         links={[
           {

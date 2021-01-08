@@ -19,7 +19,7 @@ export default {
       color: ${colors.stonegray};
     }
 
-    p {
+    div {
       margin-top: ${spacing.gap};
     }
   `,

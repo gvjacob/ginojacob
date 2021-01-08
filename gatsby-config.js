@@ -44,6 +44,7 @@ module.exports = {
           '@src': path.resolve(__dirname, './src'),
           '@styles': path.resolve(__dirname, './src/styles'),
           '@components': path.resolve(__dirname, './src/components'),
+          '@utils': path.resolve(__dirname, './src/utils'),
         },
       },
     },
@@ -52,6 +53,13 @@ module.exports = {
       options: {
         name: `projects`,
         path: fromContent('projects'),
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `updates`,
+        path: fromContent('updates'),
       },
     },
     {
