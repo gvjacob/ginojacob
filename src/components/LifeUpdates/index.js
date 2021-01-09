@@ -9,7 +9,7 @@ const Update = ({ className, date, html }) => {
   return (
     <styled.Update className={className}>
       <span className="ff-mono-body">{formattedDate}</span>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="html" dangerouslySetInnerHTML={{ __html: html }} />
     </styled.Update>
   );
 };

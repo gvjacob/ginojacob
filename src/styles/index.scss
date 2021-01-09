@@ -36,6 +36,17 @@ body {
   line-height: 22px;
 }
 
+.html {
+  a {
+    text-decoration: underline;
+    transition: opacity 0.1s ease-in-out;
+
+    @include on-focus {
+      opacity: 0.5;
+    }
+  }
+}
+
 .link {
   transition: opacity 0.1s ease-in-out;
 
