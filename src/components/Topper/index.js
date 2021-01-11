@@ -4,7 +4,7 @@ import styled from './styled';
 const Topper = ({ className, title, description }) => (
   <styled.Container className={className}>
     <h1>{title}</h1>
-    <p>{description}</p>
+    <p className="html" dangerouslySetInnerHTML={{ __html: description }} />
   </styled.Container>
 );
 
