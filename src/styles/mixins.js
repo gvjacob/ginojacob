@@ -9,13 +9,14 @@ function squash(condition, output) {
 }
 
 export default {
-  flex: ({ direction = 'column', justify, align, wrap }) => `
+  flex: ({ direction = 'column', justify, align, wrap, gap }) => `
     display: flex;
     flex-direction: ${direction};
 
     ${squash(justify, `justify-content: ${justify};`)}
     ${squash(align, `align-items: ${align};`)}
     ${squash(wrap, `flex-wrap: ${wrap};`)}
+    ${squash(gap, `gap: ${gap};`)}
   `,
 
   grid: ({ columns, rows, gap }) => `

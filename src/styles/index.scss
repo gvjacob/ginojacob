@@ -40,13 +40,8 @@ body {
 
 .ff-sans-serif-body-sub {
   font-family: $ff-sans-serif;
-  font-size: 12px;
-  line-height: 18px;
-
-  @media (min-width: $bp-tablet) {
-    font-size: 18px;
-    line-height: 24px;
-  }
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .ff-mono-body {

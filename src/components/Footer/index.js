@@ -16,13 +16,17 @@ const LinksList = ({ className, links }) => (
 
 const Footer = ({ className, links, resources, location, copyright }) => (
   <styled.Footer className={className}>
-    <styled.Logotype src="/assets/gno.svg" />
-    <LinksList links={links} />
-    <LinksList links={resources} />
-    <p className="ff-sans-serif-body-sub">{copyright}</p>
-    <styled.Location className="ff-sans-serif-body-sub">
-      {location}
-    </styled.Location>
+    <styled.LinksContainer>
+      <styled.Logotype src="/assets/gno.svg" />
+      <LinksList links={links} />
+      <LinksList links={resources} />
+    </styled.LinksContainer>
+    <styled.CopyrightContainer>
+      <p className="ff-sans-serif-body-sub">{copyright}</p>
+      <styled.Location className="ff-sans-serif-body-sub">
+        {location}
+      </styled.Location>
+    </styled.CopyrightContainer>
   </styled.Footer>
 );
 
