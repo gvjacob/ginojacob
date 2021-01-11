@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import mixins from '@styles/mixins';
 import { spacing } from '@styles/variables';
-import { min } from '@styles/responsive';
+import { min, max } from '@styles/responsive';
 
 export default {
   Footer: styled.footer`
@@ -40,6 +40,13 @@ export default {
 
   CopyrightContainer: styled.div`
     margin-top: ${spacing.small};
+
+    @media ${max.tablet} {
+      * {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
 
     @media ${min.tablet} {
       margin-top: ${spacing.medium};
