@@ -7,4 +7,6 @@ categories:
   - Mobile App
   - Backend
 featured: true
+live_link: https://covidprotocols.org
+case_study_link: https://upstatement.com/case-study/covid-protocols/
 ---

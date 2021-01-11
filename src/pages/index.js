@@ -42,19 +42,19 @@ const IndexPage = ({ data }) => {
       />
       <StyledBiography
         about="Lucky to have built a life-saving app, democratized technology skills, and developed some really pretty websites. I'm an engineer, and above all else, an unapologetically user-centric designer."
-        status="Currently in Boston. Making cool stuff at Upstatement. Learning (or really relearning) Spanish on Duolingo. Still quarantining 😷"
+        status="Currently in Boston. Learning (or really relearning) Spanish on Duolingo. Still quarantining 😷"
       />
       <FeaturedWork featured={featuredProjects} />
       <StyledArchiveTease
         categories={[
-          { name: 'Web Design', to: '#' },
-          { name: 'Front-end', to: '#' },
-          { name: 'Backend', to: '#' },
-          { name: 'Creative Direction', to: '#' },
-          { name: 'Branding', to: '#' },
-          { name: 'Logo', to: '#' },
-          { name: 'Open Source', to: '#' },
-          { name: 'Ballroom 💃', to: '#' },
+          { name: 'Web Design' },
+          { name: 'Front-end' },
+          { name: 'Backend' },
+          { name: 'Creative Direction' },
+          { name: 'Branding' },
+          { name: 'Logo' },
+          { name: 'Open Source' },
+          { name: 'Ballroom 💃' },
         ]}
       />
     </Layout>
