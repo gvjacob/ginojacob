@@ -1,11 +1,11 @@
-import styled from "styled-components";
-import mixins from "@styles/mixins";
-import { colors, spacing } from "@styles/variables";
-import { min } from "@styles/responsive";
+import styled from 'styled-components';
+import mixins from '@styles/mixins';
+import { colors, spacing } from '@styles/variables';
+import { min } from '@styles/responsive';
 
 export default {
   Container: styled.section`
-    ${mixins.flex({ direction: "row" })}
+    ${mixins.flex({ direction: 'row' })}
     border-top: 1px solid ${colors.lightgray};
     border-bottom: 1px solid ${colors.lightgray};
 
@@ -16,6 +16,7 @@ export default {
       padding: ${spacing.smallMedium};
     }
   `,
+
   Update: styled.div`
     padding: ${spacing.gap};
     width: 100%;
@@ -32,6 +33,10 @@ export default {
     @media ${min.tablet} {
       padding-right: ${spacing.small};
       padding-bottom: ${spacing.small};
+      width: 50%;
+    }
+
+    @media ${min.desktop} {
       width: calc(100% / 3);
     }
   `,
