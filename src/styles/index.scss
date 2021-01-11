@@ -2,14 +2,23 @@
 @import "./variables.module.scss";
 @import "./mixins";
 
+$bp-mobile: 320px;
+$bp-tablet: 768px;
+$bp-desktop: 1280px;
+
 body {
   background-color: $white;
   background-image: url("/assets/grain.png");
   color: $black;
 
   font-family: $ff-sans-serif;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 24px;
+
+  @media (min-width: $bp-tablet) {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 .ff-sans-serif-title {
@@ -20,20 +29,35 @@ body {
 
 .ff-sans-serif-body {
   font-family: $ff-sans-serif;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 24px;
+
+  @media (min-width: $bp-tablet) {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 .ff-sans-serif-body-sub {
   font-family: $ff-sans-serif;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 18px;
+
+  @media (min-width: $bp-tablet) {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .ff-mono-body {
   font-family: $ff-mono;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 12px;
+  line-height: 18px;
+
+  @media (min-width: $bp-tablet) {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 
 .html {
