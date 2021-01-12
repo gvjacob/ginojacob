@@ -70,8 +70,8 @@ const Layout = ({ children }) => {
       />
       <Header
         status={{
-          emoji: '😎',
-          text: 'Open to opportunities in 2021',
+          emoji: '👀',
+          text: 'for full time opportunities in 2021',
           to: 'mailto:gvjacob@outlook.com',
         }}
         links={links}
