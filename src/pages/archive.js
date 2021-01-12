@@ -9,6 +9,7 @@ import Categories from '@components/Categories';
 import TeaseList from '@components/TeaseList';
 import Layout from '@components/Layout';
 import FeaturedWork from '@components/FeaturedWork';
+import withFadeIn from '@hocs/withFadeIn';
 
 import { getProjects, getFrontmatter } from '@utils/serializers';
 import { spacing } from '@styles/variables';
@@ -40,34 +41,36 @@ const StyledTeaseList = styled(TeaseList)`
   }
 `;
 
-const ArchivePage = ({ data }) => {
+const ArchivePage = ({ className, data }) => {
   const { title, description } = getFrontmatter(data.archive);
   const projects = getProjects(data.projects);
   const [featured, rest] = partition(projects, ({ featured }) => !!featured);
 
   return (
     <Layout>
-      <SEO title={`Gino — ${title}`} description={description} />
-      <StyledTopper title={title} description={description} />
-      <StyledCategories
-        categories={[
-          { name: 'Web Design' },
-          { name: 'Front-end' },
-          { name: 'Backend' },
-          { name: 'Creative Direction' },
-          { name: 'Branding' },
-          { name: 'Logo' },
-          { name: 'Open Source' },
-          { name: 'Ballroom 💃' },
-        ]}
-      />
-      <FeaturedWork featured={featured} />
-      <StyledTeaseList projects={rest} />
+      <div className={className}>
+        <SEO title={`Gino — ${title}`} description={description} />
+        <StyledTopper title={title} description={description} />
+        <StyledCategories
+          categories={[
+            { name: 'Web Design' },
+            { name: 'Front-end' },
+            { name: 'Backend' },
+            { name: 'Creative Direction' },
+            { name: 'Branding' },
+            { name: 'Logo' },
+            { name: 'Open Source' },
+            { name: 'Ballroom 💃' },
+          ]}
+        />
+        <FeaturedWork featured={featured} />
+        <StyledTeaseList projects={rest} />
+      </div>
     </Layout>
   );
 };
 
-export default ArchivePage;
+export default withFadeIn(ArchivePage);
 
 export const query = graphql`
   query ArchiveQuery {
