@@ -1,14 +1,22 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import mixins from "@styles/mixins";
-import { spacing } from "@styles/variables";
+import mixins from '@styles/mixins';
+import { spacing } from '@styles/variables';
+import { min, max } from '@styles/responsive';
 
 export default {
   Biography: styled.section`
-    ${mixins.grid({
-      columns: "repeat(3, 1fr)",
-      gap: `${spacing.smallMedium} ${spacing.gap}`,
-    })}
+    @media ${max.tablet} {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    @media ${min.tablet} {
+      ${mixins.grid({
+    columns: 'repeat(3, 1fr)',
+    gap: `${spacing.smallMedium} ${spacing.gap}`,
+  })}
+    }
   `,
 
   About: styled.p`
