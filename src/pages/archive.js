@@ -32,9 +32,12 @@ const StyledCategories = styled(Categories)`
 `;
 
 const StyledTeaseList = styled(TeaseList)`
-  width: 50%;
   margin-top: ${spacing.medium};
   margin-bottom: ${spacing.large};
+
+  @media ${min.tablet} {
+    width: 50%;
+  }
 `;
 
 const ArchivePage = ({ data }) => {
