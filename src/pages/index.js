@@ -80,6 +80,8 @@ export const query = graphql`
             cover
             categories
             featured
+            live_link
+            case_study_link
           }
         }
       }

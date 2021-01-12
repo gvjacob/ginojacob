@@ -12,16 +12,23 @@ import FeaturedWork from '@components/FeaturedWork';
 
 import { getProjects, getFrontmatter } from '@utils/serializers';
 import { spacing } from '@styles/variables';
+import { min } from '@styles/responsive';
 
 const StyledTopper = styled(Topper)`
-  width: 50%;
   margin-bottom: ${spacing.small};
   margin-top: ${spacing.medium};
+
+  @media ${min.tablet} {
+    width: 50%;
+  }
 `;
 
 const StyledCategories = styled(Categories)`
-  width: 66%;
   margin-bottom: ${spacing.medium};
+
+  @media ${min.tablet} {
+    width: 66%;
+  }
 `;
 
 const StyledTeaseList = styled(TeaseList)`
