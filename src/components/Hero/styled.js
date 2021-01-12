@@ -2,17 +2,33 @@ import styled from 'styled-components';
 
 import mixins from '@styles/mixins';
 import { spacing } from '@styles/variables';
+import { min, max } from '@styles/responsive';
 
 export default {
   Hero: styled.section`
-    ${mixins.grid({ columns: 'repeat(12, 1fr)', gap: spacing.gap })}
-
-    grid-template-rows: 2fr;
     width: 100%;
+
+    ${mixins.flex({})}
+
+    @media ${min.tablet} {
+      ${mixins.grid({
+    columns: 'repeat(12, 1fr)',
+    rows: '2fr',
+    gap: spacing.gap,
+  })}
+    }
   `,
 
   Position: styled.p`
     grid-column: 1 / 4;
+    grid-row: 2;
+
+    @media ${max.tablet} {
+      width: 70%;
+      text-align: center;
+      margin: auto;
+      margin-top: ${spacing.small};
+    }
   `,
 
   Logotype: styled.img`
@@ -22,11 +38,22 @@ export default {
     z-index: 1;
 
     grid-column: 5 / 9;
+
+    @media ${max.tablet} {
+      width: 90%;
+      margin: auto;
+      margin-bottom: -30px;
+    }
   `,
 
   PhotoContainer: styled.div`
     position: relative;
     grid-column: 5 / 9;
+
+    @media ${max.tablet} {
+      margin: auto;
+      width: 80%;
+    }
   `,
 
   Photo: styled.img`
