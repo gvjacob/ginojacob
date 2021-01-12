@@ -40,7 +40,7 @@ export default {
     grid-column: 5 / 9;
 
     @media ${max.tablet} {
-      width: 90%;
+      width: 80%;
       margin: auto;
       margin-bottom: -30px;
     }
@@ -52,7 +52,7 @@ export default {
 
     @media ${max.tablet} {
       margin: auto;
-      width: 80%;
+      width: calc(100% - 70px);
     }
   `,
 
