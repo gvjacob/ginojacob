@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import mixins from '@styles/mixins';
 import { spacing, colors } from '@styles/variables';
+import { min } from '@styles/responsive';
 
 import Categories from '@components/Categories';
 import Link from '@components/Link';
@@ -37,6 +38,9 @@ export default {
 
   Categories: styled(Categories)`
     ${mixins.flex({ direction: 'row', justify: 'center', wrap: 'wrap' })}
-    width: 70%;
+
+    @media ${min.tablet} {
+      width: 70%;
+    }
   `,
 };

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { spacing, colors } from '@styles/variables';
+import { max } from '@styles/responsive';
 
 export default {
   Pill: component => styled(component)`
@@ -17,6 +18,13 @@ export default {
       background-color: ${colors.black};
       color: ${colors.white};
     }
+
     `}
+
+    @media ${max.tablet} {
+      padding: 5px ${spacing.gap};
+      font-size: 12px;
+      line-height: 18px;
+    }
   `,
 };
