@@ -8,6 +8,7 @@ export default {
   Header: styled.header`
     padding: ${spacing.gap};
     height: 100px;
+    padding-top: ${spacing.small};
 
     @media ${min.tablet} {
       padding: ${spacing.smallMedium};
