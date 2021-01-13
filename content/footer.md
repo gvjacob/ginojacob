@@ -7,7 +7,8 @@ links:
 
 resources:
   - label: Résumé
-    to: https://indd.adobe.com/view/4b441bbf-c9c3-47d9-b0d4-e49ab74806cb
+    to: https://documentcloud.adobe.com/link/track?uri=urn:aaid:scds:US:de094c64-3b2f-48d7-9960-2de134a89183
+
   - label: gvjacob@outlook.com
     to: mailto:gvjacob@outlook.com
 
