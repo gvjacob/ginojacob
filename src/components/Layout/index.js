@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import ImagePreloader from 'image-preloader';
 
 import SEO from '@components/SEO';
 import Header from '@components/Header';
@@ -14,6 +15,8 @@ import '@styles/index.scss';
 import styled from './styled';
 
 const Layout = ({ children }) => {
+  const [preloaded, setPreloaded] = useState(false);
+
   const data = useStaticQuery(graphql`
     query LayoutQuery {
       updates: allFile(
@@ -26,6 +29,14 @@ const Layout = ({ children }) => {
             childMarkdownRemark {
               html
             }
+          }
+        }
+      }
+
+      assets: allFile(filter: { sourceInstanceName: { eq: "assets" } }) {
+        edges {
+          node {
+            relativePath
           }
         }
       }
@@ -46,6 +57,18 @@ const Layout = ({ children }) => {
       }
     }
   `);
+
+  /**
+   * On mount, preload all illustrations in the experience
+   * before mounting the carousel
+   */
+  useEffect(() => {
+    const preloadImages = data.assets.edges.map(
+      ({ node }) => `/assets${node.relativePath}`,
+    );
+    const preloader = new ImagePreloader();
+    preloader.preload(preloadImages).then(() => setPreloaded(true));
+  }, []);
 
   const updates = getUpdates(data.updates);
   const footer = getFrontmatter(data.footer);
@@ -76,9 +99,11 @@ const Layout = ({ children }) => {
         }}
         links={links}
       />
-      <styled.Main>{children}</styled.Main>
-      <LifeUpdates updates={updates} />
-      <Footer {...footer} />
+      <styled.Container preloaded={preloaded}>
+        <styled.Main>{children}</styled.Main>
+        <LifeUpdates updates={updates} />
+        <Footer {...footer} />
+      </styled.Container>
     </>
   );
 };
