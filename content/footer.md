@@ -12,6 +12,6 @@ resources:
   - label: gvjacob@outlook.com
     to: mailto:gvjacob@outlook.com
 
-copyright: 2020 © Gino Jacob
+copyright: 2021 © Gino Jacob
 location: Based in Boston, MA
 ---
