@@ -8,7 +8,8 @@ export default {
     ${mixins.flex({ gap: spacing.large })}
 
     @media ${min.tablet} {
-      ${mixins.grid({ columns: '50% 40%', gap: '10%' })}
+      ${mixins.grid({ columns: '50% 40%' })}
+      grid-template-rows: 1fr 1fr;
     }
   `,
 
