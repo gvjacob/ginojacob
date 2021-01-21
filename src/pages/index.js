@@ -73,6 +73,7 @@ export const query = graphql`
         fields: { sourceName: { eq: "projects" } }
         frontmatter: { featured: { eq: true } }
       }
+      sort: { fields: [frontmatter___order], order: ASC }
     ) {
       edges {
         node {
