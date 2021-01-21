@@ -1,15 +1,20 @@
 import styled from 'styled-components';
 import mixins from '@styles/mixins';
 import { spacing } from '@styles/variables';
-import { min } from '@styles/responsive';
+import { min, max } from '@styles/responsive';
 
 export default {
   Container: styled.section`
-    ${mixins.flex({ gap: spacing.large })}
+    grid-template-rows: 1fr 1fr;
+
+    @media ${max.tablet} {
+      article {
+        margin-bottom: ${spacing.large};
+      }
+    }
 
     @media ${min.tablet} {
-      ${mixins.grid({ columns: '50% 40%' })}
-      grid-template-rows: 1fr 1fr;
+      ${mixins.grid({ columns: '50% 40%', gap: '10%' })}
     }
   `,
 
