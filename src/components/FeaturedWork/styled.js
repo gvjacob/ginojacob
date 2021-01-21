@@ -15,6 +15,7 @@ export default {
 
     @media ${min.tablet} {
       ${mixins.grid({ columns: '50% 40%', gap: '10%' })}
+      grid-template-rows: 1fr 1.5fr;
     }
   `,
 
