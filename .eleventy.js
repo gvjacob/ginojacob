@@ -8,13 +8,29 @@ const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.setDataDeepMerge(true);
+
+  /**
+   * Add eleventy plugins
+   *
+   * @see https://www.11ty.dev/docs/plugins/
+   */
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginNavigation);
 
-  eleventyConfig.setDataDeepMerge(true);
-
-  // Pass through bundles
+  /**
+   * Add pass through bundles
+   *
+   * @see https://www.11ty.dev/docs/copy/
+   */
   eleventyConfig.addPassthroughCopy('src/assets');
+
+  /**
+   * Add custom watch targets
+   *
+   * @see https://www.11ty.dev/docs/config/#add-your-own-watch-targets
+   */
+  eleventyConfig.addWatchTarget('./src/styles/');
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
   eleventyConfig.addFilter('htmlDateString', (dateObj) => {
