@@ -1,0 +1,13 @@
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "Gino Jacob",
+  "home_page_url": "https://ginojacob.com/",
+  "feed_url": "https://ginojacob.com/feed/feed.json",
+  "description": "Lucky to have built a life-saving app, democratized technology skills, and developed some really pretty websites. I&#39;m an engineer, and above all else, an unapologetically user-centric designer.",
+  "author": {
+    "name": "Gino Jacob",
+    "url": "https://ginojacob.com"
+  },
+  "items": [
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Gino Jacob",
+  "url": "https://ginojacob.com/",
+  "description": "Lucky to have built a life-saving app, democratized technology skills, and developed some really pretty websites. I'm an engineer, and above all else, an unapologetically user-centric designer.",
+  "feed": {
+    "subtitle": "Lucky to have built a life-saving app, democratized technology skills, and developed some really pretty websites. I'm an engineer, and above all else, an unapologetically user-centric designer.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://ginojacob.com/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://ginojacob.com/feed/feed.json"
+  },
+  "author": {
+    "name": "Gino Jacob",
+    "email": "gvjacob@outlook.com",
+    "url": "https://ginojacob.com"
+  }
+}

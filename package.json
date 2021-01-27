@@ -1,23 +1,32 @@
 {
   "name": "ginojacob",
   "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Portfolio website of Gino Jacob",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "eleventy",
+    "watch": "eleventy --watch",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve",
+    "debug": "DEBUG=* eleventy"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gvjacob/ginojacob.git"
+    "url": "git://github.com/gvjacob/ginojacob.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/gvjacob/ginojacob/issues"
+  "author": {
+    "name": "Gino Jacob",
+    "email": "gvjacob@outlook.com",
+    "url": "https://ginojacob.com/"
   },
-  "homepage": "https://github.com/gvjacob/ginojacob#readme",
+  "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1"
+    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy-navigation": "^0.1.6",
+    "@11ty/eleventy-plugin-rss": "^1.1.0",
+    "markdown-it": "^8.4.2",
+    "markdown-it-anchor": "^5.2.5"
+  },
+  "dependencies": {
+    "luxon": "^1.25.0"
   }
 }
