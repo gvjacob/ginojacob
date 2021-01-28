@@ -3,7 +3,7 @@
     font-family: $name;
     font-style: $style;
     font-weight: $weight;
-    src: url('/fonts/#{$file}');
+    src: url('/static/fonts/#{$file}');
   }
 }
 

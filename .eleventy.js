@@ -23,7 +23,7 @@ module.exports = function (eleventyConfig) {
    *
    * @see https://www.11ty.dev/docs/copy/
    */
-  eleventyConfig.addPassthroughCopy('src/assets');
+  eleventyConfig.addPassthroughCopy('static');
 
   /**
    * Add custom watch targets

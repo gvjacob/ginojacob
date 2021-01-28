@@ -1,2 +1,2 @@
-$ff-primary: 'Tomato Grotesk';
-$ff-secondary: 'Helvetica Neue';
+$ff-secondary: 'Helvetica Neue', Helvetica, sans-serif;
+$ff-primary: 'Tomato Grotesk', $ff-secondary;
