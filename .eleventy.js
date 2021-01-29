@@ -7,6 +7,8 @@ const pluginNavigation = require('@11ty/eleventy-navigation');
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 
+const addFilters = require('./src/filters');
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
@@ -31,6 +33,9 @@ module.exports = function (eleventyConfig) {
    * @see https://www.11ty.dev/docs/config/#add-your-own-watch-targets
    */
   eleventyConfig.addWatchTarget('./src/styles/');
+
+  // Add custom filters to config
+  addFilters(eleventyConfig);
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
   eleventyConfig.addFilter('htmlDateString', (dateObj) => {

@@ -1,0 +1,28 @@
+<article class="project__container">
+  <div class="project__details">
+    <h3>
+      {% if project.live_url %}
+        <a href="{{ project.live_url }}">
+          {{ project.title }}
+        </a>
+      {% else %}
+        {{ project.title }}
+      {% endif %}
+    </h3>
+
+    <div class="project__description">
+      <time datetime="{{ project.year }}">{{ project.year | shortYear }}</time>
+      <p class="project__excerpt">{{ project.excerpt }}</p>
+    </div>
+  </div>
+
+  <div class="project__cover">
+    {% if project.cover %}
+      <img src="{{ project.cover.src }}" alt="{{ project.cover.alt }}" />
+    {% endif %}
+
+    <p class="project__excerpt">{{ project.excerpt }}</p>
+
+    <p class="project__type">{{ project.type }} — {{ project.roles | join(', ') }}</p>
+  </div>
+</article>

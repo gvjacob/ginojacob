@@ -3,4 +3,9 @@
     <h2>Showcase</h2>
     <p>{{ showcase.introduction}}</p>
   </div>
+
+  {% for project in collections.projects %}
+    {% set project = project.data %}
+    {% include 'components/project.njk' %}
+  {% endfor %}
 </section>
