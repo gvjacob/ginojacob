@@ -1,0 +1,68 @@
+.header__bar {
+  @include base-padding;
+  @include padding($sp-xs x);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+
+  position: relative;
+
+  * {
+    @include ff-primary-subtitle;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - #{$sp-padding});
+    border-bottom: 1px solid $graphite;
+    left: $sp-padding;
+    bottom: 0;
+
+    @include mq($bp-tablet, 'max') {
+      width: calc(100% - #{$sp-padding * 2});
+    }
+  }
+
+  @include mq($bp-tablet, 'max') {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      'status cta'
+      'name cta';
+  }
+}
+
+.header__status {
+  @include mq($bp-tablet, 'max') {
+    grid-area: status;
+  }
+}
+
+.header__name {
+  justify-self: center;
+
+  @include mq($bp-tablet, 'max') {
+    grid-area: name;
+    justify-self: left;
+  }
+}
+
+.header__cta {
+  @include padding($sp-xxs $sp-xs);
+  width: fit-content;
+  justify-self: right;
+
+  border: 1px solid $graphite;
+  border-radius: 50px;
+
+  @include on-focus {
+    color: $white;
+    background-color: $graphite;
+  }
+
+  @include mq($bp-tablet, 'max') {
+    grid-area: cta;
+  }
+}

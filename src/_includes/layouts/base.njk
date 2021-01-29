@@ -1,3 +1,10 @@
+---
+header:
+  status: Open to work in 2021
+  name: Gino Jacob
+  cta: Let's Talk
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -10,7 +17,7 @@
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
   </head>
   <body>
-    <header> </header>
+    {% include 'components/header.njk' %}
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
       {{ content | safe }}
