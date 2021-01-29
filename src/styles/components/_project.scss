@@ -1,6 +1,10 @@
 .project__container {
   margin-top: $sp-md;
   margin-bottom: $sp-xl;
+
+  @include mq($bp-tablet, 'max') {
+    margin-bottom: $sp-md;
+  }
 }
 
 .project__details {
