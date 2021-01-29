@@ -58,10 +58,23 @@
 // ------------------------------------
 @mixin ff-primary-heading() {
   font-family: $ff-primary;
-  font-size: 120px;
-  line-height: 120px;
+  line-height: 1.1;
   font-weight: 300;
   font-style: normal;
+
+  @include fluid-type(
+    (
+      $bp-mobile: 72px,
+      $bp-desktop: 81px,
+    )
+  );
+
+  @include fluid-type(
+    (
+      $bp-desktop: 81px,
+      $bp-monitor: 180px,
+    )
+  );
 }
 
 @mixin ff-primary-title() {
