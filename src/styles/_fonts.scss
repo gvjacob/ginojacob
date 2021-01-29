@@ -4,10 +4,20 @@
  * Light, Bold
  *
  */
-@include font-face($ff-primary, 'TomatoGrotesk-Light.otf', normal, 300);
-@include font-face($ff-primary, 'TomatoGrotesk-LightSlanted.otf', italic, 300);
-@include font-face($ff-primary, 'TomatoGrotesk-Bold.otf', normal, bold);
-@include font-face($ff-primary, 'TomatoGrotesk-BoldSlanted.otf', italic, bold);
+@include font-face($ff-tomato-grotesk, 'TomatoGrotesk-Light.otf', normal, 300);
+@include font-face(
+  $ff-tomato-grotesk,
+  'TomatoGrotesk-LightSlanted.otf',
+  italic,
+  300
+);
+@include font-face($ff-tomato-grotesk, 'TomatoGrotesk-Bold.otf', normal, bold);
+@include font-face(
+  $ff-tomato-grotesk,
+  'TomatoGrotesk-BoldSlanted.otf',
+  italic,
+  bold
+);
 
 /**
  *
@@ -15,13 +25,33 @@
  * Light, Bold
  *
  */
-@include font-face($ff-secondary, 'HelveticaNeue.ttf', normal, normal);
-@include font-face($ff-secondary, 'HelveticaNeue-Italic.ttf', italic, normal);
-@include font-face($ff-secondary, 'HelveticaNeue-Light.ttf', normal, 300);
-@include font-face($ff-secondary, 'HelveticaNeue-LightItalic.ttf', italic, 300);
-@include font-face($ff-secondary, 'HelveticaNeue-Bold.ttf', normal, bold);
-@include font-face($ff-secondary, 'HelveticaNeue-BoldItalic.ttf', italic, bold);
-@include font-face($ff-secondary, 'HelveticaNeue-BoldItalic.ttf', italic, bold);
+@include font-face($ff-helvetica-neue, 'HelveticaNeue.ttf', normal, normal);
+@include font-face(
+  $ff-helvetica-neue,
+  'HelveticaNeue-Italic.ttf',
+  italic,
+  normal
+);
+@include font-face($ff-helvetica-neue, 'HelveticaNeue-Light.ttf', normal, 300);
+@include font-face(
+  $ff-helvetica-neue,
+  'HelveticaNeue-LightItalic.ttf',
+  italic,
+  300
+);
+@include font-face($ff-helvetica-neue, 'HelveticaNeue-Bold.ttf', normal, bold);
+@include font-face(
+  $ff-helvetica-neue,
+  'HelveticaNeue-BoldItalic.ttf',
+  italic,
+  bold
+);
+@include font-face(
+  $ff-helvetica-neue,
+  'HelveticaNeue-BoldItalic.ttf',
+  italic,
+  bold
+);
 
 // ------------------------------------
 // Primary font style presets
@@ -31,6 +61,7 @@
   font-size: 120px;
   line-height: 120px;
   font-weight: 300;
+  font-style: normal;
 }
 
 @mixin ff-primary-title() {

@@ -1,18 +1,19 @@
 @import 'reset';
 @import 'abstracts';
 @import 'fonts';
+@import 'components';
 
 html,
 body {
   @include margin(0);
   @include padding(0);
 
-  background-image: url('/static/assets/grain.png');
-
   @include ff-secondary-body;
 }
 
 body {
+  background-image: url('/static/assets/grain.png');
+
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
