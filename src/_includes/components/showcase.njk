@@ -5,7 +5,9 @@
   </div>
 
   {% for project in collections.projects %}
-    {% set project = project.data %}
-    {% include 'components/project.njk' %}
+    {% if (project.fileSlug in showcase.projects) and project.data.published  %}
+      {% set project = project.data %}
+      {% include 'components/project.njk' %}
+    {% endif %}
   {% endfor %}
 </section>
