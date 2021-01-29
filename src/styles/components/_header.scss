@@ -43,7 +43,7 @@
     content: '';
     position: absolute;
     width: calc(100% - #{$sp-padding});
-    border-bottom: 1px solid $graphite;
+    border-bottom: $base-border;
     left: $sp-padding;
     bottom: 0;
 
@@ -81,7 +81,7 @@
   width: fit-content;
   justify-self: right;
 
-  border: 1px solid $graphite;
+  border: $base-border;
   border-radius: 50px;
 
   @include on-focus {
