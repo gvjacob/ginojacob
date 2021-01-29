@@ -1,3 +1,8 @@
+.header__container {
+  position: absolute;
+  width: 100%;
+}
+
 .header__portrait {
   @include flex(row);
   @include base-padding;
