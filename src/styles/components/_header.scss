@@ -1,3 +1,25 @@
+.header__portrait {
+  @include flex(row);
+  @include base-padding;
+
+  img {
+    width: 375px;
+    height: 180px;
+    object-fit: cover;
+
+    margin-right: $sp-xs;
+  }
+
+  p {
+    width: 20%;
+    min-width: 350px;
+  }
+
+  @include mq($bp-tablet, 'max') {
+    display: none;
+  }
+}
+
 .header__bar {
   @include base-padding;
   @include padding($sp-xs x);
@@ -29,14 +51,14 @@
     grid-template-columns: 1fr auto;
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
-      'status cta'
-      'name cta';
+      'name cta'
+      'update cta';
   }
 }
 
-.header__status {
+.header__update {
   @include mq($bp-tablet, 'max') {
-    grid-area: status;
+    grid-area: update;
   }
 }
 

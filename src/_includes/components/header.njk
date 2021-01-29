@@ -1,6 +1,11 @@
 <header>
+  <div class="header__portrait">
+    <img src="{{ header.portrait.src }}" alt="{{ header.portrait.alt }}" />
+    <p>{{ header.status }}</p>
+  </div>
+
   <div class="header__bar">
-    <p class="header__status">{{ header.status }}</p>
+    <p class="header__update">{{ header.update }}</p>
     <p class="header__name">{{ header.name }}</p>
     <button class="header__cta">{{ header.cta }}</button>
   </div>
