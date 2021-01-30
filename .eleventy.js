@@ -11,6 +11,7 @@ const addFilters = require('./src/filters');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
+  eleventyConfig.setUseGitIgnore(false);
 
   /**
    * Add eleventy plugins
@@ -19,22 +20,6 @@ module.exports = function (eleventyConfig) {
    */
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginNavigation);
-
-  /**
-   * Add pass through bundles
-   *
-   * @see https://www.11ty.dev/docs/copy/
-   */
-  eleventyConfig.addPassthroughCopy('static');
-  eleventyConfig.addPassthroughCopy({ bundle: 'scripts' });
-
-  /**
-   * Add custom watch targets
-   *
-   * @see https://www.11ty.dev/docs/config/#add-your-own-watch-targets
-   */
-  eleventyConfig.addWatchTarget('./bundle/');
-  eleventyConfig.addWatchTarget('./src/styles/');
 
   // Add custom filters to config
   addFilters(eleventyConfig);
@@ -55,6 +40,22 @@ module.exports = function (eleventyConfig) {
     permalinkSymbol: '#',
   });
   eleventyConfig.setLibrary('md', markdownLibrary);
+
+  /**
+   * Add custom watch targets
+   *
+   * @see https://www.11ty.dev/docs/config/#add-your-own-watch-targets
+   */
+  eleventyConfig.addWatchTarget('./bundle/');
+  eleventyConfig.addWatchTarget('./src/styles/');
+
+  /**
+   * Add pass through bundles
+   *
+   * @see https://www.11ty.dev/docs/copy/
+   */
+  eleventyConfig.addPassthroughCopy('static');
+  eleventyConfig.addPassthroughCopy({ bundle: 'scripts' });
 
   // Browsersync Overrides
   eleventyConfig.setBrowserSyncConfig({

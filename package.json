@@ -8,13 +8,13 @@
     "debug": "DEBUG=* eleventy",
     "sass": "sass --style=compressed src/styles/index.scss _site/styles/index.css",
     "watch": "eleventy --watch",
-    "watch:eleventy": "eleventy --serve --quiet",
     "watch:styles": "npm run sass -- --watch",
     "watch:scripts": "parcel watch ./src/scripts/index.js --out-dir ./bundle --no-source-maps --no-hmr",
+    "watch:eleventy": "eleventy --serve --quiet",
     "build": "npm-run-all -s build:*",
-    "build:eleventy": "eleventy",
     "build:styles": "npm run sass",
-    "build:scripts": "parcel build ./src/scripts/index.js --out-dir ./bundle --no-source-maps"
+    "build:scripts": "parcel build ./src/scripts/index.js --out-dir ./bundle --no-source-maps",
+    "build:eleventy": "eleventy"
   },
   "repository": {
     "type": "git",
@@ -36,6 +36,7 @@
     "parcel-bundler": "^1.12.4"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "lodash.chunk": "^4.2.0",
     "luxon": "^1.25.0",
     "sass": "^1.32.5"
