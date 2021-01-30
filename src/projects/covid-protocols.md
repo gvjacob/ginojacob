@@ -5,5 +5,8 @@ excerpt: Definitive clinical guidelines that helps frontline workers make real-t
 type: Mobile App
 roles:
   - Full Stack Development
+cover:
+  src: /static/assets/covid-protocols.png
+  alt: Covid Protocols on the iPhone.
 published: true
 ---
