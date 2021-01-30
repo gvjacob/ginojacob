@@ -1,17 +1,27 @@
 .archive__container {
   h2 {
     @include ff-primary-subtitle;
-    text-align: center;
+    margin-bottom: $sp-xxs;
+
+    @include mq($bp-tablet) {
+      text-align: center;
+    }
   }
 
   h3 {
     @include ff-primary-heading;
+  }
+
+  @include mq($bp-tablet, 'max') {
+    @include base-padding;
   }
 }
 
 .archive__strip {
   @include flex(row);
   @include margin($sp-sm x);
+
+  overflow-x: scroll;
 
   h3 {
     @include margin(x $sp-md);
@@ -39,6 +49,18 @@
 
     @include on-focus {
       opacity: 0.5;
+    }
+  }
+
+  @include mq($bp-tablet, 'max') {
+    @include flex(column);
+    margin: 0;
+
+    h3 {
+      margin: 0;
+      margin-left: 0 !important;
+      margin-top: $sp-xxs;
+      font-size: 36px;
     }
   }
 }
