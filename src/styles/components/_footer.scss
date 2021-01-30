@@ -33,6 +33,7 @@
 
   h3 {
     @include ff-primary-title;
+    line-height: 81px;
     overflow-x: scroll;
     transition: all 0.2s ease-in-out;
   }
