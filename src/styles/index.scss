@@ -22,3 +22,12 @@ body {
 .external-link:not(.basic-link) {
   cursor: url('/static/assets/arrow.svg'), auto;
 }
+
+img {
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+
+  &.loaded {
+    opacity: 1;
+  }
+}
