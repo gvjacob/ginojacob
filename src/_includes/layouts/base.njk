@@ -9,6 +9,22 @@ header:
   cta:
     label: Let's Talk
     href: mailto:gvjacob@outlook.com
+
+footer:
+  introduction: I’m open for freelance and full-time opportunities in 2021. Found anything that you liked? Let’s talk.
+  links:
+    - overline: Say Hello!
+      label: gvjacob@outlook.com
+      href: mailto:gvjacob@outlook.com
+    - overline: GitHub
+      label: github.com/gvjacob
+      href: https://github.com/gvjacob
+  resources:
+    - label: Résumé
+      href: https://documentcloud.adobe.com/link/track?uri=urn:aaid:scds:US:de094c64-3b2f-48d7-9960-2de134a89183
+    - label: Linkedin
+      href: https://www.linkedin.com/in/gvjacob/
+  copyright: 2021 © Gino Jacob
 ---
 
 <!doctype html>
@@ -29,7 +45,7 @@ header:
       {{ content | safe }}
     </main>
 
-    <footer></footer>
+    {% include 'components/footer.njk' %}
     <script src="/scripts/index.js" defer></script>
   </body>
 </html>
