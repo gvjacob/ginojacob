@@ -1,10 +1,13 @@
-import 'babel-polyfill';
+import "babel-polyfill";
 
-import { onDocumentReady } from './utils';
-import HorizontalParallax from './HorizontalParallax';
+import { onDocumentReady } from "./utils";
+import ExternalLinks from "./ExternalLinks";
+import HorizontalParallax from "./HorizontalParallax";
 
 onDocumentReady(() => {
-  if (document.querySelector('.js-horizontal-parallax')) {
+  new ExternalLinks();
+
+  if (document.querySelector(".js-horizontal-parallax")) {
     new HorizontalParallax();
   }
 });
