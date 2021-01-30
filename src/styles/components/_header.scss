@@ -6,6 +6,10 @@
 .header__topper {
   @include base-padding;
   @include flex(row, space-between);
+
+  @include mq($bp-tablet, 'max') {
+    display: none;
+  }
 }
 
 .header__anchor {
@@ -37,10 +41,6 @@
   p {
     width: 20%;
     min-width: 350px;
-  }
-
-  @include mq($bp-tablet, 'max') {
-    display: none;
   }
 }
 
