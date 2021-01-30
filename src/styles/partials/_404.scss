@@ -14,7 +14,7 @@
 
     .not-found__link {
       @include padding(5px 10px);
-      border-radius: 20px;
+      border-radius: 8px;
       background-color: $shade;
       font-weight: normal;
     }
@@ -43,10 +43,6 @@
       @include ff-secondary-body;
       line-height: 1.8;
       width: 100%;
-
-      .not-found__link {
-        border-radius: 8px;
-      }
     }
   }
 }
