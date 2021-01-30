@@ -26,6 +26,10 @@
         color: $stone;
       }
     }
+
+    @include mq($bp-tablet) {
+      margin-bottom: $sp-xs;
+    }
   }
 
   @include mq($bp-tablet, 'max') {
