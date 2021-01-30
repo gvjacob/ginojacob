@@ -1,0 +1,48 @@
+.not-found__container {
+  @include flex(row, space-between, flex-end);
+  @include base-padding;
+  height: 100vh;
+
+  h1 {
+    @include ff-primary-heading;
+  }
+
+  p {
+    @include ff-secondary-title;
+    line-height: 1.5;
+    width: 50%;
+
+    .not-found__link {
+      @include padding(5px 10px);
+      border-radius: 20px;
+      background-color: $shade;
+      font-weight: normal;
+    }
+
+    a {
+      text-decoration: underline;
+
+      @include on-focus {
+        color: $stone;
+      }
+    }
+  }
+
+  @include mq($bp-tablet, 'max') {
+    @include flex(column, flex-end, flex-start);
+
+    h1 {
+      margin-bottom: $sp-sm;
+    }
+
+    p {
+      @include ff-secondary-body;
+      line-height: 1.8;
+      width: 100%;
+
+      .not-found__link {
+        border-radius: 8px;
+      }
+    }
+  }
+}
