@@ -22,17 +22,31 @@
   @include margin($sp-sm x);
 
   overflow-x: scroll;
+  overflow-y: hidden;
+
+  // Hide scrollbar
+  -ms-overflow-style: none; /* IE, Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
 
   h3 {
     @include margin(x $sp-md);
     position: relative;
 
     &:first-child {
-      margin-left: $sp-padding;
+      margin-left: $sp-md;
     }
 
     &:last-child {
+      @include flex(row);
       margin-right: $sp-sm;
+
+      &::after {
+        content: '';
+        width: $sp-md;
+      }
     }
 
     &:not(:last-child)::after {
