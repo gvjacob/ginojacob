@@ -34,6 +34,7 @@
   h3 {
     @include margin(x $sp-md);
     position: relative;
+    white-space: nowrap;
 
     &:first-child {
       margin-left: $sp-md;
