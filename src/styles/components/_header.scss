@@ -53,6 +53,9 @@
   align-items: center;
 
   position: relative;
+  background-color: $white;
+  background-image: url('/static/assets/grain.png');
+  z-index: 99;
 
   * {
     @include ff-primary-subtitle;
@@ -78,6 +81,12 @@
       'name cta'
       'update cta';
   }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .header__update {
