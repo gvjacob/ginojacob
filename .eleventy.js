@@ -26,12 +26,14 @@ module.exports = function (eleventyConfig) {
    * @see https://www.11ty.dev/docs/copy/
    */
   eleventyConfig.addPassthroughCopy('static');
+  eleventyConfig.addPassthroughCopy({ bundle: 'scripts' });
 
   /**
    * Add custom watch targets
    *
    * @see https://www.11ty.dev/docs/config/#add-your-own-watch-targets
    */
+  eleventyConfig.addWatchTarget('./bundle/');
   eleventyConfig.addWatchTarget('./src/styles/');
 
   // Add custom filters to config

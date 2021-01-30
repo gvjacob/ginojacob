@@ -8,6 +8,6 @@ cover:
 type: WordPress Multisite
 roles:
   - Full Stack Development
-published: false
+published: true
 live_url: https://harvard.upstatement.dev
 ---
