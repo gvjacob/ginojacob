@@ -1,4 +1,4 @@
-<section class="archive__container">
+<section id="Archive" class="archive__container js-anchor">
   <h2>Archive</h2>
   <div>
     {% for strip in collections.projects | published | exclude(showcase.featured) | sort | chunks(3) %}
