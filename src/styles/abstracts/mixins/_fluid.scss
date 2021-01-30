@@ -1,0 +1,36 @@
+@mixin fluid($property, $vw-val-map: ()) {
+  $length: length($vw-val-map);
+  $keys: map-keys($vw-val-map);
+  $vals: map-values($vw-val-map);
+
+  @each $min-vw, $min-val in $vw-val-map {
+    $index: index($keys, $min-vw);
+
+    @if $index == 1 {
+      #{$property}: $min-val;
+    }
+
+    @if ($index == 1 and $length == 2) or $index <= $length - 1 {
+      $next-index: $index + 1;
+      $max-vw: nth($keys, $next-index);
+      $max-val: nth($vals, $next-index);
+
+      @media screen and (min-width: $min-vw) and (max-width: $max-vw) {
+        $font-diff: strip-unit($max-val - $min-val);
+        $vw-diff: strip-unit($max-vw - $min-vw);
+        $value: calc(
+          #{$min-val} + #{$font-diff} * ((100vw - #{$min-vw}) / #{$vw-diff})
+        );
+        #{$property}: $value;
+      }
+    } @else if $index > 1 {
+      @media screen and (min-width: $min-vw) {
+        #{$property}: $min-val;
+      }
+    }
+  }
+}
+
+@mixin fluid-type($vw-val-map) {
+  @include fluid(font-size, $vw-val-map);
+}

@@ -1,0 +1,18 @@
+<header class="header__container">
+  <div class="header__topper">
+    <div class="header__portrait">
+      <img src="{{ header.portrait.src }}" alt="{{ header.portrait.alt }}" />
+      <p>{{ header.status }}</p>
+    </div>
+    <nav>
+      <ul id="header__anchors">
+      </ul>
+    </nav>
+  </div>
+
+  <div class="header__bar">
+    <p class="header__update">{{ header.update }}</p>
+    <p class="header__name">{{ header.name }}</p>
+    <a class="header__cta" href="{{ header.cta.href }}">{{ header.cta.label }}</a>
+  </div>
+</header>

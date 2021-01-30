@@ -1,0 +1,11 @@
+<section id="Showcase" class="showcase__container js-anchor">
+  <div class="showcase__topper">
+    <h2>Showcase</h2>
+    <p>{{ showcase.introduction}}</p>
+  </div>
+
+  {% for project in collections.projects | published | featured(showcase.featured)  %}
+    {% set project = project.data %}
+    {% include 'components/project.njk' %}
+  {% endfor %}
+</section>

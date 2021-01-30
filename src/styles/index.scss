@@ -1,121 +1,20 @@
-@import "./fonts";
-@import "./variables.module.scss";
-@import "./mixins";
+@import 'reset';
+@import 'abstracts';
+@import 'fonts';
+@import 'components';
 
-$bp-mobile: 320px;
-$bp-tablet: 768px;
-$bp-desktop: 1280px;
+html,
+body {
+  @include margin(0);
+  @include padding(0);
+}
 
 body {
-  background-color: $white;
-  background-image: url("/assets/grain.png");
-  color: $black;
+  background-image: url('/static/assets/grain.png');
 
-  font-family: $ff-sans-serif;
-  font-size: 18px;
-  line-height: 24px;
+  @include ff-secondary-body;
+  color: $graphite;
 
-  @media (min-width: $bp-tablet) {
-    font-size: 24px;
-    line-height: 32px;
-  }
-}
-
-.ff-sans-serif-title {
-  font-family: $ff-sans-serif;
-  font-size: 36px;
-  line-height: 42px;
-
-  @media (min-width: $bp-tablet) {
-    font-size: 42px;
-    line-height: 48px;
-  }
-}
-
-.ff-sans-serif-body {
-  font-family: $ff-sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-
-  @media (min-width: $bp-tablet) {
-    font-size: 24px;
-    line-height: 32px;
-  }
-}
-
-.ff-sans-serif-body-sub {
-  font-family: $ff-sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.ff-mono-body {
-  font-family: $ff-mono;
-  font-size: 12px;
-  line-height: 18px;
-
-  @media (min-width: $bp-tablet) {
-    font-size: 16px;
-    line-height: 22px;
-  }
-}
-
-.html {
-  a {
-    text-decoration: underline;
-    transition: opacity 0.1s ease-in-out;
-
-    @include on-focus {
-      opacity: 0.5;
-    }
-  }
-}
-
-.link {
-  transition: opacity 0.1s ease-in-out;
-
-  @include on-focus {
-    opacity: 0.5;
-  }
-}
-
-/**
- * CSS Resets
- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-weight: normal;
-  font-family: $ff-sans-serif;
-  font-size: 36px;
-  line-height: 42px;
-
-  @media (min-width: $bp-tablet) {
-    font-size: 42px;
-    line-height: 48px;
-  }
-
-  margin: 0;
-}
-
-li {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }

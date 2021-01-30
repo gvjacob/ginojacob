@@ -1,0 +1,48 @@
+.showcase__container {
+  @include margin($sp-lg x);
+
+  @include mq($bp-tablet) {
+    @include margin($sp-xxl x);
+  }
+}
+
+.showcase__topper {
+  @include flex(row, none, flex-end);
+  @include base-padding;
+  position: relative;
+
+  h2 {
+    @include ff-primary-subtitle;
+    margin-right: $sp-sm;
+    margin-bottom: 5px;
+  }
+
+  p {
+    @include ff-secondary-title;
+
+    @include mq($bp-desktop) {
+      width: 50%;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - #{$sp-padding});
+    border-bottom: $base-border;
+    left: $sp-padding;
+    bottom: 0;
+
+    @include mq($bp-tablet, 'max') {
+      width: calc(100% - #{$sp-padding * 2});
+    }
+  }
+
+  @include mq($bp-tablet, 'max') {
+    @include flex(column, start, flex-start);
+
+    p {
+      @include ff-secondary-body;
+    }
+  }
+}

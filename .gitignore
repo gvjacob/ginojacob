@@ -1,3 +1,9 @@
+bundle
+
+# Eleventy
+_site
+
+
 .env
 .env.development
 .env.production
