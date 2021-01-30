@@ -20,7 +20,7 @@ body {
 }
 
 .external-link:not(.basic-link) {
-  cursor: url('/static/assets/arrow.svg'), auto;
+  cursor: url('/static/assets/arrow.svg') 50 50, auto;
 }
 
 img {
