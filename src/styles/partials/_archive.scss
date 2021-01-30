@@ -74,8 +74,10 @@
     h3 {
       margin: 0;
       margin-left: 0 !important;
+      margin-right: 0 !important;
       margin-top: $sp-xxs;
       font-size: 36px;
+      white-space: normal;
 
       &::after {
         display: none;
