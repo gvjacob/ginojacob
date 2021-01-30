@@ -13,9 +13,12 @@ onDocumentReady(() => {
   new ExternalLinks();
   new Anchors();
   new ImageLoadPlaceholder();
-  new NotFoundLink();
 
   if (document.querySelector('.js-horizontal-parallax')) {
     new HorizontalParallax();
+  }
+
+  if (document.querySelector('.js-not-found-link')) {
+    new NotFoundLink();
   }
 });
