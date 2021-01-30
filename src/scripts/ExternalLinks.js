@@ -11,6 +11,7 @@ class ExternalLinks {
       if (this.isExternal(href)) {
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
+        link.classList.add('external-link');
       }
     });
   }

@@ -18,3 +18,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
+
+.external-link:not(.basic-link) {
+  cursor: url('/static/assets/arrow.svg'), auto;
+}
