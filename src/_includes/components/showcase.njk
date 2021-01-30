@@ -4,10 +4,8 @@
     <p>{{ showcase.introduction}}</p>
   </div>
 
-  {% for project in collections.projects %}
-    {% if (project.fileSlug in showcase.projects) and project.data.published  %}
-      {% set project = project.data %}
-      {% include 'components/project.njk' %}
-    {% endif %}
+  {% for project in collections.projects | published | featured(showcase.featured)  %}
+    {% set project = project.data %}
+    {% include 'components/project.njk' %}
   {% endfor %}
 </section>

@@ -1,0 +1,44 @@
+.archive__container {
+  h2 {
+    @include ff-primary-subtitle;
+    text-align: center;
+  }
+
+  h3 {
+    @include ff-primary-heading;
+  }
+}
+
+.archive__strip {
+  @include flex(row);
+  @include margin($sp-sm x);
+
+  h3 {
+    @include margin(x $sp-md);
+    position: relative;
+
+    &:first-child {
+      margin-left: $sp-padding;
+    }
+
+    &:last-child {
+      margin-right: $sp-sm;
+    }
+
+    &:not(:last-child)::after {
+      content: '/';
+      position: absolute;
+      right: -$sp-md;
+      transform: translateX(50%);
+      color: $shade;
+    }
+  }
+
+  a {
+    transition: opacity 0.2s ease-in-out;
+
+    @include on-focus {
+      opacity: 0.5;
+    }
+  }
+}
