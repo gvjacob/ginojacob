@@ -91,5 +91,9 @@
 }
 
 .archive__year {
-  color: $shade;
+  color: $stone;
+
+  @include mq($bp-tablet) {
+    color: $shade;
+  }
 }
