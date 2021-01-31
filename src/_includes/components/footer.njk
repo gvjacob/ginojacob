@@ -1,29 +1,42 @@
 <footer id="Contact" class="footer__container js-anchor">
-  <p class="footer__introduction">{{ footer.introduction }}</p>
-  <ul>
-    {% for link in footer.links %}
-      <li class="footer__link">
-        <a href="{{ link.href }}">
-          <span>{{ link.overline }}</span>
-          <h3>
-            {{ link.label }}
-          </h3>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-  <div class="footer__underline">
+  <section>
+    <p class="footer__introduction">{{ footer.introduction }}</p>
     <ul>
-      {% for resource in footer.resources %}
-        <li>
-          <span>
-            <a class="basic-link" href="{{ resource.href }}">
-              {{ resource.label }}
-            </a>
-          </span>
+      {% for link in footer.links %}
+        <li class="footer__link">
+          <a href="{{ link.href }}">
+            <span>{{ link.overline }}</span>
+            <h3>
+              {{ link.label }}
+            </h3>
+          </a>
         </li>
       {% endfor %}
     </ul>
-    <span class="footer__copyright">{{ footer.copyright }}</span>
-  </div>
+    <div class="footer__underline">
+      <ul>
+        {% for resource in footer.resources %}
+          <li>
+            <span>
+              <a class="basic-link" href="{{ resource.href }}">
+                {{ resource.label }}
+              </a>
+            </span>
+          </li>
+        {% endfor %}
+      </ul>
+      <span class="footer__copyright">{{ footer.copyright }}</span>
+    </div>
+  </section>
+  <a class="footer__marquee" href="#">
+    {% for i in range(0, 2) %}
+      <div>
+        {% for i in range(0, 15) %}
+          <span>
+            Back to Top
+          </span>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </a>
 </footer>

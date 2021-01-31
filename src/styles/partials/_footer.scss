@@ -1,9 +1,13 @@
 .footer__container {
-  @include base-padding;
   margin-top: $sp-lg;
 
   @include mq($bp-tablet) {
     margin-top: $sp-xxl;
+  }
+
+  section {
+    @include base-padding;
+    margin-bottom: $sp-xs;
   }
 }
 
@@ -79,4 +83,41 @@
 
 .footer__copyright {
   @include ff-primary-subtitle;
+}
+
+.footer__marquee {
+  $min-screen-width: 1920px;
+
+  @include flex(row);
+
+  @keyframes marquee {
+    from {
+      transform: translateX(-$min-screen-width);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  animation: marquee 12s linear infinite;
+
+  div {
+    @include ff-primary-subtitle;
+    @include padding($sp-xs 0);
+    @include flex(row, none);
+    flex: 0 0 auto;
+    min-width: $min-screen-width;
+
+    width: 100vw;
+    white-space: nowrap;
+    background-color: $stone;
+
+    span {
+      margin-right: auto;
+
+      &:nth-child(even) {
+        font-weight: normal;
+      }
+    }
+  }
 }
