@@ -38,6 +38,35 @@ module.exports = function (eleventyConfig) {
   });
 
   /**
+   * Inject years into projects list.
+   */
+  eleventyConfig.addFilter('injectYears', (projects) => {
+    const [results, _] = projects.reduce(
+      ([acc, years], project) => {
+        const { year } = project.data;
+
+        if (years.has(year)) {
+          return [[...acc, project], years];
+        } else {
+          const yearPayload = {
+            data: {
+              title: year,
+              isYear: true,
+            },
+          };
+
+          years.add(year);
+
+          return [[...acc, yearPayload, project], years];
+        }
+      },
+      [[], new Set()],
+    );
+
+    return results;
+  });
+
+  /**
    * Sort projects by year, alphanumeric
    */
   eleventyConfig.addFilter('sort', (projects) => {

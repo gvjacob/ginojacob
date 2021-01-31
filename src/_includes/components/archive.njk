@@ -1,11 +1,11 @@
 <section id="Archive" class="archive__container js-anchor">
   <h2>Archive</h2>
   <div>
-    {% for strip in collections.projects | published | exclude(showcase.featured) | sort | chunks(3) %}
+    {% for strip in collections.projects | published | exclude(showcase.featured) | sort | injectYears | chunks(4) %}
       <div class="archive__strip js-horizontal-parallax">
         {% for project in strip %}
           {% set project = project.data %}
-          <h3>
+          <h3 {% if project.isYear %} class="archive__year" {% endif %}>
             {% if project.live_url %}
               <a href="{{ project.live_url}}">
                 {{ project.title }}
