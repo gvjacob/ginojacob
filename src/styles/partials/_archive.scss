@@ -19,7 +19,7 @@
 
 .archive__strip {
   @include flex(row);
-  @include margin($sp-sm x);
+  @include margin($sp-xs x);
 
   overflow-x: scroll;
   overflow-y: hidden;
