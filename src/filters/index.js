@@ -38,6 +38,29 @@ module.exports = function (eleventyConfig) {
   });
 
   /**
+   * Sort projects by year, alphanumeric
+   */
+  eleventyConfig.addFilter('sort', (projects) => {
+    return projects.sort((first, second) => {
+      if (first.data.year > second.data.year) {
+        return -1;
+      } else if (first.data.year < second.data.year) {
+        return 1;
+      } else if (
+        first.data.title.toLowerCase() > second.data.title.toLowerCase()
+      ) {
+        return 1;
+      } else if (
+        first.data.title.toLowerCase() < second.data.title.toLowerCase()
+      ) {
+        return -1;
+      } else {
+        return 0;
+      }
+    });
+  });
+
+  /**
    * Break array into chunks of given size
    */
   eleventyConfig.addFilter('chunks', (arr, size) => {
