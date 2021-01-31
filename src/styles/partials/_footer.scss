@@ -99,7 +99,11 @@
     }
   }
 
-  animation: marquee 12s linear infinite;
+  animation: marquee 20s linear infinite;
+
+  @include mq($bp-tablet) {
+    animation: marquee 12s linear infinite;
+  }
 
   div {
     @include ff-primary-subtitle;
