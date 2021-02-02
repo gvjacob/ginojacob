@@ -10,6 +10,7 @@ roles:
   - Branding
   - Creative Design
   - Full Stack Development
+public: true
 published: true
 live_url: https://brads-catastrophic-creations.vercel.app/
 ---

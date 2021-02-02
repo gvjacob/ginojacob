@@ -1,7 +1,7 @@
 <article class="project__container">
   <div class="project__details">
-    <h3>
-      {% if project.live_url %}
+    <h3 {% if not project.public %} class="project__details--not-public" {% endif %}>
+      {% if project.live_url and project.public %}
         <a href="{{ project.live_url }}">
           {{ project.title }}
         </a>

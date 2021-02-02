@@ -21,7 +21,12 @@ body {
 }
 
 .external-link:not(.basic-link) {
-  cursor: url('/static/assets/arrow.svg') 50 50, auto;
+  cursor: -webkit-image-set(
+        url('/static/assets/arrow@1x.png') 1x,
+        url('/static/assets/arrow@2x.png') 2x
+      )
+      50 50,
+    auto;
 }
 
 img {

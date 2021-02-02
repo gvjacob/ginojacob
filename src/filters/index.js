@@ -27,7 +27,9 @@ module.exports = function (eleventyConfig) {
    * Filter for projects that are featured.
    */
   eleventyConfig.addFilter('featured', (projects, featured) => {
-    return projects.filter(({ fileSlug }) => featured.includes(fileSlug));
+    return featured.map((slug) =>
+      projects.find(({ fileSlug }) => fileSlug === slug),
+    );
   });
 
   /**
