@@ -3,6 +3,10 @@
 @import 'fonts';
 @import 'partials';
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   @include margin(0);
