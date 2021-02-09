@@ -36,6 +36,11 @@
     object-fit: cover;
 
     margin-right: $sp-xs;
+
+    @include mq($bp-monitor) {
+      width: 30%;
+      height: 300px;
+    }
   }
 
   p {
